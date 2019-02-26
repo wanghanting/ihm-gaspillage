@@ -20,7 +20,7 @@
       </Label>
       <ImageView fitHeight="290.0" fitWidth="200.0" layoutX="26.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Unknown.jpg" />
+            <Image url="@Unknown.jpg" />
          </image>
       </ImageView>
       <Label layoutX="242.0" layoutY="85.0" text="Vous suivez Pauldu66" underline="true" />

@@ -35,9 +35,6 @@ public class ControllerAide {
             FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/page_d'accueil.fxml"));
             Parent root1 = (Parent) fxmlLoader.load ();
             Stage stage = (Stage) btn_ok.getScene ().getWindow ();
-//            Stage stage = (Stage)btn_ok.getScene ().getWindow ();
-//            stage.initModality (Modality.APPLICATION_MODAL);
-//            stage.initStyle (StageStyle.UNDECORATED);
             stage.setTitle ("Page d'accueil");
             stage.setScene (new Scene (root1));
             stage.show ();

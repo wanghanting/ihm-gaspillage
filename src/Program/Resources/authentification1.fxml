@@ -4,14 +4,14 @@
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.image.Image?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Program.Controller.ControllerBienvenue">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Program.Controller.ControllerBienvenue">
    <children>
-      <Button fx:id="btn_close1" layoutX="548.0" layoutY="-1.0" mnemonicParsing="false" text="Close" onAction="#closeButtonAction" textFill="#f50303" />
+      <Button fx:id="btn_close1" layoutX="548.0" layoutY="-1.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Close" textFill="#f50303" />
       <Label layoutX="240.0" layoutY="25.0" prefHeight="63.0" prefWidth="345.0" text="Bienvenue sur StopAuGaspillage">
          <font>
             <Font name="System Bold" size="20.0" />
@@ -27,14 +27,14 @@
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Button fx:id="btn_authentifier" layoutX="335.0" layoutY="285.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="132.0" onAction="#setBtn_auth" textFill="#1490e3" text="    S'authentifier    "  />
+      <Button fx:id="btn_authentifier" layoutX="335.0" layoutY="285.0" mnemonicParsing="false" onAction="#setBtn_auth" prefHeight="36.0" prefWidth="132.0" text="    S'authentifier    " textFill="#1490e3" />
       <Label layoutX="244.0" layoutY="356.0" prefHeight="30.0" prefWidth="240.0" text="vous n'avez pas encore de compte?">
          <font>
             <Font name="Arial Bold Italic" size="12.0" />
          </font>
       </Label>
-      <Hyperlink fx:id="link_inscri" layoutX="461.0" layoutY="360.0" text="inscription " />
-      <ImageView fx:id="img1" fitHeight="331.0" fitWidth="200.0" layoutX="24.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="370.0" AnchorPane.topAnchor="30.0" >
+      <Hyperlink fx:id="link_inscri" layoutX="461.0" layoutY="360.0" onAction="#setLink_inscri" text="inscription " />
+      <ImageView fx:id="img1" fitHeight="296.0" fitWidth="200.0" layoutX="30.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="109.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="370.0" AnchorPane.topAnchor="91.0">
       <image>
          <Image url="@legume.jpg" />
       </image>

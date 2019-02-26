@@ -10,28 +10,22 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-
-public class ControllerAccueil {
+public class ControllerMessages {
     @FXML
     private Button btn_close;
-
-    @FXML
-    private Button btn_pro;
-
-    @FXML
-    private Button btn_mes;
 
     @FXML
     private Hyperlink link_aide;
 
     @FXML
+    private Hyperlink link_accueil;
+
+    @FXML
     private Hyperlink link_deco;
 
     @FXML
-    private void closeButtonAction() {
-        // get a handle to the stage
+    private void setBtn_close(){
         Stage stage = (Stage) btn_close.getScene ().getWindow ();
-        // do what you have to do
         stage.close ();
     }
 
@@ -41,8 +35,6 @@ public class ControllerAccueil {
             FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/aide.fxml"));
             Parent root1 = (Parent) fxmlLoader.load ();
             Stage stage = new Stage ();
-//            stage.initModality (Modality.APPLICATION_MODAL);
-//            stage.initStyle (StageStyle.UNDECORATED);
             stage.setTitle ("Aide");
             stage.setScene (new Scene (root1));
             stage.show ();
@@ -52,26 +44,12 @@ public class ControllerAccueil {
     }
 
     @FXML
-    private void setBtn_pro(){
-        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/profil.fxml"));
+    private void setLink_accueil(){
         try {
+            FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/page_d'accueil.fxml"));
             Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) btn_pro.getScene ().getWindow ();
-            stage.setTitle ("Mon profil");
-            stage.setScene (new Scene (root1));
-            stage.show ();
-        } catch (IOException e) {
-            e.printStackTrace ();
-        }
-    }
-
-    @FXML
-    private void setBtn_mes(){
-        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/messages.fxml"));
-        try {
-            Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) btn_pro.getScene ().getWindow ();
-            stage.setTitle ("Messages");
+            Stage stage = (Stage) link_accueil.getScene ().getWindow ();
+            stage.setTitle ("Page d'accueil");
             stage.setScene (new Scene (root1));
             stage.show ();
         } catch (IOException e) {

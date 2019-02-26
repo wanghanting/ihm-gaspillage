@@ -10,29 +10,28 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ControllerBienvenue {
+public class ControllerInscription {
     @FXML
-    private Button btn_close1;
+    private Button btn_close;
 
     @FXML
-    private Button btn_authentifier;
+    private Button btn_suivant;
 
     @FXML
-    private Hyperlink link_inscri;
-
+    private Hyperlink link_auth;
 
     @FXML
-    private void closeButtonAction(){
-        Stage stage = (Stage) btn_close1.getScene ().getWindow ();
+    private void setBtn_close(){
+        Stage stage = (Stage) btn_close.getScene ().getWindow ();
         stage.close();
     }
 
     @FXML
-    private void setBtn_auth() {
+    private void setBtn_suivant(){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/aide.fxml"));
             Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) btn_authentifier.getScene ().getWindow ();
+            Stage stage = (Stage) btn_suivant.getScene ().getWindow ();
             stage.setTitle ("Aide");
             stage.setScene (new Scene (root1));
             stage.show ();
@@ -42,12 +41,12 @@ public class ControllerBienvenue {
     }
 
     @FXML
-    private void setLink_inscri() {
+    private void setLink_auth(){
+        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/authentification1.fxml"));
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/inscription.fxml"));
             Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) btn_authentifier.getScene ().getWindow ();
-            stage.setTitle ("Inscription");
+            Stage stage = (Stage) link_auth.getScene ().getWindow ();
+            stage.setTitle ("Gaspillage");
             stage.setScene (new Scene (root1));
             stage.show ();
         } catch (IOException e) {

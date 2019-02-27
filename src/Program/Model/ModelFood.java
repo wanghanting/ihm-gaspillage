@@ -17,6 +17,16 @@ public class ModelFood {
     private IntegerProperty daysBeforeAlmostExpired;
     private StringProperty foodDescription;
 
+    public ModelFood(String name, String foodType, int quantity, DatePicker datePurchase, DatePicker dateExpiration, int daysBeforeAlmostExpired, String foodDescription){
+        this.name = new SimpleStringProperty(name);
+        this.foodType = new SimpleStringProperty(foodType);
+        this.quantity = new SimpleIntegerProperty(quantity);
+        this.datePurchase = datePurchase;
+        this.dateExpiration = dateExpiration;
+        this.daysBeforeAlmostExpired = new SimpleIntegerProperty(daysBeforeAlmostExpired);
+        this.foodDescription = new SimpleStringProperty(foodDescription);
+    }
+
     public void setName(String name){this.name = new SimpleStringProperty(name);}
     public void setFoodType(String foodType){this.foodType = new SimpleStringProperty(foodType);}
     public void setQuantity(Integer quantity){this.quantity = new SimpleIntegerProperty(quantity);}

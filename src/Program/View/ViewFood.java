@@ -1,7 +1,9 @@
 package Program.View;
+import Program.Controller.ControllerFood;
 import Program.Model.ModelFood;
 import Program.Model.ModelListOfFood;
-import Program.Controller.ControllerFood;
+import Program.Controller.ControllerEnregistrer;
+import Program.Controller.ControllerAccueil;
 import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,29 +15,29 @@ import java.io.IOException;
 
 public class ViewFood {
     static final String XML_FILE = "../Resources/page_d'accueil.fxml";
-    static final String LABEL = "HFV";
+    static final String LABEL = "Aliments";
     static final int WIDTH = 200;
     static final int HEIGHT = 10;
     private static final String FOOD = "../Resources/food.fxml";
     private static int rangeSelectedItem = -1;
     private static ModelListOfFood model;
-    private static ControllerFood controller;
+    private static ControllerAccueil controller;
 
     public static int getRangeSelectedItem() {
         return rangeSelectedItem;
     }
 
-    void init(ModelListOfFood model, ControllerFood controller) {
+    void init(ModelListOfFood model, ControllerAccueil controller) {
         ViewFood.model = model;
         ViewFood.controller = controller;
-        //init the ObservableList of custumers to the ListView
-        controller.getFoodListView().setItems(model.getListOfFood());
+        //init the ObservableList of food to the ListView
+        controller.getPerimeFoodListView().setItems(model.getListOfFood());
 
         //call a cell factory and display each observable item in the ListView
-        adaptItems( controller.getFoodListView() );
+        adaptItems( controller.getPerimeFoodListView() );
 
         //listner if user click in the ListView update rangeSelectedItem value
-        listenTo( controller.getFoodListView() );
+        listenTo( controller.getPerimeFoodListView() );
     }
     private void adaptItems(ListView listView) {
         //Set a new cell factory to use in the ListView.
@@ -64,7 +66,7 @@ public class ViewFood {
                                         e.printStackTrace();
                                     }
                                     //initialize the person controller
-                                    foodController.init((ModelListOfFood) item);
+                                    foodController.init((ModelFood) item);
                                     // Display content of the fxml file
                                     setGraphic(listElement);
                                     adaptItems(listView);

@@ -1,35 +1,39 @@
 package Program.Controller;
 
+import Program.Model.ModelListOfFood;
+import Program.View.ViewFood;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 
 public class ControllerAccueil {
+    private ModelListOfFood modelListfood = null;
     @FXML
     private Button btn_close;
-
     @FXML
     private Button btn_pro;
-
     @FXML
     private Button btn_mes;
-
     @FXML
     private Button btn_follow;
-
     @FXML
     private Hyperlink link_aide;
-
     @FXML
     private Hyperlink link_deco;
-
+    @FXML
+    private ListView list_aliperimes;
+    @FXML
+    private ListView list_alipp;
+    @FXML
+    private ListView list_aliok;
     @FXML
     private void closeButtonAction() {
         // get a handle to the stage
@@ -109,6 +113,11 @@ public class ControllerAccueil {
             e.printStackTrace ();
         }
     }
+    public void init(ModelListOfFood foodList, ViewFood view) {
+        this.modelListfood = foodList;
+    }
+
+    public ListView getPerimeFoodListView(){ return list_aliperimes;}
 
 
 }

@@ -31,7 +31,7 @@ ControllerBienvenue {
     @FXML
     private void setBtn_auth() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/aide.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/page_d'accueil.fxml"));
             Parent root1 = (Parent) fxmlLoader.load ();
             Stage stage = (Stage) btn_authentifier.getScene ().getWindow ();
             stage.setTitle ("Aide");

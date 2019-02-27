@@ -11,13 +11,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Program.Controller.ControllerFollow">
    <children>
-      <Hyperlink fx:id="link_accueil" layoutX="35.0" layoutY="20.0" text="page d'accueil" underline="true" />
-      <Hyperlink fx:id="link_aide" layoutX="134.0" layoutY="20.0" text="aide" underline="true" />
-      <Hyperlink fx:id="link_deco" layoutX="439.0" layoutY="20.0" text="se deconnecter" underline="true" />
+      <Hyperlink fx:id="link_accueil" layoutX="35.0" layoutY="20.0" text="page d'accueil" underline="true" onAction="#setLink_accueil"/>
+      <Hyperlink fx:id="link_aide" layoutX="134.0" layoutY="20.0" text="aide" underline="true" onAction="#setLink_aide"/>
+      <Hyperlink fx:id="link_deco" layoutX="439.0" layoutY="20.0" text="se deconnecter" underline="true" onAction="#setLink_deco"/>
       <TabPane layoutX="355.0" layoutY="114.0" prefHeight="264.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" />
-      <Button fx:id="btn_close" layoutX="550.0" layoutY="-2.0" mnemonicParsing="false" text="close" />
+      <Button fx:id="btn_close" layoutX="550.0" layoutY="-2.0" mnemonicParsing="false" text="close" onAction="#closeButtonAction"/>
       <TextField fx:id="text_pro" layoutX="217.0" layoutY="74.0" promptText="profil..." />
       <TitledPane animated="false" layoutX="69.0" layoutY="125.0" text="personnes vous suivent">
         <content>

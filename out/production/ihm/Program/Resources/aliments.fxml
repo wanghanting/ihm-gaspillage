@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="365.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+      <Hyperlink fx:id="link_accueil" layoutX="6.0" layoutY="30.0" text="Page d'accueil" />
+      <Hyperlink fx:id="link_aide" layoutX="114.0" layoutY="30.0" text="Aide" />
+      <Hyperlink fx:id="link_deco" layoutX="542.0" layoutY="30.0" text="Se déconnecter" />
+      <Label layoutX="257.0" layoutY="30.0" text="Aliments" textFill="#3baebb">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="76.0" text="Type d'aliment" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="229.0" layoutX="31.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
+      <Label layoutX="519.0" layoutY="76.0" text="Tous les aliments" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="229.0" layoutX="343.0" layoutY="106.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
+      <Button fx:id="btn_close" layoutX="583.0" layoutY="2.0" mnemonicParsing="false" text="Close" />
+      <Pane fx:id="pan" layoutX="31.0" layoutY="107.0" prefHeight="229.0" prefWidth="280.0">
+         <children>
+            <Button fx:id="btn_ajoutequi" layoutX="77.0" layoutY="3.0" mnemonicParsing="false" text="Ajouter une  étiquette" />
+         </children>
+      </Pane>
+      <Pane layoutX="346.0" layoutY="107.0" prefHeight="229.0" prefWidth="273.0">
+         <children>
+            <Button fx:id="btn_ajoutali" layoutX="75.0" layoutY="3.0" mnemonicParsing="false" text="Ajouter un aliment" />
+         </children>
+      </Pane>
+</children>
+</AnchorPane>

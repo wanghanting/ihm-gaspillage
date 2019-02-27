@@ -1,9 +1,9 @@
 package Program.Model;
 
-public class Tag {
+public class ModleTag {
     private String tagName;
 
-    public Tag(String name){this.tagName=name;}
+    public ModleTag(String name){this.tagName=name;}
 
     public void setName(String name){this.tagName=name;}
 

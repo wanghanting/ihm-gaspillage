@@ -8,20 +8,16 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Program.Controller.ControllerProfil">
    <children>
-      <Button fx:id="btn_close4" layoutX="552.0" layoutY="2.0" mnemonicParsing="false" text="Close" textFill="#f50303" />
+      <Button fx:id="btn_close" layoutX="548.0" layoutY="-1.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Close" textFill="#f50303" />
       <Label layoutX="176.0" layoutY="14.0" prefHeight="60.0" prefWidth="264.0" text="    Mon profil" textAlignment="CENTER">
          <font>
             <Font name="Arial" size="37.0" />
          </font>
       </Label>
-      <TextArea fx:id="txt_warning2" layoutX="10.0" layoutY="81.0" prefHeight="46.0" prefWidth="580.0" text="Aucun de ces champs n'est obligatoire, mais il est recommander d'en remplir un certain nombre&#10; afin que d'autres utilisateurs puises vous identifier et  vous suivez si cela les intéresse.">
-         <font>
-            <Font name="Arial Bold" size="12.0" />
-         </font>
-      </TextArea>
       <Button fx:id="btn_changeimage" layoutX="56.0" layoutY="352.0" mnemonicParsing="false" text="Charger une image " />
       <Label layoutX="236.0" layoutY="160.0" text="Nom" />
       <Label layoutX="236.0" layoutY="236.0" text="Prénom" />
@@ -36,6 +32,7 @@
       <TextField fx:id="txt_frame2" layoutX="236.0" layoutY="264.0" prefHeight="31.0" prefWidth="122.0" />
       <TextField fx:id="txt_frame3" layoutX="236.0" layoutY="348.0" prefHeight="31.0" prefWidth="122.0" />
       <TextArea fx:id="txt_description" layoutX="394.0" layoutY="190.0" prefHeight="147.0" prefWidth="191.0" />
-      <Hyperlink fx:id="link_accueil" layoutX="459.0" layoutY="353.0" text="Hyperlink" />
+      <Hyperlink fx:id="link_accueil" layoutX="448.0" layoutY="353.0" onAction="#setLink_accueil" text="page d'accueil" />
+      <Text layoutX="17.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aucun de ces champs n'est obligatoire, mais il est recommander d'en remplir un certain nombre afin que d'autres utilisateurs puises vous identifier et  vous suivez si cela les intéresse." wrappingWidth="581.4912109375" />
    </children>
 </AnchorPane>

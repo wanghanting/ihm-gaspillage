@@ -77,7 +77,7 @@ public class ControllerAccueil {
         FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/messages.fxml"));
         try {
             Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) btn_pro.getScene ().getWindow ();
+            Stage stage = (Stage) btn_mes.getScene ().getWindow ();
             stage.setTitle ("Messages");
             stage.setScene (new Scene (root1));
             stage.show ();

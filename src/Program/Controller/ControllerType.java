@@ -3,10 +3,7 @@ package Program.Controller;
 import Program.Model.ModelListOfTags;
 import Program.Model.ModelTag;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 public class ControllerType {
 
@@ -28,31 +25,27 @@ public class ControllerType {
     private TextField txt_tag;
 
     @FXML
-    public ListView getListView(){
+    public ListView getListView() {
         return choosenTag;
     }
 
     @FXML
-    public TextField getTxt_tag(){
+    public TextField getTxt_tag() {
         return txt_tag;
     }
 
     @FXML
-    public void init(ModelListOfTags tagList){
+    public void init(ModelListOfTags tagList) {
         this.modelListOfTags = tagList;
+        setBtn_ajoute();
     }
 
     @FXML
-    private void setBtn_ajoute(){
-        try
-        {
-            btn_ajoute.setOnAction( event -> {
-                modelListOfTags.add(new ModelTag(txt_tag.getText()));
-            });
+    private void setBtn_ajoute() {
 
-        }catch(NullPointerException e)
-        {
-            System.out.println("发生异常的 :"+e.getMessage());
-        }
+        btn_ajoute.setOnAction(event -> {
+            modelListOfTags.add(new ModelTag(txt_tag.getText()));
+        });
+
     }
 }

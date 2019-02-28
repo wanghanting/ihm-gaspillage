@@ -25,6 +25,10 @@ public class ControllerAccueil {
     @FXML
     private Button btn_follow;
     @FXML
+    private Button btn_type;
+    @FXML
+    private Button btn_conso;
+    @FXML
     private Hyperlink link_aide;
     @FXML
     private Hyperlink link_deco;
@@ -113,11 +117,42 @@ public class ControllerAccueil {
             e.printStackTrace ();
         }
     }
+
+    @FXML
+    private void setBtn_type(){
+        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/types.fxml"));
+        try {
+            Parent root = (Parent) fxmlLoader.load ();
+            Stage stage = (Stage) btn_type.getScene ().getWindow ();
+            stage.setTitle ("Categorie d'aliment");
+            stage.setScene (new Scene (root));
+            stage.show ();
+        }catch (IOException e){
+            e.printStackTrace ();
+        }
+    }
+
+    @FXML
+    private void setBtn_conso(){
+        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/consommation_texte.fxml"));
+        try {
+            Parent root = (Parent) fxmlLoader.load ();
+            Stage stage = (Stage) btn_conso.getScene ().getWindow ();
+            stage.setTitle ("Consommation");
+            stage.setScene (new Scene (root));
+            stage.show ();
+        }catch (IOException e){
+            e.printStackTrace ();
+        }
+    }
+
     public void init(ModelListOfFood foodList, ViewFood view) {
         this.modelListfood = foodList;
     }
 
-    public ListView getPerimeFoodListView(){ return list_aliperimes;}
+    public ListView getPerimeFoodListView(){
+        return list_aliperimes;
+    }
 
 
 }

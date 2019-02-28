@@ -23,7 +23,7 @@
       <Button fx:id="btn_close" layoutX="550.0" mnemonicParsing="false" onAction="#closeButtonAction" text="close" />
     <Button fx:id="btn_pro" layoutX="34.0" layoutY="111.0" mnemonicParsing="false" onAction="#setBtn_pro" text="Mon profile" />
       <Button fx:id="btn_mes" layoutX="145.0" layoutY="111.0" mnemonicParsing="false" onAction="#setBtn_mes" text="Message" />
-      <Button fx:id="btn_type" layoutX="401.0" layoutY="111.0" mnemonicParsing="false" text="Type" />
+      <Button fx:id="btn_type" layoutX="401.0" layoutY="111.0" mnemonicParsing="false" text="Type" onAction="#setBtn_type"/>
       <Button fx:id="btn_follow" layoutX="238.0" layoutY="111.0" mnemonicParsing="false" onAction="#setBtn_follow" prefHeight="27.0" text="Followers/Following" />
       <Button fx:id="btn_conso" layoutX="466.0" layoutY="111.0" mnemonicParsing="false" text="Consommation" />
       <ListView fx:id="list_aliperimes" layoutX="21.0" layoutY="181.0" prefHeight="200.0" prefWidth="180.0" />

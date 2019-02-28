@@ -30,7 +30,7 @@ public class Main extends Application {
         view.init(model,controller);
 
         primaryStage.setTitle(view.LABEL);
-        primaryStage.setScene(new Scene(root, 600, 475));
+        primaryStage.setScene(new Scene(root, 700, 475));
         primaryStage.show();
     }
 

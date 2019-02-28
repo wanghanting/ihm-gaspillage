@@ -1,65 +1,32 @@
 package Program.Controller;
 
-import Program.Model.ModelListOfTags;
-import Program.Model.ModelTag;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ControllerType {
+public class ControllerConsommation {
 
-    private ModelListOfTags modelListOfTags = null;
+    @FXML
+    private Button btn_close;
 
     @FXML
     private Hyperlink link_accueil;
+
     @FXML
     private Hyperlink link_aide;
+
     @FXML
     private Hyperlink link_deco;
-    @FXML
-    private Button btn_close;
-    @FXML
-    private Button btn_ajoute;
-    @FXML
-    private ListView choosenTag;
-    @FXML
-    private TextField txt_tag;
 
     @FXML
-    public ListView getListView() {
-        return choosenTag;
-    }
-
-    @FXML
-    public TextField getTxt_tag() {
-        return txt_tag;
-    }
-
-    @FXML
-    public void init(ModelListOfTags tagList) {
-        this.modelListOfTags = tagList;
-        setBtn_ajoute();
-    }
-
-    @FXML
-    private void setBtn_ajoute() {
-
-        btn_ajoute.setOnAction(event -> {
-            modelListOfTags.add(new ModelTag(txt_tag.getText()));
-        });
-
-    }
-
-    @FXML
-    private void closeButtonAction() {
-        // get a handle to the stage
+    private void setBtn_close(){
         Stage stage = (Stage) btn_close.getScene ().getWindow ();
-        // do what you have to do
         stage.close ();
     }
 

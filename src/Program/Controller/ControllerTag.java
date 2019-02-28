@@ -12,12 +12,9 @@ public class ControllerTag {
 
     @FXML
     public void init(ModelTag tag) {
-        try {
-            tagName.setText(tag.getName());
-        } catch (NullPointerException e) {
-            System.out.println("发生异常的是:" + e.getMessage());
-        }
-    }
 
+        tagName.setText(tag.getName());
+
+    }
 
 }

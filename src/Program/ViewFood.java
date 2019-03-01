@@ -1,9 +1,9 @@
-package Program.View;
+package Program;
 import Program.Controller.ControllerFood;
 import Program.Model.ModelFood;
 import Program.Model.ModelListOfFood;
-import Program.Controller.ControllerEnregistrer;
 import Program.Controller.ControllerAccueil;
+import Program.Model.ModelListOfTags;
 import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,7 +18,7 @@ public class ViewFood {
     static final String LABEL = "Aliments";
     static final int WIDTH = 200;
     static final int HEIGHT = 10;
-    private static final String FOOD = "../Resources/food.fxml";
+    private static final String FOOD = "Resources/food.fxml";
     private static int rangeSelectedItem = -1;
     private static ModelListOfFood model;
     private static ControllerAccueil controller;
@@ -27,10 +27,13 @@ public class ViewFood {
         return rangeSelectedItem;
     }
 
-    void init(ModelListOfFood model, ControllerAccueil controller) {
+    public void init(ModelListOfFood model, ControllerAccueil controller) {
         ViewFood.model = model;
         ViewFood.controller = controller;
         //init the ObservableList of food to the ListView
+        /*ListView foodperime = new ListView();
+        foodperime.setItems(model.getListOfTag());
+        controller.setView(foodperime);*/
         controller.getPerimeFoodListView().setItems(model.getListOfFood());
 
         //call a cell factory and display each observable item in the ListView

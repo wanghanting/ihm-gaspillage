@@ -1,7 +1,8 @@
 package Program.Controller;
 
 import Program.Model.ModelListOfFood;
-import Program.View.ViewFood;
+import Program.Model.ModelListOfTags;
+import Program.ViewFood;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,6 +18,14 @@ import java.io.IOException;
 public class ControllerAccueil {
     private ModelListOfFood modelListfood = null;
     @FXML
+    private ListView list_alipp;
+    @FXML
+    private ListView list_aliok;
+    @FXML
+    private ListView list_perimes;
+    @FXML
+    private Button btn_ajouter;
+    @FXML
     private Button btn_close;
     @FXML
     private Button btn_pro;
@@ -28,12 +37,6 @@ public class ControllerAccueil {
     private Hyperlink link_aide;
     @FXML
     private Hyperlink link_deco;
-    @FXML
-    private ListView list_aliperimes;
-    @FXML
-    private ListView list_alipp;
-    @FXML
-    private ListView list_aliok;
     @FXML
     private void closeButtonAction() {
         // get a handle to the stage
@@ -86,7 +89,7 @@ public class ControllerAccueil {
         }
     }
 
-    @FXML
+   @FXML
     private void setLink_deco(){
         FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/authentification1.fxml"));
         try {
@@ -113,11 +116,32 @@ public class ControllerAccueil {
             e.printStackTrace ();
         }
     }
-    public void init(ModelListOfFood foodList, ViewFood view) {
-        this.modelListfood = foodList;
+    @FXML
+    private void setBtn_ajouter(){
+        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/enregistrer.fxml"));
+        try {
+            Parent root = (Parent) fxmlLoader.load ();
+            Stage stage = (Stage) btn_follow.getScene ().getWindow ();
+            stage.setTitle ("Enregistrer");
+            stage.setScene (new Scene (root));
+            stage.show ();
+        }catch (IOException e){
+            e.printStackTrace ();
+        }
+
     }
 
-    public ListView getPerimeFoodListView(){ return list_aliperimes;}
+    public ListView getPerimeFoodListView(){ return list_perimes;}
+    public ListView getOkFoodListView(){ return this.list_aliok;}
+    public Button getBtn_close(){return this.btn_close;}
+    public void init(ModelListOfFood food, ViewFood view) {
+        this.modelListfood = food;
+        //list_aliperimes = new ListView();
+        btn_ajouter.setOnAction( event -> {
+            setBtn_ajouter();
+        });
+    }
+
 
 
 }

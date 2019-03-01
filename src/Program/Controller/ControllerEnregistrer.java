@@ -1,11 +1,9 @@
 package Program.Controller;
 import Program.Model.ModelFood;
 import Program.Model.ModelListOfFood;
-import Program.View.ViewFood;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 
 public class ControllerEnregistrer {
     @FXML

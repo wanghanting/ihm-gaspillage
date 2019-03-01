@@ -8,7 +8,6 @@
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -17,7 +16,6 @@
       <ChoiceBox fx:id="sel_type" layoutX="255.0" layoutY="143.0" prefWidth="150.0" />
       <Label layoutX="177.0" layoutY="104.0" text="Nom" />
       <Label layoutX="177.0" layoutY="150.0" text="Type" />
-      <ImageView fx:id="img_aliment" fitHeight="128.0" fitWidth="119.0" layoutX="25.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" />
       <Label layoutX="177.0" layoutY="193.0" text="Quantité" />
       <Spinner fx:id="sel_quan" layoutX="255.0" layoutY="189.0" prefHeight="23.0" prefWidth="150.0" />
       <TextField fx:id="txt_nom" layoutX="255.0" layoutY="101.0" prefHeight="23.0" prefWidth="150.0" />
@@ -29,7 +27,6 @@
       <DatePicker fx:id="jour_expira" layoutX="255.0" layoutY="282.0" prefHeight="23.0" prefWidth="150.0" />
       <Hyperlink fx:id="link_accueil" layoutX="25.0" layoutY="13.0" text="Page d'accueil" />
       <Hyperlink fx:id="link_aide" layoutX="144.0" layoutY="13.0" text="Aide" />
-      <Button fx:id="btn_changerimage" layoutX="21.0" layoutY="210.0" mnemonicParsing="false" text="Changer de l'image" />
       <Label layoutX="217.0" layoutY="17.0" text="Ajouter un aliment " textFill="#3553ea">
          <font>
             <Font size="24.0" />

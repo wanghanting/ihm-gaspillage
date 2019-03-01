@@ -16,8 +16,6 @@ public class ModelListOfFood {
 
     public void addFood(ModelFood food){ listOfFood.add(food); }
 
-    public ObservableList<ModelFood> getListOfFood(){
-        return listOfFood;
-    }
+    public ObservableList<ModelFood> getListOfFood(){return listOfFood;}
 
 }

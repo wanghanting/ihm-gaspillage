@@ -2,6 +2,7 @@ package Program.Controller;
 
 
 
+import Program.Model.ModelFood;
 import Program.Model.ModelUser;
 import javafx.fxml.FXML;
 import javafx.scene.control.Hyperlink;
@@ -19,11 +20,15 @@ public class ControllerUser {
     @FXML
     private TextField text_frame3;
     @FXML
-    private Button btn_suivant;
+    private javafx.scene.control.Button btn_suivant;
+    @FXML
+    private javafx.scene.control.Button btn_authentifier;
     @FXML
     boolean passwordComfirmed;
+    @FXML
+    boolean usernamePasswordUniforme;
 
-
+ModelListOfUsers userInformation = new ModelListOfUsers();
 //    private Button btn_close;
 //    private Button btn_suivant;
 //    private Hyperlink link_auth;
@@ -62,8 +67,24 @@ public class ControllerUser {
 
     public void storeUserInformation(){
         if(comfirmInformation()){
-
+            btn_suivant.setOnAction( event -> {
+                userInformation.ListOfUsers.add(new ModelUser(text_frame1.getText(),text_frame2.getText()));
+            });
         }
+    }
+//athentification
+    public boolean authendification(ModelUser usertest){
+        for(int i=0;i<userInformation.ListOfUsers.size();i++){
+            if(usertest.getUsername() == userInformation.ListOfUsers.get(i).getUsername()&& usertest.getPassword()==userInformation.ListOfUsers.get(i).getPassword()){
+                usernamePasswordUniforme = true;
+                btn_authentifier.setOnAction(event -> {
+
+                });
+            }else{
+                usernamePasswordUniforme = false;
+            }
+        }
+        return usernamePasswordUniforme;
     }
 
 

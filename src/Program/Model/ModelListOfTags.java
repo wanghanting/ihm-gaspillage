@@ -17,6 +17,14 @@ public class ModelListOfTags {
         listOfTag.add(tag);
     }
 
+    public ObservableList<String> getNames(){
+        ObservableList<String> names= FXCollections.observableList(new ArrayList<>());
+        for(int i =0; i < getListOfTag().size();i++){
+            names.add(getListOfTag().get(i).getName());
+        }
+        return names;
+    }
+
     public ObservableList<ModelTag> getListOfTag(){
         return listOfTag;
     }

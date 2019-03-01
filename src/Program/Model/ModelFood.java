@@ -4,20 +4,19 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.scene.control.DatePicker;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class ModelFood {
     private StringProperty name;
     private StringProperty foodType;
     private IntegerProperty quantity;
-    private DatePicker datePurchase;
-    private DatePicker dateExpiration;
+    private LocalDate datePurchase;
+    private LocalDate dateExpiration;
     private IntegerProperty daysBeforeAlmostExpired;
     private StringProperty foodDescription;
 
-    public ModelFood(String name, String foodType, int quantity, DatePicker datePurchase, DatePicker dateExpiration, int daysBeforeAlmostExpired, String foodDescription){
+    public ModelFood(String name, String foodType, int quantity, LocalDate datePurchase, LocalDate dateExpiration, int daysBeforeAlmostExpired, String foodDescription){
         this.name = new SimpleStringProperty(name);
         this.foodType = new SimpleStringProperty(foodType);
         this.quantity = new SimpleIntegerProperty(quantity);
@@ -38,8 +37,8 @@ public class ModelFood {
     public String getName(){return name.get();}
     public String getFoodType(){return foodType.get();}
     public Integer getQuantity(){return quantity.get();}
-    public DatePicker getDatePurchase(){return datePurchase;}
-    public DatePicker getDateExpiration(){return dateExpiration;}
+    public LocalDate getDatePurchase(){return datePurchase;}
+    public LocalDate getDateExpiration(){return dateExpiration;}
     public Integer getDaysBeforeAlmostExpired(){return daysBeforeAlmostExpired.get();}
     public String getFoodDescription(){return foodDescription.get();}
 }

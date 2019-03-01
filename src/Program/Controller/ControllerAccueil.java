@@ -34,6 +34,8 @@ public class ControllerAccueil {
     @FXML
     private Button btn_follow;
     @FXML
+    private Button btn_type;
+    @FXML
     private Hyperlink link_aide;
     @FXML
     private Hyperlink link_deco;
@@ -51,8 +53,6 @@ public class ControllerAccueil {
             FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/aide.fxml"));
             Parent root1 = (Parent) fxmlLoader.load ();
             Stage stage = new Stage ();
-//            stage.initModality (Modality.APPLICATION_MODAL);
-//            stage.initStyle (StageStyle.UNDECORATED);
             stage.setTitle ("Aide");
             stage.setScene (new Scene (root1));
             stage.show ();
@@ -116,6 +116,21 @@ public class ControllerAccueil {
             e.printStackTrace ();
         }
     }
+
+    @FXML
+    private void setBtn_type(){
+        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/types.fxml"));
+        try {
+            Parent root1 = (Parent) fxmlLoader.load ();
+            Stage stage = (Stage) btn_pro.getScene ().getWindow ();
+            stage.setTitle ("Messages");
+            stage.setScene (new Scene (root1));
+            stage.show ();
+        } catch (IOException e) {
+            e.printStackTrace ();
+        }
+    }
+
     @FXML
     private void setBtn_ajouter(){
         FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/enregistrer.fxml"));
@@ -132,13 +147,21 @@ public class ControllerAccueil {
     }
 
     public ListView getPerimeFoodListView(){ return list_perimes;}
+
     public ListView getOkFoodListView(){ return this.list_aliok;}
-    public Button getBtn_close(){return this.btn_close;}
+
+//    public Button getBtn_close(){return this.btn_close;}
+
     public void init(ModelListOfFood food, ViewFood view) {
         this.modelListfood = food;
         //list_aliperimes = new ListView();
+
         btn_ajouter.setOnAction( event -> {
             setBtn_ajouter();
+        });
+
+        btn_type.setOnAction (event -> {
+            setBtn_type ();
         });
     }
 

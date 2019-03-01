@@ -15,10 +15,10 @@ import javafx.util.Callback;
 import java.io.IOException;
 
 public class ViewType {
-    static final String TYPE = "Resources/types.fxml";
+    public static final String TYPE = "Resources/types.fxml";
     static final String TAG = "Resources/tag.fxml";
     static final String ACCUEIL = "Resources/page_d'accueil.fxml";
-    static final String LABEL = "HFV";
+    public static final String LABEL = "HFV";
     private static ModelListOfTags modelListOfTags;
     private static ControllerType controllerType;
     private static int rangeSelectedItem = -1;

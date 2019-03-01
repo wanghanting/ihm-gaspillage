@@ -44,6 +44,10 @@ public class ControllerType {
     public void init(ModelListOfTags tagList) {
         this.modelListOfTags = tagList;
         setBtn_ajoute();
+        setLink_accueil ();
+//        setLink_deco ();
+//        closeButtonAction ();
+        setLink_aide ();
     }
 
     @FXML
@@ -60,7 +64,9 @@ public class ControllerType {
         // get a handle to the stage
         Stage stage = (Stage) btn_close.getScene ().getWindow ();
         // do what you have to do
-        stage.close ();
+        btn_close.setOnAction (event -> {
+            stage.close ();
+        });
     }
 
     @FXML
@@ -71,7 +77,10 @@ public class ControllerType {
             Stage stage = new Stage ();
             stage.setTitle ("Aide");
             stage.setScene (new Scene (root1));
-            stage.show ();
+//            stage.show ();
+            link_aide.setOnAction (event -> {
+                stage.showAndWait ();
+            });
         } catch (IOException e) {
             e.printStackTrace ();
         }
@@ -82,10 +91,13 @@ public class ControllerType {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/page_d'accueil.fxml"));
             Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) link_accueil.getScene ().getWindow ();
+//            Stage stage = (Stage) link_accueil.getScene ().getWindow ();
+            Stage stage = new Stage ();
             stage.setTitle ("Page d'accueil");
             stage.setScene (new Scene (root1));
-            stage.show ();
+            link_accueil.setOnAction (event ->{
+                stage.show ();
+            });
         } catch (IOException e) {
             e.printStackTrace ();
         }

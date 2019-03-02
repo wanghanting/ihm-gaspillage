@@ -2,6 +2,8 @@ package Program.Controller;
 
 import Program.Model.ModelListOfFood;
 import Program.Model.ModelListOfTags;
+import Program.StageFactory;
+import Program.ViewEnregistrer;
 import Program.ViewFood;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,7 +26,7 @@ public class ControllerAccueil {
     @FXML
     private ListView list_perimes;
     @FXML
-    private Button btn_ajouter;
+    private Button btn_ajouterali;
     @FXML
     private Button btn_close;
     @FXML
@@ -116,29 +118,25 @@ public class ControllerAccueil {
             e.printStackTrace ();
         }
     }
-    @FXML
-    private void setBtn_ajouter(){
-        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/enregistrer.fxml"));
-        try {
-            Parent root = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) btn_follow.getScene ().getWindow ();
-            stage.setTitle ("Enregistrer");
-            stage.setScene (new Scene (root));
-            stage.show ();
-        }catch (IOException e){
-            e.printStackTrace ();
-        }
+
+     void setBtn_ajouter(Stage stageold,StageFactory factory) throws IOException {
+
+            stageold.close();
+            factory.initEnregistrer(modelListfood);
 
     }
 
     public ListView getPerimeFoodListView(){ return list_perimes;}
     public ListView getOkFoodListView(){ return this.list_aliok;}
     public Button getBtn_close(){return this.btn_close;}
-    public void init(ModelListOfFood food, ViewFood view) {
+    public void init(ModelListOfFood food, ViewFood view,Stage stage, StageFactory factory) {
         this.modelListfood = food;
-        //list_aliperimes = new ListView();
-        btn_ajouter.setOnAction( event -> {
-            setBtn_ajouter();
+        btn_ajouterali.setOnAction( event -> {
+            try {
+                setBtn_ajouter(stage,factory);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         });
     }
 

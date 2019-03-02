@@ -29,6 +29,6 @@
       <ListView fx:id="list_perimes" layoutX="21.0" layoutY="181.0" prefHeight="181.0" prefWidth="180.0" />
       <ListView fx:id="list_alipp" layoutX="201.0" layoutY="181.0" prefHeight="181.0" prefWidth="180.0" />
       <ListView fx:id="list_aliok" layoutX="381.0" layoutY="181.0" prefHeight="181.0" prefWidth="180.0" />
-      <Button fx:id="btn_ajouter" layoutX="264.0" layoutY="367.0" mnemonicParsing="false" text="Ajouter" />
+      <Button fx:id="btn_ajouterali" layoutX="264.0" layoutY="367.0" mnemonicParsing="false" text="Ajouter" />
    </children>
 </Pane>

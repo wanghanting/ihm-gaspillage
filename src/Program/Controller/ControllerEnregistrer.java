@@ -1,6 +1,9 @@
 package Program.Controller;
+import Program.Main;
 import Program.Model.ModelFood;
 import Program.Model.ModelListOfFood;
+import Program.StageFactory;
+import Program.ViewFood;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -40,30 +43,26 @@ public class ControllerEnregistrer {
 
     public Spinner getSpi_jour(){return  spi_jour;}
 
-    void setBtn_ajouter(){
+    void setBtn_ajouter(Stage stageold,StageFactory factory) throws IOException {
         try {
-            modelListFood.addFood( new ModelFood(txt_nom.getText(),sel_type.getTypeSelector(),(int)spi_quan.getValue(),jour_achatj.getValue(),jour_expira.getValue(),(int)spi_jour.getValue(),txt_info.getText()));
+            modelListFood.addFood( new ModelFood(txt_nom.getText(),(String)sel_type.getValue(),(int)spi_quan.getValue(),jour_achatj.getValue(),jour_expira.getValue(),(int)spi_jour.getValue(),txt_info.getText()));
         }catch (Exception e){
             System.out.println(e);
         }
+        stageold.close();
+        factory.initAccueil(modelListFood);
 
-        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/page_d'accueil.fxml"));
-        try {
-            Parent root = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) btn_ajouter.getScene ().getWindow ();
-            stage.setTitle ("Enregistrer");
-            stage.setScene (new Scene(root));
-            stage.show ();
-        }catch (
-                IOException e){
-            e.printStackTrace ();
-        }
-        System.out.println(modelListFood.getListOfFood().size());
     }
-    public void init(ModelListOfFood foodList) {
+    public void init(ModelListOfFood foodList, Stage stage, StageFactory factory) {
         this.modelListFood = foodList;
         //listner on the buttons
-        btn_ajouter.setOnAction( event -> {setBtn_ajouter(); });
+        btn_ajouter.setOnAction( event -> {
+            try {
+                setBtn_ajouter(stage,factory);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
 
     }
 

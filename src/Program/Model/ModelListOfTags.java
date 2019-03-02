@@ -5,7 +5,7 @@ import javafx.collections.ObservableList;
 import java.util.ArrayList;
 
 public class ModelListOfTags {
-    private ObservableList<ModelTag> listOfTag;
+    private static ObservableList<ModelTag> listOfTag;
 
     public ModelListOfTags(){
         listOfTag = FXCollections.observableList(new ArrayList<>());
@@ -17,7 +17,7 @@ public class ModelListOfTags {
         listOfTag.add(tag);
     }
 
-    public ObservableList<String> getNames(){
+    public static ObservableList<String> getNames(){
         ObservableList<String> names= FXCollections.observableList(new ArrayList<>());
         for(int i =0; i < getListOfTag().size();i++){
             names.add(getListOfTag().get(i).getName());
@@ -25,7 +25,7 @@ public class ModelListOfTags {
         return names;
     }
 
-    public ObservableList<ModelTag> getListOfTag(){
+    public static ObservableList<ModelTag> getListOfTag(){
         return listOfTag;
     }
 }

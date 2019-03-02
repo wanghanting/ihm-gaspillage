@@ -29,8 +29,8 @@ public class ModelFood {
     public void setName(String name){this.name = new SimpleStringProperty(name);}
     public void setFoodType(String foodType){this.foodType = new SimpleStringProperty(foodType);}
     public void setQuantity(Integer quantity){this.quantity = new SimpleIntegerProperty(quantity);}
-//    public void setDatePurchase(DatePicker datePurchase){this.datePurchase = new DatePicker(datePurchase);}
-//    public void setDateExpiration(DatePicker dateExpiration){this.dateExpiration = new DatePicker(dateExpiration);}
+    public void setDatePurchase(LocalDate datePurchase){this.datePurchase = datePurchase;}
+    public void setDateExpiration(LocalDate dateExpiration){this.dateExpiration = dateExpiration;}
     public void setDaysBeforeAlmostExpired(Integer daysBeforeAlmostExpired){this.daysBeforeAlmostExpired = new SimpleIntegerProperty(daysBeforeAlmostExpired);}
     public void setFoodDescription(String foodDescription){this.foodDescription = new SimpleStringProperty(foodDescription);}
 

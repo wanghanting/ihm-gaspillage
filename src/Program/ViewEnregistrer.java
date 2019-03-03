@@ -12,7 +12,8 @@ public class ViewEnregistrer {
         controller.getSel_type().setItems(model.getNames());
         SpinnerValueFactory svf = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 99);
         controller.getSpi_quan().setValueFactory(svf);
-        controller.getSpi_jour().setValueFactory(svf);
+        SpinnerValueFactory svf2 = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 99);
+        controller.getSpi_jour().setValueFactory(svf2);
     }
 
 }

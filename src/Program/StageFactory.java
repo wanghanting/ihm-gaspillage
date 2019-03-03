@@ -22,8 +22,9 @@ public class StageFactory {
         FXMLLoader loader= new FXMLLoader();
         Stage stage = new Stage();
 
-        ViewFood viewFood = new ViewFood();
+        ViewAccueil viewFood = new ViewAccueil();
         ControllerAccueil controllerAccueil = new ControllerAccueil();
+
 
         loader.setController(controllerAccueil);
         Parent root = loader.load(getClass().getResourceAsStream("Resources/page_d'accueil.fxml"));
@@ -46,7 +47,7 @@ public class StageFactory {
         Stage stage = new Stage();
         ModelListOfTags modelListOfTags = new ModelListOfTags();
         ControllerEnregistrer controllerenregistrer = new ControllerEnregistrer();
-        ViewFood viewFood = new ViewFood();
+        ViewAccueil viewFood = new ViewAccueil();
         ViewEnregistrer viewEnregistrer = new ViewEnregistrer();
         loader.setController(controllerenregistrer);
         Parent root = loader.load(getClass().getResourceAsStream("Resources/enregistrer.fxml"));

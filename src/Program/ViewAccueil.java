@@ -4,6 +4,8 @@ import Program.Model.ModelFood;
 import Program.Model.ModelListOfFood;
 import Program.Controller.ControllerAccueil;
 import javafx.beans.value.ChangeListener;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
@@ -11,12 +13,9 @@ import javafx.scene.control.ListView;
 import javafx.util.Callback;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
-public class ViewFood {
-    static final String XML_FILE = "../Resources/page_d'accueil.fxml";
-    static final String LABEL = "Aliments";
-    static final int WIDTH = 200;
-    static final int HEIGHT = 10;
+public class ViewAccueil {
     private static final String FOOD = "Resources/food.fxml";
     private static int rangeSelectedItem = -1;
     private static ModelListOfFood model;
@@ -27,13 +26,19 @@ public class ViewFood {
     }
 
     public void init(ModelListOfFood model, ControllerAccueil controller) {
-        ViewFood.model = model;
-        ViewFood.controller = controller;
+        ViewAccueil.model = model;
+        ViewAccueil.controller = controller;
         //init the ObservableList of food to the ListView
-        controller.getPerimeFoodListView().setItems(model.getListOfFood());
+        model.init();
+        listinit();
+        controller.getPerimeFoodListView().setItems(model.getListOfPerimeFood());
+        controller.getOkFoodListView().setItems(model.getListOfOkFood());
+        controller.getPPFoodListView().setItems(model.getListOfPPFood());
 
         //call a cell factory and display each observable item in the ListView
         adaptItems( controller.getPerimeFoodListView() );
+        adaptItems(controller.getOkFoodListView());
+        adaptItems(controller.getPPFoodListView());
 
         //listner if user click in the ListView update rangeSelectedItem value
         listenTo( controller.getPerimeFoodListView() );
@@ -82,9 +87,16 @@ public class ViewFood {
     private void listenTo(ListView listView) {
         listView.getSelectionModel().selectedItemProperty().addListener(
                 (ChangeListener<ModelFood>) (observable, oldValue, newValue) -> {
-                    rangeSelectedItem = model.getListOfFood().indexOf(newValue);
+                    rangeSelectedItem = model.getListOfOkFood().indexOf(newValue);
                     // --> GRRR! in javaFX the field Name is kbown in the Controller class (not in the view)
                     //controller.getChoosenName().setText(newValue.getName());
                 });
+    }
+    private void listinit(){
+        ObservableList listvide= FXCollections.observableList(new ArrayList<>());
+        controller.getPerimeFoodListView().setItems(listvide);
+        controller.getOkFoodListView().setItems(listvide);
+        controller.getPPFoodListView().setItems(listvide);
+
     }
 }

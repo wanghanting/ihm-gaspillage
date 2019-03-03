@@ -1,10 +1,8 @@
 package Program.Controller;
 
 import Program.Model.ModelListOfFood;
-import Program.Model.ModelListOfTags;
 import Program.StageFactory;
-import Program.ViewEnregistrer;
-import Program.ViewFood;
+import Program.ViewAccueil;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -128,8 +126,9 @@ public class ControllerAccueil {
 
     public ListView getPerimeFoodListView(){ return list_perimes;}
     public ListView getOkFoodListView(){ return this.list_aliok;}
+    public ListView getPPFoodListView(){return  this.list_alipp;}
     public Button getBtn_close(){return this.btn_close;}
-    public void init(ModelListOfFood food, ViewFood view,Stage stage, StageFactory factory) {
+    public void init(ModelListOfFood food, ViewAccueil view, Stage stage, StageFactory factory) {
         this.modelListfood = food;
         btn_ajouterali.setOnAction( event -> {
             try {

@@ -41,28 +41,23 @@ public class ControllerAccueil {
     private Hyperlink link_aide;
     @FXML
     private Hyperlink link_deco;
-    @FXML
-    private void closeButtonAction() {
-        // get a handle to the stage
-        Stage stage = (Stage) btn_close.getScene ().getWindow ();
-        // do what you have to do
-        stage.close ();
-    }
 
     @FXML
-    private void setLink_aide() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/aide.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = new Stage ();
+    private void setLink_aide(StageFactory stageFactory) throws IOException{
+//        try {
+//            FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/aide.fxml"));
+//            Parent root = (Parent) fxmlLoader.load ();
+//            Stage stage = new Stage ();
 //            stage.initModality (Modality.APPLICATION_MODAL);
 //            stage.initStyle (StageStyle.UNDECORATED);
-            stage.setTitle ("Aide");
-            stage.setScene (new Scene (root1));
-            stage.show ();
-        } catch (IOException e) {
-            e.printStackTrace ();
-        }
+//            stage.setTitle ("Aide");
+//            stage.setScene (new Scene (root));
+//            stage.show ();
+//        } catch (IOException e) {
+//            e.printStackTrace ();
+//        }
+        stageFactory.initAide ();
+
     }
 
     @FXML
@@ -137,9 +132,22 @@ public class ControllerAccueil {
     public ListView getPerimeFoodListView(){ return list_perimes;}
     public ListView getOkFoodListView(){ return this.list_aliok;}
     public ListView getPPFoodListView(){return  this.list_alipp;}
-    public Button getBtn_close(){return this.btn_close;}
+
+    void setBtn_close(Stage stage){
+        stage.close ();
+    }
     public void init(ModelListOfFood food, ViewAccueil view, Stage stage, StageFactory factory) {
         this.modelListfood = food;
+        btn_close.setOnAction (event -> {
+            setBtn_close (stage);
+        });
+        link_aide.setOnAction (event -> {
+            try{
+                setLink_aide (factory);
+            }catch (IOException e){
+                e.printStackTrace ();
+            }
+        });
         btn_ajouterali.setOnAction( event -> {
             try {
                 setBtn_ajouter(stage,factory);

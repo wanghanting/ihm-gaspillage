@@ -1,6 +1,7 @@
 package Program;
 
 import Program.Controller.ControllerAccueil;
+import Program.Controller.ControllerAide;
 import Program.Controller.ControllerEnregistrer;
 import Program.Controller.ControllerType;
 import Program.Model.ModelListOfFood;
@@ -16,8 +17,9 @@ import java.io.IOException;
 
 
 public class StageFactory {
-    static int width=600;
-    static int height=475;
+    static int width = 600;
+    static int height = 475;
+
     private ModelListOfTags modelListOfTags = new ModelListOfTags();
     private ModelListOfFood modelListOfFood = new ModelListOfFood();
 
@@ -40,7 +42,6 @@ public class StageFactory {
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
-                //此处当stage关闭时，同时结束程序，避免stage关闭后，程序界面关闭了，但后台线程却依然运行的问题
                 System.exit(0);
             }
         });
@@ -62,30 +63,49 @@ public class StageFactory {
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
-                //此处当stage关闭时，同时结束程序，避免stage关闭后，程序界面关闭了，但后台线程却依然运行的问题
+                //锟剿达拷锟斤拷stage锟截憋拷时锟斤拷同时锟斤拷锟斤拷锟斤拷锟津，憋拷锟斤拷stage锟截闭后，筹拷锟斤拷锟斤拷锟截憋拷锟剿ｏ拷锟斤拷锟斤拷台锟竭筹拷却锟斤拷然锟斤拷锟叫碉拷锟斤拷锟斤拷
                 System.exit(0);
             }
         });
         return stage;
     }
 
-    public Stage initType() throws IOException{
-        FXMLLoader loader = new FXMLLoader();
-        Stage stage = new Stage();
-        ViewType viewType = new ViewType();
-        ControllerType controller = new ControllerType();
+    public Stage initType() throws IOException {
+        FXMLLoader loader = new FXMLLoader ();
+        Stage stage = new Stage ();
+        ViewType viewType = new ViewType ();
+        ControllerType controller = new ControllerType ();
 
-        loader.setController(controller);
-        Parent root = loader.load(getClass().getResourceAsStream("Resources/types.fxml"));
+        loader.setController (controller);
+        Parent root = loader.load (getClass ().getResourceAsStream ("Resources/types.fxml"));
 
-        controller.init(modelListOfTags,viewType,stage,this);
-        viewType.init(modelListOfTags,controller);
-        stage.setScene(new Scene(root,width,height));
-        stage.show();
-        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+        controller.init (modelListOfTags, viewType, stage, this);
+        viewType.init (modelListOfTags, controller);
+        stage.setScene (new Scene (root, width, height));
+        stage.show ();
+        stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
             @Override
             public void handle(WindowEvent event) {
-                System.exit(0);
+                System.exit (0);
+            }
+        });
+        return stage;
+    }
+
+    public Stage initAide() throws IOException {
+        FXMLLoader loader = new FXMLLoader ();
+        Stage stage = new Stage ();
+        ControllerAide controllerAide = new ControllerAide ();
+
+        loader.setController (controllerAide);
+        Parent root = loader.load (getClass ().getResourceAsStream ("Resources/aide.fxml"));
+        controllerAide.init (stage);
+        stage.setScene (new Scene (root, width, height));
+        stage.show();
+        stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
+            @Override
+            public void handle(WindowEvent event) {
+                System.exit (0);
             }
         });
         return stage;
@@ -98,4 +118,5 @@ public class StageFactory {
     public void setModelListOfTags(ModelListOfTags modelListOfTags){
         this.modelListOfTags = modelListOfTags;
     }
+
 }

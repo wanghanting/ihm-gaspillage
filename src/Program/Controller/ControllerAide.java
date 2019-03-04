@@ -8,17 +8,17 @@ import javafx.stage.Stage;
 
 public class ControllerAide {
 
-    Scene scene;
-
     @FXML
     private Button btn_ok;
 
-    @FXML
-    private void setBtn_ok(){
-        // get a handle to the stage
-        Stage stage = (Stage)btn_ok.getScene().getWindow();
-        // do what you have to do
+    void setBtn_ok(Stage stage){
         stage.close();
+    }
+
+    public void init(Stage stage){
+        btn_ok.setOnAction (event -> {
+            setBtn_ok (stage);
+        });
     }
 
 

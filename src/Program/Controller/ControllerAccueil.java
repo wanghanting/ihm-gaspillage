@@ -1,10 +1,12 @@
 package Program.Controller;
 
 import Program.Model.ModelListOfFood;
+import Program.Model.ModelListOfTags;
 import Program.StageFactory;
 import Program.ViewAccueil;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -33,6 +35,8 @@ public class ControllerAccueil {
     private Button btn_mes;
     @FXML
     private Button btn_follow;
+    @FXML
+    private Button btn_type;
     @FXML
     private Hyperlink link_aide;
     @FXML
@@ -120,8 +124,14 @@ public class ControllerAccueil {
      void setBtn_ajouter(Stage stageold,StageFactory factory) throws IOException {
 
             stageold.close();
-            factory.initEnregistrer(modelListfood);
+            factory.setModelListOfFood(modelListfood);
+            factory.initEnregistrer();
 
+    }
+
+    void serBtn_type(Stage stageold,StageFactory factory)throws IOException{
+        stageold.close();
+        factory.initType();
     }
 
     public ListView getPerimeFoodListView(){ return list_perimes;}
@@ -134,6 +144,13 @@ public class ControllerAccueil {
             try {
                 setBtn_ajouter(stage,factory);
             } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        btn_type.setOnAction(event -> {
+            try {
+                serBtn_type(stage,factory);
+            }catch (IOException e){
                 e.printStackTrace();
             }
         });

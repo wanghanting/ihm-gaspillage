@@ -2,6 +2,8 @@ package Program.Controller;
 
 import Program.Model.ModelListOfTags;
 import Program.Model.ModelTag;
+import Program.StageFactory;
+import Program.ViewType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -41,10 +43,21 @@ public class ControllerType {
     }
 
     @FXML
-    public void init(ModelListOfTags tagList) {
+    public void init(ModelListOfTags tagList, ViewType view, Stage stage, StageFactory factory) {
         this.modelListOfTags = tagList;
-        setBtn_ajoute();
-        setLink_accueil ();
+        link_accueil.setOnAction(event -> {
+            try {
+                setLink_accueil(stage,factory);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        });
+
+        btn_ajoute.setOnAction(event -> {
+            setBtn_ajoute();
+            factory.setModelListOfTags(modelListOfTags);
+        });
+
 //        setLink_deco ();
 //        closeButtonAction ();
         setLink_aide ();
@@ -52,10 +65,7 @@ public class ControllerType {
 
     @FXML
     private void setBtn_ajoute() {
-
-        btn_ajoute.setOnAction(event -> {
-            modelListOfTags.add(new ModelTag(txt_tag.getText()));
-        });
+        modelListOfTags.add(new ModelTag(txt_tag.getText()));
 
     }
 
@@ -87,20 +97,9 @@ public class ControllerType {
     }
 
     @FXML
-    private void setLink_accueil(){
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/page_d'accueil.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load ();
-//            Stage stage = (Stage) link_accueil.getScene ().getWindow ();
-            Stage stage = new Stage ();
-            stage.setTitle ("Page d'accueil");
-            stage.setScene (new Scene (root1));
-            link_accueil.setOnAction (event ->{
-                stage.show ();
-            });
-        } catch (IOException e) {
-            e.printStackTrace ();
-        }
+    private void setLink_accueil(Stage stageold,StageFactory factory)throws IOException{
+            stageold.close();
+            factory.initAccueil();
     }
 
     @FXML

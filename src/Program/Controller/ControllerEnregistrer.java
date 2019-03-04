@@ -45,7 +45,8 @@ public class ControllerEnregistrer {
             System.out.println(e);
         }
         stageold.close();
-        factory.initAccueil(modelListFood);
+        factory.setModelListOfFood(modelListFood);
+        factory.initAccueil();
 
     }
     public void init(ModelListOfFood foodList, Stage stage, StageFactory factory) {

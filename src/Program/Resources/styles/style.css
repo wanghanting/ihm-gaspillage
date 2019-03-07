@@ -1,0 +1,12 @@
+.button{
+
+}
+
+#btn_ajouter{
+    -fx-background-color : red;
+}
+
+#btn_ajouter:hover {
+    -fx-cursor: hand;
+    -fx-background-color: blue;
+}

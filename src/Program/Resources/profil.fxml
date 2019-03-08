@@ -10,9 +10,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Program.Controller.ControllerProfil">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" >
    <children>
-      <Button fx:id="btn_close" layoutX="548.0" layoutY="-1.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Close" textFill="#f50303" />
+      <Button fx:id="btn_close" layoutX="548.0" layoutY="-1.0" mnemonicParsing="false" text="Close" textFill="#f50303" />
       <Label layoutX="176.0" layoutY="14.0" prefHeight="60.0" prefWidth="264.0" text="    Mon profil" textAlignment="CENTER">
          <font>
             <Font name="Arial" size="37.0" />
@@ -32,7 +32,7 @@
       <TextField fx:id="txt_frame2" layoutX="236.0" layoutY="264.0" prefHeight="31.0" prefWidth="122.0" />
       <TextField fx:id="txt_frame3" layoutX="236.0" layoutY="348.0" prefHeight="31.0" prefWidth="122.0" />
       <TextArea fx:id="txt_description" layoutX="394.0" layoutY="190.0" prefHeight="147.0" prefWidth="191.0" />
-      <Hyperlink fx:id="link_accueil" layoutX="448.0" layoutY="353.0" onAction="#setLink_accueil" text="page d'accueil" />
+      <Hyperlink fx:id="link_accueil" layoutX="448.0" layoutY="353.0" text="page d'accueil" />
       <Text layoutX="17.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aucun de ces champs n'est obligatoire, mais il est recommander d'en remplir un certain nombre afin que d'autres utilisateurs puises vous identifier et  vous suivez si cela les intéresse." wrappingWidth="581.4912109375" />
    </children>
 </AnchorPane>

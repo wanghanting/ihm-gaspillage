@@ -4,13 +4,15 @@ import Program.Model.ModelListOfFood;
 import Program.StageFactory;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class ControllerEnregistrer {
-    @FXML
     private ModelListOfFood modelListFood;
+    @FXML
+    private HBox hbox1;
     @FXML
     private TextField txt_nom;
     @FXML
@@ -49,7 +51,9 @@ public class ControllerEnregistrer {
         factory.initAccueil();
 
     }
+    //public Button getBtn_ajouter() {return btn_ajouter;}
     public void init(ModelListOfFood foodList, Stage stage, StageFactory factory) {
+        this.btn_ajouter.getStyleClass().add("buttonFred");
         this.modelListFood = foodList;
         //listner on the buttons
         btn_ajouter.setOnAction( event -> {

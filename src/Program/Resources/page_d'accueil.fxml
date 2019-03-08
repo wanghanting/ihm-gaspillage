@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Hyperlink fx:id="link_aide" layoutX="126.0" layoutY="24.0" text="aide" underline="true" />
       <Hyperlink fx:id="link_deco" layoutX="399.0" layoutY="24.0" text="se deconnecter" underline="true" />
@@ -17,9 +17,9 @@
             <Font size="41.0" />
          </font>
       </Label>
-      <TitledPane animated="false" layoutX="21.0" layoutY="156.0" prefHeight="25.0" prefWidth="180.0" text="Aliments perimes" />
-      <TitledPane animated="false" layoutX="201.0" layoutY="156.0" prefHeight="25.0" prefWidth="180.0" text="Presque perimes" />
-      <TitledPane animated="false" layoutX="380.0" layoutY="156.0" prefHeight="25.0" prefWidth="180.0" text="C'est OK!" />
+      <TitledPane fx:id="aliments_perimes" animated="false" layoutX="21.0" layoutY="156.0" prefHeight="25.0" prefWidth="180.0" text="Aliments perimes" textFill="RED" />
+      <TitledPane fx:id="aliments_presque_perimes" animated="false" layoutX="201.0" layoutY="156.0" prefHeight="25.0" prefWidth="180.0" text="Presque perimes" textFill="#ffac00" />
+      <TitledPane fx:id="aliments_ok" animated="false" layoutX="380.0" layoutY="156.0" prefHeight="25.0" prefWidth="180.0" text="C'est OK!" textFill="#23bb0e" />
       <Button fx:id="btn_close" layoutX="550.0" mnemonicParsing="false" text="close" />
     <Button fx:id="btn_pro" layoutX="34.0" layoutY="111.0" mnemonicParsing="false" text="Mon profile" />
       <Button fx:id="btn_mes" layoutX="145.0" layoutY="111.0" mnemonicParsing="false" text="Message" />

@@ -43,7 +43,7 @@ public class ControllerEnregistrer {
 
     void setBtn_ajouter(Stage stageold,StageFactory factory) throws IOException {
         if(txt_nom.getText() == null || sel_type.getValue() == null || spi_quan.getValue() == null || jour_achatj.getValue() == null || jour_expira.getValue() == null){
-            lab_null.setText("les champs ne pouvent pas être vides(sauf 'information à propos de l'aliment') ,\nremplissez-les s'il vous plait.");
+            lab_null.setText("les champs ne peuvent pas être vides(sauf 'information à propos de l'aliment') ,\nremplissez-les s'il vous plait.");
         }else {
             try {
                 modelListFood.addFood(new ModelFood(txt_nom.getText(), (String) sel_type.getValue(), (int) spi_quan.getValue(), jour_achatj.getValue(), jour_expira.getValue(), (int) spi_jour.getValue(), txt_info.getText()));

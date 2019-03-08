@@ -63,7 +63,7 @@
             <MenuItem fx:id="par_ali" mnemonicParsing="false" text="par aliment" />
          </items>
       </MenuButton>
-      <DatePicker id="sel_date" fx:id="date_back" layoutX="400.0" layoutY="91.0" prefHeight="23.0" prefWidth="125.0" />
+      <DatePicker id="sel_date" fx:id="date_to" layoutX="400.0" layoutY="91.0" prefHeight="23.0" prefWidth="125.0" />
       <Text layoutX="220.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="De" />
       <Text layoutX="382.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="à" />
       <DatePicker id="sel_date" fx:id="date_from" layoutX="246.0" layoutY="91.0" prefHeight="23.0" prefWidth="125.0" />

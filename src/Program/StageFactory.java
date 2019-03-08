@@ -34,11 +34,7 @@ public class StageFactory {
 
         controllerAccueil.init(modelListOfFood,viewFood,stage,this);
         viewFood.init(modelListOfFood, controllerAccueil);
-
-        Scene scene = new Scene(root, width, height);
-        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
-        stage.setScene(scene);
-
+        stage.setScene(new Scene(root, width, height));
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
@@ -48,6 +44,33 @@ public class StageFactory {
         });
         return stage;
     }
+
+    public Stage initFoodByType(String type) throws IOException{
+
+        FXMLLoader loader= new FXMLLoader();
+        Stage stage = new Stage();
+
+        ViewFoodByType view = new ViewFoodByType();
+        ControllerFoodByType controller = new ControllerFoodByType();
+
+
+        loader.setController(controller);
+        Parent root = loader.load(getClass().getResourceAsStream("Resources/aliment_par_type.fxml"));
+
+        modelListOfFood.setType(type);
+        controller.init(modelListOfFood,view,stage,this,type);
+        view.init(modelListOfFood, controller);
+        stage.setScene(new Scene(root, width, height));
+        stage.show();
+        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                System.exit(0);
+            }
+        });
+        return stage;
+    }
+
     public Stage initEnregistrer() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         Stage stage = new Stage();
@@ -59,15 +82,12 @@ public class StageFactory {
 
         controllerenregistrer.init(modelListOfFood, stage,this);
         viewEnregistrer.init(modelListOfTags, controllerenregistrer);
-
-        Scene scene = new Scene(root, width, height);
-        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
-        stage.setScene(scene);
-
+        stage.setScene(new Scene(root, width, height));
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
+                //�˴���stage�ر�ʱ��ͬʱ�������򣬱���stage�رպ󣬳������ر��ˣ�����̨�߳�ȴ��Ȼ���е�����
                 System.exit(0);
             }
         });
@@ -85,11 +105,7 @@ public class StageFactory {
 
         controller.init (modelListOfTags, viewType, stage, this);
         viewType.init (modelListOfTags, controller);
-
-        Scene scene = new Scene(root, width, height);
-        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
-        stage.setScene(scene);
-
+        stage.setScene (new Scene (root, width, height));
         stage.show ();
         stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
             @Override
@@ -108,11 +124,7 @@ public class StageFactory {
         loader.setController (controllerAide);
         Parent root = loader.load (getClass ().getResourceAsStream ("Resources/aide.fxml"));
         controllerAide.init (stage);
-
-        Scene scene = new Scene(root, width, height);
-        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
-        stage.setScene(scene);
-
+        stage.setScene (new Scene (root, width, height));
         stage.show();
         stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
             @Override
@@ -157,12 +169,17 @@ public class StageFactory {
 
     }
 
+
     public void setModelListOfFood(ModelListOfFood modelListOfFood){
         this.modelListOfFood = modelListOfFood;
     }
 
     public void setModelListOfTags(ModelListOfTags modelListOfTags){
         this.modelListOfTags = modelListOfTags;
+    }
+
+    public ModelListOfFood getModelListOfFood(){
+        return modelListOfFood;
     }
 
 }

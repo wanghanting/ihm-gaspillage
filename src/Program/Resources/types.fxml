@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="365.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="365.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Hyperlink fx:id="link_accueil" layoutX="45.0" layoutY="30.0" text="Page d'accueil" />
         <Hyperlink fx:id="link_aide" layoutX="162.0" layoutY="30.0" text="Aide" />
@@ -19,8 +19,9 @@
             </font>
         </Label>
         <Button fx:id="btn_close" layoutX="583.0" layoutY="2.0" mnemonicParsing="false" text="Close" />
-        <Button fx:id="btn_ajoute" layoutX="380.0" layoutY="84.0" mnemonicParsing="false" text="Ajouter une  type"/>
+        <Button fx:id="btn_ajoute" layoutX="380.0" layoutY="84.0" mnemonicParsing="false" text="Ajouter une  type" />
         <ListView fx:id="choosenTag" layoutX="132.0" layoutY="117.0" prefHeight="200.0" prefWidth="391.0" />
         <TextField fx:id="txt_tag" layoutX="199.0" layoutY="84.0" />
+      <Button fx:id="btn_open" layoutX="300.0" layoutY="328.0" mnemonicParsing="false" text="Ouvrir" />
     </children>
 </AnchorPane>

@@ -84,6 +84,7 @@ public class ViewType{
         listView.getSelectionModel().selectedItemProperty().addListener(
                 (ChangeListener<ModelTag>) (observable, oldValue, newValue) -> {
                     rangeSelectedItem = modelListOfTags.getListOfTag().indexOf(newValue);
+                    controllerType.setType(newValue.getName());
                 }
 
         );

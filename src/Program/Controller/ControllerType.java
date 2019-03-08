@@ -4,6 +4,8 @@ import Program.Model.ModelListOfTags;
 import Program.Model.ModelTag;
 import Program.StageFactory;
 import Program.ViewType;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,6 +18,7 @@ import java.io.IOException;
 public class ControllerType {
 
     private ModelListOfTags modelListOfTags = null;
+    private String type;
 
     @FXML
     private Hyperlink link_accueil;
@@ -31,6 +34,8 @@ public class ControllerType {
     private ListView choosenTag;
     @FXML
     private TextField txt_tag;
+    @FXML
+    private Button btn_open;
 
     @FXML
     public ListView getListView() {
@@ -48,6 +53,14 @@ public class ControllerType {
         link_accueil.setOnAction(event -> {
             try {
                 setLink_accueil(stage,factory);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        });
+
+        btn_open.setOnAction(event -> {
+            try {
+                setBtn_open(stage,factory);
             }catch (IOException e){
                 e.printStackTrace();
             }
@@ -103,6 +116,13 @@ public class ControllerType {
     }
 
     @FXML
+    private void setBtn_open(Stage stageold,StageFactory factory)throws IOException{
+        stageold.close();
+        factory.initFoodByType(type);
+    }
+
+
+    @FXML
     private void setLink_deco(){
         FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/authentification1.fxml"));
         try {
@@ -114,5 +134,13 @@ public class ControllerType {
         } catch (IOException e) {
             e.printStackTrace ();
         }
+    }
+
+    public void setType(String type){
+        this.type = type;
+    }
+
+    public String getType(){
+        return type;
     }
 }

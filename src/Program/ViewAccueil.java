@@ -38,9 +38,10 @@ public class ViewAccueil {
         controller.getPerimeFoodListView().setItems(model.getListOfPerimeFood());
         controller.getOkFoodListView().setItems(model.getListOfOkFood());
         controller.getPPFoodListView().setItems(model.getListOfPPFood());
+        System.out.println(model.getListOfPerimeFood().size());
 
         //call a cell factory and display each observable item in the ListView
-        adaptItems( controller.getPerimeFoodListView() );
+        adaptItems(controller.getPerimeFoodListView() );
         adaptItems(controller.getOkFoodListView());
         adaptItems(controller.getPPFoodListView());
 
@@ -48,6 +49,8 @@ public class ViewAccueil {
 
         //listner if user click in the ListView update rangeSelectedItem value
         listenTo( controller.getPerimeFoodListView() );
+        listenTo(controller.getOkFoodListView());
+        listenTo(controller.getPPFoodListView());
     }
     private void adaptItems(ListView listView) {
         //Set a new cell factory to use in the ListView.
@@ -93,9 +96,8 @@ public class ViewAccueil {
     private void listenTo(ListView listView) {
         listView.getSelectionModel().selectedItemProperty().addListener(
                 (ChangeListener<ModelFood>) (observable, oldValue, newValue) -> {
-                    rangeSelectedItem = model.getListOfOkFood().indexOf(newValue);
-                    // --> GRRR! in javaFX the field Name is kbown in the Controller class (not in the view)
-                    //controller.getChoosenName().setText(newValue.getName());
+                    rangeSelectedItem = model.getListOfFoodA().indexOf(newValue);
+                    //controller.getChoosenFood(newValue.getName(),newValue.getDateExpiration());
                 });
     }
     private void listinit(){

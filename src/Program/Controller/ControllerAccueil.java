@@ -1,10 +1,12 @@
 package Program.Controller;
 
+import Program.Model.ModelFood;
 import Program.Model.ModelListOfFood;
 import Program.Model.ModelListOfTags;
 import Program.StageFactory;
 import Program.ViewAccueil;
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -16,10 +18,12 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 
 public class ControllerAccueil {
     private ModelListOfFood modelListfood = null;
+    private int chosenfood;
     @FXML
     private ListView list_alipp;
     @FXML
@@ -44,6 +48,8 @@ public class ControllerAccueil {
     private Hyperlink link_deco;
     @FXML
     private Button btn_conso;
+    @FXML
+    private Button btn_delete;
 
     @FXML
     private void setLink_aide(StageFactory stageFactory) throws IOException{
@@ -136,6 +142,11 @@ public class ControllerAccueil {
         stage.close ();
     }
 
+    void deletefood(){
+
+
+    }
+
     public void init(ModelListOfFood food, ViewAccueil view, Stage stage, StageFactory factory) {
         this.modelListfood = food;
         btn_close.setOnAction (event -> {
@@ -179,8 +190,19 @@ public class ControllerAccueil {
                 e.printStackTrace();
             }
         });
+        btn_delete.setOnAction(event -> {
+            System.out.println(view.getRangeSelectedItem());
+            this.modelListfood.getListOfFoodA().remove(view.getRangeSelectedItem());
+            factory.setModelListOfFood(this.modelListfood);
+
+            System.out.println(this.modelListfood.getListOfFoodA().size());
+            stage.close();
+            try {
+                factory.initAccueil();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
     }
-
-
 
 }

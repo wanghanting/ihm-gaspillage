@@ -7,45 +7,66 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class ModelListOfFood {
-    private ObservableList<ModelFood> listOfFood;
+    private ObservableList<ModelFood> listOfFoodA;
+    private ObservableList<ModelFood> listOfFoodG;
     private ObservableList<ModelFood> listOfOkFood;
     private ObservableList<ModelFood> listOfPerimeFood;
     private ObservableList<ModelFood> listOfPPFood;
+    private ObservableList<ModelFood> listOfOkFoodG;
+    private ObservableList<ModelFood> listOfPerimeFoodG;
+    private ObservableList<ModelFood> listOfPPFoodG;
     private ObservableList<ModelFood> listOfOkFoodOfOneType;
     private ObservableList<ModelFood> listOfPerimeFoodOfOneType;
     private ObservableList<ModelFood> listOfPPFoodOfOneType;
     private String type;
 
     public ModelListOfFood(){
-        listOfOkFood = FXCollections.observableList(new ArrayList<>());
-        listOfFood= FXCollections.observableList(new ArrayList<>());
+        listOfFoodA= FXCollections.observableList(new ArrayList<>());
+        listOfFoodG= FXCollections.observableList(new ArrayList<>());
         listOfPerimeFood=FXCollections.observableList(new ArrayList<>());
+        listOfOkFood = FXCollections.observableList(new ArrayList<>());
         listOfPPFood= FXCollections.observableList(new ArrayList<>());
+        listOfPerimeFoodG=FXCollections.observableList(new ArrayList<>());
+        listOfOkFoodG = FXCollections.observableList(new ArrayList<>());
+        listOfPPFoodG= FXCollections.observableList(new ArrayList<>());
         listOfOkFoodOfOneType = FXCollections.observableList(new ArrayList<>());
         listOfPerimeFoodOfOneType = FXCollections.observableList(new ArrayList<>());
         listOfPPFoodOfOneType = FXCollections.observableList(new ArrayList<>());
-        listOfFood.add(new ModelFood("apple","fruit",1,LocalDate.of(2019, 1, 8),LocalDate.of(2019, 2, 8),1,"from England"));
+        listOfFoodA.add(new ModelFood("apple","fruit",1,LocalDate.of(2019, 1, 8),LocalDate.of(2019, 2, 8),1,"from England"));
+        listOfFoodG.add(new ModelFood("apple","fruit",1,LocalDate.of(2019, 1, 8),LocalDate.of(2019, 2, 8),1,"from England"));
     }
 
     public void addFood(ModelFood food){
-        this.listOfFood.add(food);
+        this.listOfFoodA.add(food);
+        this.listOfFoodG.add(food);
     }
-    public ObservableList<ModelFood> getListOfFood(){return  listOfFood;}
+    public ObservableList<ModelFood> getListOfFoodA(){return  listOfFoodA;}
     public ObservableList<ModelFood> getListOfOkFood(){return listOfOkFood;}
     public ObservableList<ModelFood> getListOfPPFood(){return listOfPPFood;}
     public ObservableList<ModelFood> getListOfPerimeFood(){return listOfPerimeFood;}
-
+    public ObservableList<ModelFood> getListOfOkFoodG(){return listOfOkFoodG;}
+    public ObservableList<ModelFood> getListOfPPFoodG(){return listOfPPFoodG;}
+    public ObservableList<ModelFood> getListOfPerimeFoodG(){return listOfPerimeFoodG;}
     public void init(){
         listOfPPFood.removeAll(listOfPPFood);
         listOfPerimeFood.removeAll(listOfPerimeFood);
         listOfOkFood.removeAll(listOfOkFood);
-        for(ModelFood food:this.listOfFood){
+        listOfPPFoodG.removeAll(listOfPPFoodG);
+        listOfPerimeFoodG.removeAll(listOfPerimeFoodG);
+        listOfOkFoodG.removeAll(listOfOkFoodG);
+        for(ModelFood food:this.listOfFoodA){
             if(food.getDateExpiration().compareTo(LocalDate.now())<0){
                 listOfPerimeFood.add(food);
             }else if(food.getDateExpiration().minusDays((long)food.getDaysBeforeAlmostExpired()).compareTo(LocalDate.now())>0){
                 listOfOkFood.add(food);
-                System.out.println(listOfFood.size());
             }else listOfPPFood.add(food);
+        }
+        for(ModelFood food:this.listOfFoodG){
+            if(food.getDateExpiration().compareTo(LocalDate.now())<0){
+                listOfPerimeFoodG.add(food);
+            }else if(food.getDateExpiration().minusDays((long)food.getDaysBeforeAlmostExpired()).compareTo(LocalDate.now())>0){
+                listOfOkFoodG.add(food);
+            }else listOfPPFoodG.add(food);
         }
     }
 

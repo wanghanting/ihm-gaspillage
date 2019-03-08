@@ -8,6 +8,6 @@ public class ControllerFood {
     @FXML
     private Label food;
     public void init(ModelFood mfood) {
-        food.setText(mfood.getName()+" "+mfood.getFoodType()+" "+mfood.getQuantity());
+        food.setText(mfood.getName()+"  "+mfood.getFoodType()+"  "+mfood.getQuantity());
     }
 }

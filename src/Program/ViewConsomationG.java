@@ -11,9 +11,9 @@ public class ViewConsomationG {
     public void init(ControllerConsomationG controllerConsomationG,ModelListOfFood listOfFood){
         this.listOfFood=listOfFood;
         ObservableList<PieChart.Data> pieChartData =
-                FXCollections.observableArrayList(new PieChart.Data("okFood",listOfFood.getListOfOkFood().size()),
-                        new PieChart.Data(" ppFood",listOfFood.getListOfPPFood().size()),
-                        new PieChart.Data(" perimeFood",listOfFood.getListOfPerimeFood().size()));
+                FXCollections.observableArrayList(new PieChart.Data("okFood",listOfFood.getListOfOkFoodG().size()),
+                        new PieChart.Data(" ppFood",listOfFood.getListOfPPFoodG().size()),
+                        new PieChart.Data(" perimeFood",listOfFood.getListOfPerimeFoodG().size()));
         controllerConsomationG.getPiechart().setData(pieChartData);
 
     }

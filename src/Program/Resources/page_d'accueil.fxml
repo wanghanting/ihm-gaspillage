@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Hyperlink fx:id="link_aide" layoutX="126.0" layoutY="24.0" text="aide" underline="true" />
       <Hyperlink fx:id="link_deco" layoutX="399.0" layoutY="24.0" text="se deconnecter" underline="true" />
@@ -29,6 +29,7 @@
       <ListView fx:id="list_perimes" layoutX="21.0" layoutY="181.0" prefHeight="181.0" prefWidth="180.0" />
       <ListView fx:id="list_alipp" layoutX="201.0" layoutY="181.0" prefHeight="181.0" prefWidth="180.0" />
       <ListView fx:id="list_aliok" layoutX="381.0" layoutY="181.0" prefHeight="181.0" prefWidth="180.0" />
-      <Button fx:id="btn_ajouterali" layoutX="264.0" layoutY="367.0" mnemonicParsing="false" text="Ajouter" />
+      <Button fx:id="btn_ajouterali" layoutX="352.0" layoutY="367.0" mnemonicParsing="false" text="Ajouter" />
+      <Button fx:id="btn_delete" layoutX="162.0" layoutY="367.0" mnemonicParsing="false" text="Supprimer" />
    </children>
 </Pane>

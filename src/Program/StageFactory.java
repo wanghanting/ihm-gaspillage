@@ -34,7 +34,11 @@ public class StageFactory {
 
         controllerAccueil.init(modelListOfFood,viewFood,stage,this);
         viewFood.init(modelListOfFood, controllerAccueil);
-        stage.setScene(new Scene(root, width, height));
+
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
+
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
@@ -55,7 +59,11 @@ public class StageFactory {
 
         controllerenregistrer.init(modelListOfFood, stage,this);
         viewEnregistrer.init(modelListOfTags, controllerenregistrer);
-        stage.setScene(new Scene(root, width, height));
+
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
+
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
@@ -77,7 +85,11 @@ public class StageFactory {
 
         controller.init (modelListOfTags, viewType, stage, this);
         viewType.init (modelListOfTags, controller);
-        stage.setScene (new Scene (root, width, height));
+
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
+
         stage.show ();
         stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
             @Override
@@ -96,7 +108,11 @@ public class StageFactory {
         loader.setController (controllerAide);
         Parent root = loader.load (getClass ().getResourceAsStream ("Resources/aide.fxml"));
         controllerAide.init (stage);
-        stage.setScene (new Scene (root, width, height));
+
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
+
         stage.show();
         stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
             @Override

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="380.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="380.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
 <children>
       <ChoiceBox fx:id="sel_type" layoutX="255.0" layoutY="143.0" prefWidth="150.0" />
       <Label layoutX="177.0" layoutY="104.0" text="Nom" />

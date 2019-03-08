@@ -38,6 +38,6 @@
          </items>
       </MenuButton>
       <DatePicker id="sel_date" layoutX="227.0" layoutY="90.0" />
-      <PieChart id="chart" layoutX="181.0" layoutY="122.0" prefHeight="250.0" prefWidth="278.0" />
+      <PieChart fx:id="piechart" layoutX="181.0" layoutY="122.0" prefHeight="250.0" prefWidth="278.0" />
    </children>
 </AnchorPane>

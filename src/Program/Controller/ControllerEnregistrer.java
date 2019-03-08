@@ -4,13 +4,15 @@ import Program.Model.ModelListOfFood;
 import Program.StageFactory;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class ControllerEnregistrer {
-    @FXML
     private ModelListOfFood modelListFood;
+    @FXML
+    private HBox hbox1;
     @FXML
     private TextField txt_nom;
     @FXML

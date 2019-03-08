@@ -41,6 +41,8 @@ public class ControllerAccueil {
     private Hyperlink link_aide;
     @FXML
     private Hyperlink link_deco;
+    @FXML
+    private Button btn_conso;
 
     @FXML
     private void setLink_aide(StageFactory stageFactory) throws IOException{
@@ -124,9 +126,13 @@ public class ControllerAccueil {
 
     }
 
-    void serBtn_type(Stage stageold,StageFactory factory)throws IOException{
+    void setBtn_type(Stage stageold,StageFactory factory)throws IOException{
         stageold.close();
         factory.initType();
+    }
+    void setBtn_conso(Stage stageold,StageFactory factory)throws IOException {
+        stageold.close();
+        factory.initConsomation();
     }
 
     public ListView getPerimeFoodListView(){ return list_perimes;}
@@ -157,7 +163,14 @@ public class ControllerAccueil {
         });
         btn_type.setOnAction(event -> {
             try {
-                serBtn_type(stage,factory);
+                setBtn_type(stage,factory);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        });
+        btn_conso.setOnAction(event -> {
+            try {
+                setBtn_conso(stage,factory);
             }catch (IOException e){
                 e.printStackTrace();
             }

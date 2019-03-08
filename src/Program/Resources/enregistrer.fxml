@@ -135,5 +135,10 @@
             </VBox>
          </children>
       </HBox>
+      <HBox layoutX="26.0" layoutY="353.0" prefHeight="42.0" prefWidth="622.0">
+         <children>
+            <Label fx:id="lab_null" prefHeight="54.0" prefWidth="635.0" textFill="RED" textOverrun="CLIP" />
+         </children>
+      </HBox>
 </children>
 </AnchorPane>

@@ -27,7 +27,8 @@ public class ControllerEnregistrer {
     private Spinner spi_jour;
     @FXML
     private TextArea txt_info;
-
+    @FXML
+    private Label lab_null;
     @FXML
     private Button btn_changerimg;
     @FXML
@@ -41,14 +42,18 @@ public class ControllerEnregistrer {
     public Spinner getSpi_jour(){return  spi_jour;}
 
     void setBtn_ajouter(Stage stageold,StageFactory factory) throws IOException {
-        try {
-            modelListFood.addFood( new ModelFood(txt_nom.getText(),(String)sel_type.getValue(),(int)spi_quan.getValue(),jour_achatj.getValue(),jour_expira.getValue(),(int)spi_jour.getValue(),txt_info.getText()));
-        }catch (Exception e){
-            System.out.println(e);
+        if(txt_nom.getText() == null || sel_type.getValue() == null || spi_quan.getValue() == null || jour_achatj.getValue() == null || jour_expira.getValue() == null){
+            lab_null.setText("les champs ne pouvent pas être vides(sauf 'information à propos de l'aliment') ,\nremplissez-les s'il vous plait.");
+        }else {
+            try {
+                modelListFood.addFood(new ModelFood(txt_nom.getText(), (String) sel_type.getValue(), (int) spi_quan.getValue(), jour_achatj.getValue(), jour_expira.getValue(), (int) spi_jour.getValue(), txt_info.getText()));
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+            stageold.close();
+            factory.setModelListOfFood(modelListFood);
+            factory.initAccueil();
         }
-        stageold.close();
-        factory.setModelListOfFood(modelListFood);
-        factory.initAccueil();
 
     }
     //public Button getBtn_ajouter() {return btn_ajouter;}

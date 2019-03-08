@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button fx:id="btn_close1" layoutX="548.0" layoutY="-3.0" mnemonicParsing="false" text="Close" textFill="#f50303" />
       <Label layoutX="240.0" layoutY="27.0" prefHeight="63.0" prefWidth="345.0" text="Bienvenue sur StopAuGaspillage">
@@ -37,6 +37,6 @@
       <TextField fx:id="text_frame1" layoutX="257.0" layoutY="164.0" prefHeight="36.0" prefWidth="307.0" />
       <TextField fx:id="text_frame2" layoutX="257.0" layoutY="247.0" prefHeight="36.0" prefWidth="307.0" />
       <ImageView fx:id="img1" fitHeight="331.0" fitWidth="200.0" layoutX="34.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0" />
-      <Text layoutX="257.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mauvaise combinaison de nom d'utilisateur et mot de passe !" wrappingWidth="277.296875" />
+      <Text fill="RED" layoutX="257.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mauvaise combinaison de nom d'utilisateur et mot de passe !" wrappingWidth="277.296875" />
    </children>
 </AnchorPane>

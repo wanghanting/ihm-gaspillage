@@ -34,7 +34,11 @@ public class StageFactory {
 
         controllerAccueil.init(modelListOfFood,viewFood,stage,this);
         viewFood.init(modelListOfFood, controllerAccueil);
-        stage.setScene(new Scene(root, width, height));
+
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
+
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
@@ -55,12 +59,15 @@ public class StageFactory {
 
         controllerenregistrer.init(modelListOfFood, stage,this);
         viewEnregistrer.init(modelListOfTags, controllerenregistrer);
-        stage.setScene(new Scene(root, width, height));
+
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
+
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
-                //�˴���stage�ر�ʱ��ͬʱ�������򣬱���stage�رպ󣬳������ر��ˣ�����̨�߳�ȴ��Ȼ���е�����
                 System.exit(0);
             }
         });
@@ -78,7 +85,11 @@ public class StageFactory {
 
         controller.init (modelListOfTags, viewType, stage, this);
         viewType.init (modelListOfTags, controller);
-        stage.setScene (new Scene (root, width, height));
+
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
+
         stage.show ();
         stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
             @Override
@@ -97,6 +108,29 @@ public class StageFactory {
         loader.setController (controllerAide);
         Parent root = loader.load (getClass ().getResourceAsStream ("Resources/aide.fxml"));
         controllerAide.init (stage);
+
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
+
+        stage.show();
+        stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
+            @Override
+            public void handle(WindowEvent event) {
+                System.exit (0);
+            }
+        });
+        return stage;
+    }
+
+    public Stage initProfil() throws IOException{
+        FXMLLoader loader = new FXMLLoader ();
+        Stage stage = new Stage ();
+        ControllerProfil controllerProfil = new ControllerProfil ();
+
+        loader.setController (controllerProfil);
+        Parent root = loader.load (getClass ().getResourceAsStream ("Resources/profil.fxml"));
+        controllerProfil.init (stage, this);
         stage.setScene (new Scene (root, width, height));
         stage.show();
         stage.setOnCloseRequest (new EventHandler<WindowEvent> () {

@@ -49,7 +49,9 @@ public class ControllerEnregistrer {
         factory.initAccueil();
 
     }
+    //public Button getBtn_ajouter() {return btn_ajouter;}
     public void init(ModelListOfFood foodList, Stage stage, StageFactory factory) {
+        this.btn_ajouter.getStyleClass().add("buttonFred");
         this.modelListFood = foodList;
         //listner on the buttons
         btn_ajouter.setOnAction( event -> {

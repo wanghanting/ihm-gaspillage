@@ -24,13 +24,13 @@ public class Main extends Application {
         ViewEnregistrer viewEnregistrer=new ViewEnregistrer();
         loader.setController(controllerenregistrer);
         Parent root = loader.load(getClass().getResourceAsStream("Resources/enregistrer.fxml"));
+        root.getStylesheets().add(getClass().getResource("Resources/view.css").toExternalForm());
+        //controllerenregistrer.getBtn_ajouter().getStyleClass().add("buttonFred");
         controllerenregistrer.init(modelListOfFood,primaryStage,stages);
         viewEnregistrer.init(modelListOfTags,controllerenregistrer);
 
         primaryStage.setTitle("Gaspillage");
-        Scene scene = new Scene(root, 600, 475);
-        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
-        primaryStage.setScene(scene);
+        primaryStage.setScene(new Scene(root, 500, 475));
         primaryStage.show();
 
     }

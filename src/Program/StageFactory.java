@@ -1,9 +1,6 @@
 package Program;
 
-import Program.Controller.ControllerAccueil;
-import Program.Controller.ControllerAide;
-import Program.Controller.ControllerEnregistrer;
-import Program.Controller.ControllerType;
+import Program.Controller.*;
 import Program.Model.ModelListOfFood;
 import Program.Model.ModelListOfTags;
 import javafx.event.EventHandler;
@@ -63,7 +60,6 @@ public class StageFactory {
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
-                //�˴���stage�ر�ʱ��ͬʱ�������򣬱���stage�رպ󣬳������ر��ˣ�����̨�߳�ȴ��Ȼ���е�����
                 System.exit(0);
             }
         });
@@ -100,6 +96,25 @@ public class StageFactory {
         loader.setController (controllerAide);
         Parent root = loader.load (getClass ().getResourceAsStream ("Resources/aide.fxml"));
         controllerAide.init (stage);
+        stage.setScene (new Scene (root, width, height));
+        stage.show();
+        stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
+            @Override
+            public void handle(WindowEvent event) {
+                System.exit (0);
+            }
+        });
+        return stage;
+    }
+
+    public Stage initProfil() throws IOException{
+        FXMLLoader loader = new FXMLLoader ();
+        Stage stage = new Stage ();
+        ControllerProfil controllerProfil = new ControllerProfil ();
+
+        loader.setController (controllerProfil);
+        Parent root = loader.load (getClass ().getResourceAsStream ("Resources/profil.fxml"));
+        controllerProfil.init (stage, this);
         stage.setScene (new Scene (root, width, height));
         stage.show();
         stage.setOnCloseRequest (new EventHandler<WindowEvent> () {

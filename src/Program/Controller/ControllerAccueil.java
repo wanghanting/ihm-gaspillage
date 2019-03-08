@@ -4,6 +4,7 @@ import Program.Model.ModelListOfFood;
 import Program.Model.ModelListOfTags;
 import Program.StageFactory;
 import Program.ViewAccueil;
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -61,17 +62,9 @@ public class ControllerAccueil {
     }
 
     @FXML
-    private void setBtn_pro(){
-        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/profil.fxml"));
-        try {
-            Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) btn_pro.getScene ().getWindow ();
-            stage.setTitle ("Mon profil");
-            stage.setScene (new Scene (root1));
-            stage.show ();
-        } catch (IOException e) {
-            e.printStackTrace ();
-        }
+    private void setBtn_pro(Stage stageold, StageFactory factory) throws IOException{
+        stageold.close();
+        factory.initProfil ();
     }
 
     @FXML
@@ -136,11 +129,22 @@ public class ControllerAccueil {
     void setBtn_close(Stage stage){
         stage.close ();
     }
+
     public void init(ModelListOfFood food, ViewAccueil view, Stage stage, StageFactory factory) {
         this.modelListfood = food;
         btn_close.setOnAction (event -> {
             setBtn_close (stage);
         });
+
+        btn_pro.setOnAction (event -> {
+            try{
+                setBtn_pro (stage, factory);
+            }catch (IOException e){
+                e.printStackTrace ();
+            }
+
+        });
+
         link_aide.setOnAction (event -> {
             try{
                 setLink_aide (factory);

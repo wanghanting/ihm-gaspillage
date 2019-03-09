@@ -82,17 +82,4 @@ public class ControllerProfil {
 
     }
 
-//    @FXML
-//    private void setLink_accueil() {
-//        try {
-//            FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/page_d'accueil.fxml"));
-//            Parent root = (Parent) fxmlLoader.load ();
-//            Stage stage = (Stage) link_accueil.getScene ().getWindow ();
-//            stage.setTitle ("Page d'accueil");
-//            stage.setScene (new Scene (root));
-//            stage.show ();
-//        } catch (IOException e) {
-//            e.printStackTrace ();
-//        }
-//    }
 }

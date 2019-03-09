@@ -36,6 +36,12 @@ public class ControllerEnregistrer {
     private Button btn_changerimg;
     @FXML
     private Button btn_ajouter;
+    @FXML
+    private Hyperlink link_aide;
+    @FXML
+    private Hyperlink link_accueil;
+    @FXML
+    private Button btn_close;
 
 
     public ChoiceBox getSel_type(){ return sel_type; }
@@ -63,9 +69,21 @@ public class ControllerEnregistrer {
             factory.setModelListOfFood(modelListFood);
             factory.initAccueil();
         }
-
-
     }
+
+    public void setBtn_close(Stage stage){
+        stage.close();
+    }
+
+    private void setLink_aide(StageFactory stageFactory) throws IOException{
+        stageFactory.initAide ();
+    }
+
+    private void setLink_accueil(Stage stageold, StageFactory factory) throws IOException{
+        stageold.close ();
+        factory.initAccueil ();
+    }
+
     //public Button getBtn_ajouter() {return btn_ajouter;}
     public void init(ModelListOfFood foodList, Stage stage, StageFactory factory) {
         this.btn_ajouter.getStyleClass().add("buttonFred");
@@ -77,6 +95,26 @@ public class ControllerEnregistrer {
                 setBtn_ajouter(stage,factory);
             } catch (IOException e) {
                 e.printStackTrace();
+            }
+        });
+
+        btn_close.setOnAction (event -> {
+            setBtn_close (stage);
+        });
+
+        link_aide.setOnAction (event -> {
+            try{
+                setLink_aide (factory);
+            }catch (IOException e){
+                e.printStackTrace ();
+            }
+        });
+
+        link_accueil.setOnAction (event -> {
+            try {
+                setLink_accueil (stage, factory);
+            } catch (IOException e){
+                e.printStackTrace ();
             }
         });
 

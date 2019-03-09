@@ -45,10 +45,8 @@ public class ControllerAccueil {
     @FXML
     private Button btn_delete;
 
-    @FXML
     private void setLink_aide(StageFactory stageFactory) throws IOException{
         stageFactory.initAide ();
-
     }
 
     @FXML
@@ -85,20 +83,6 @@ public class ControllerAccueil {
         }
     }
 
-    @FXML
-    private void setBtn_follow(){
-        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/follower.fxml"));
-        try {
-            Parent root = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) btn_follow.getScene ().getWindow ();
-            stage.setTitle ("Follower/Followings");
-            stage.setScene (new Scene (root));
-            stage.show ();
-        }catch (IOException e){
-            e.printStackTrace ();
-        }
-    }
-
      void setBtn_ajouter(Stage stageold,StageFactory factory) throws IOException {
 
             stageold.close();
@@ -130,7 +114,6 @@ public class ControllerAccueil {
     }
 
     void deletefood(){
-
 
     }
 

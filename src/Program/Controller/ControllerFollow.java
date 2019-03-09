@@ -64,43 +64,16 @@ public class ControllerFollow {
         return text_pro;
     }
 
-    public void setLink_aide() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/aide.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = new Stage ();
-            stage.setTitle ("Aide");
-            stage.setScene (new Scene (root1));
-            stage.show ();
-        } catch (IOException e) {
-            e.printStackTrace ();
-        }
+    private void setLink_aide(StageFactory stageFactory) throws IOException{
+        stageFactory.initAide ();
     }
 
-    public void setLink_accueil(){
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/page_d'accueil.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) link_accueil.getScene ().getWindow ();
-            stage.setTitle ("Page d'accueil");
-            stage.setScene (new Scene (root1));
-            stage.show ();
-        } catch (IOException e) {
-            e.printStackTrace ();
-        }
+    private void setLink_accueil(Stage stageold, StageFactory factory) throws IOException{
+        stageold.close ();
+        factory.initAccueil ();
     }
 
-    public void setLink_deco(){
-        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/authentification1.fxml"));
-        try {
-            Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) link_deco.getScene ().getWindow ();
-            stage.setTitle ("Gaspillage");
-            stage.setScene (new Scene (root1));
-            stage.show ();
-        } catch (IOException e) {
-            e.printStackTrace ();
-        }
+    private void setLink_deco(Stage stageold, StageFactory factory) throws IOException{
     }
 
     public void init(ModelListOfFollow listOfAmi, ModelListOfFollow listOfUsers, ViewFollow view, Stage stage, StageFactory factory){
@@ -109,6 +82,30 @@ public class ControllerFollow {
 
         btn_close.setOnAction (event -> {
             setBtn_close (stage);
+        });
+
+        link_aide.setOnAction (event -> {
+            try{
+                setLink_aide (factory);
+            }catch (IOException e){
+                e.printStackTrace ();
+            }
+        });
+
+        link_accueil.setOnAction (event -> {
+            try {
+                setLink_accueil (stage, factory);
+            } catch (IOException e){
+                e.printStackTrace ();
+            }
+        });
+
+        link_deco.setOnAction (event -> {
+            try{
+                setLink_deco (stage, factory);
+            }catch (IOException e){
+                e.printStackTrace ();
+            }
         });
     }
 

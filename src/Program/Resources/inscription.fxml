@@ -10,18 +10,18 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="btn_close" layoutX="548.0" layoutY="-1.0" mnemonicParsing="false" text="Close" textFill="#f50303" />
-      <Label layoutX="240.0" layoutY="28.0" prefHeight="63.0" prefWidth="345.0" text="Bienvenue sur StopAuGaspillage">
+      <Button fx:id="btn_close2" layoutX="540.0" layoutY="3.0" mnemonicParsing="false" text="Close" textFill="#f50303" />
+      <Label layoutX="256.0" layoutY="26.0" prefHeight="56.0" prefWidth="328.0" text="Bienvenue sur StopAuGaspillage">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="254.0" layoutY="91.0" text="utilisateur ">
+      <Label layoutX="257.0" layoutY="115.0" text="utilisateur ">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="255.0" layoutY="246.0" prefHeight="18.0" prefWidth="147.0" text="mot de passe(encore)">
+      <Label layoutX="257.0" layoutY="256.0" prefHeight="18.0" prefWidth="147.0" text="mot de passe(encore)">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
@@ -32,15 +32,18 @@
             <Font name="Arial Bold Italic" size="12.0" />
          </font>
       </Label>
-      <Hyperlink fx:id="link_auth" layoutX="450.0" layoutY="371.0" text="authentification " />
-      <Label layoutX="256.0" layoutY="172.0" prefHeight="18.0" prefWidth="117.0" text="mot de passe">
+      <Hyperlink fx:id="link_inscri" layoutX="450.0" layoutY="371.0" text="authentification " />
+      <Label layoutX="257.0" layoutY="187.0" prefHeight="18.0" prefWidth="117.0" text="mot de passe">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <ImageView fx:id="img1" fitHeight="186.0" fitWidth="200.0" layoutX="32.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="114.0" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="100.0" />
-      <TextField fx:id="text_frame1" layoutX="257.0" layoutY="121.0" prefHeight="36.0" prefWidth="307.0" />
-      <TextField fx:id="text_frame2" layoutX="257.0" layoutY="200.0" prefHeight="36.0" prefWidth="307.0" />
-      <TextField fx:id="text_frame3" layoutX="257.0" layoutY="278.0" prefHeight="36.0" prefWidth="307.0" />
+      <ImageView fx:id="img1" fitHeight="331.0" fitWidth="200.0" layoutX="34.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0" />
+      <TextField fx:id="text_frame1" layoutX="257.0" layoutY="143.0" prefHeight="36.0" prefWidth="307.0" />
+      <TextField fx:id="text_frame2" layoutX="257.0" layoutY="209.0" prefHeight="36.0" prefWidth="307.0" />
+      <TextField fx:id="text_frame3" layoutX="257.0" layoutY="284.0" prefHeight="36.0" prefWidth="307.0" />
+      <Label fx:id="Inscrierr" layoutX="257.0" layoutY="71.0" />
+      <Label fx:id="Inscrierr" layoutX="257.0" layoutY="78.0" />
+      <Label fx:id="inscrierr" layoutX="262.0" layoutY="71.0" text="   " textFill="#f50909" />
    </children>
 </AnchorPane>

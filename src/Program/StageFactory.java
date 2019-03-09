@@ -3,6 +3,7 @@ package Program;
 import Program.Controller.*;
 import Program.Model.ModelListOfFood;
 import Program.Model.ModelListOfTags;
+import Program.Model.ModelListOfUsers;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -148,6 +149,69 @@ public class StageFactory {
             @Override
             public void handle(WindowEvent event) {
                 System.exit (0);
+            }
+        });
+        return stage;
+    }
+
+    public Stage initInscription(ModelListOfUsers modelListOfUser) throws IOException {
+        FXMLLoader loader= new FXMLLoader();
+        Stage stage = new Stage();
+
+        ViewInscription viewUser = new ViewInscription();
+        ControllerInscription controllerInscription = new ControllerInscription();
+
+
+        loader.setController(controllerInscription);
+        Parent root = loader.load(getClass().getResourceAsStream("Resources/inscription.fxml"));
+
+        controllerInscription.init(modelListOfUser, stage,this);
+        viewUser.init(modelListOfUser, controllerInscription);
+        stage.setScene(new Scene(root, width, height));
+        stage.show();
+        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                //�˴���stage�ر�ʱ��ͬʱ�������򣬱���stage�رպ󣬳������ر��ˣ�����̨�߳�ȴ��Ȼ���е�����
+                System.exit(0);
+            }
+        });
+        return stage;
+    }
+
+    public Stage initAuthentification(ModelListOfUsers modelListOfUser) throws IOException {
+        FXMLLoader loader= new FXMLLoader();
+        Stage stage = new Stage();
+
+        ViewAuthentification viewUser = new ViewAuthentification();
+        ControllerAuthentification controllerAuthentification = new ControllerAuthentification();
+        //ControllerAuthentification controllerInscription = new ControllerAuthentification();
+        //loader.setController(controllerAuthentification);
+        Parent root = loader.load(getClass().getResourceAsStream("Resources/profil.fxml"));
+        // controllerAuthentification.init(modelListOfUser, stage,this);
+        // viewUser.init(modelListOfUser, controllerAuthentification);
+        stage.setScene(new Scene(root, width, height));
+        stage.show();
+        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                //�˴���stage�ر�ʱ��ͬʱ�������򣬱���stage�رպ󣬳������ر��ˣ�����̨�߳�ȴ��Ȼ���е�����
+                System.exit(0);
+            }
+        });
+        return stage;
+    }
+    public Stage initInscriptionError( ) throws IOException {
+        FXMLLoader loader= new FXMLLoader();
+        Stage stage = new Stage();
+
+        Parent root = loader.load(getClass().getResourceAsStream("Resources/inscription_error.fxml"));
+        stage.setScene(new Scene(root, width, height));
+        stage.show();
+        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                System.exit(0);
             }
         });
         return stage;

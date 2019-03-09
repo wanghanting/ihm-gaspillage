@@ -4,8 +4,6 @@ import Program.Model.ModelListOfTags;
 import Program.Model.ModelTag;
 import Program.StageFactory;
 import Program.ViewType;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -36,6 +34,7 @@ public class ControllerType {
     private TextField txt_tag;
     @FXML
     private Button btn_open;
+
 
     @FXML
     public ListView getListView() {
@@ -71,9 +70,17 @@ public class ControllerType {
             factory.setModelListOfTags(modelListOfTags);
         });
 
-//        setLink_deco ();
-//        closeButtonAction ();
-        setLink_aide ();
+
+        link_aide.setOnAction(event -> {
+            try {
+                setLink_aide(factory);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        });
+        btn_close.setOnAction(event -> {
+            setBtn_close(stage);
+        });
     }
 
     @FXML
@@ -83,30 +90,8 @@ public class ControllerType {
     }
 
     @FXML
-    private void closeButtonAction() {
-        // get a handle to the stage
-        Stage stage = (Stage) btn_close.getScene ().getWindow ();
-        // do what you have to do
-        btn_close.setOnAction (event -> {
-            stage.close ();
-        });
-    }
-
-    @FXML
-    private void setLink_aide() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/aide.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = new Stage ();
-            stage.setTitle ("Aide");
-            stage.setScene (new Scene (root1));
-//            stage.show ();
-            link_aide.setOnAction (event -> {
-                stage.showAndWait ();
-            });
-        } catch (IOException e) {
-            e.printStackTrace ();
-        }
+    private void setLink_aide(StageFactory factory)throws IOException {
+        factory.initAide ();
     }
 
     @FXML
@@ -121,6 +106,9 @@ public class ControllerType {
         factory.initFoodByType(type);
     }
 
+    private void setBtn_close(Stage stage){
+        stage.close ();
+    }
 
     @FXML
     private void setLink_deco(){

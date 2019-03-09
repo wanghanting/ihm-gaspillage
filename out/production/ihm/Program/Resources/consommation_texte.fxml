@@ -17,7 +17,7 @@
    <children>
       <Hyperlink fx:id="link_accueil" layoutX="49.0" layoutY="14.0" text="page d'accueil" />
       <Hyperlink id="link_aide" fx:id="link_aide" layoutX="165.0" layoutY="14.0" text="aide" />
-      <Hyperlink fx:id="link_deconn" layoutX="517.0" layoutY="14.0" text="se déconnecter" />
+      <Hyperlink fx:id="link_deconn" layoutX="463.0" layoutY="14.0" text="se déconnecter" />
       <Label id="title" layoutX="207.0" layoutY="25.0" text="Consommation" textAlignment="CENTER">
          <font>
             <Font size="42.0" />
@@ -58,7 +58,7 @@
       </TitledPane>
       <MenuButton fx:id="sel_cosm_type" layoutX="537.0" layoutY="87.0" mnemonicParsing="false" text="somme">
          <items>
-            <MenuItem fx:id="par_date" mnemonicParsing="false" text="somme" />
+            <MenuItem fx:id="somme" mnemonicParsing="false" text="somme" />
             <MenuItem fx:id="par_type_ali" mnemonicParsing="false" text="par type d'aliment" />
             <MenuItem fx:id="par_ali" mnemonicParsing="false" text="par aliment" />
          </items>
@@ -69,5 +69,6 @@
       <DatePicker id="sel_date" fx:id="date_from" layoutX="246.0" layoutY="70.0" prefHeight="23.0" prefWidth="125.0" />
       <Label fx:id="lab_from" layoutX="261.0" layoutY="101.0" prefHeight="23.0" prefWidth="96.0" />
       <Label fx:id="lab_to" layoutX="415.0" layoutY="101.0" prefHeight="23.0" prefWidth="96.0" />
+      <Button fx:id="btn_close" layoutX="565.0" layoutY="13.0" mnemonicParsing="false" text="Close" />
    </children>
 </AnchorPane>

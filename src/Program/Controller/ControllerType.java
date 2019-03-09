@@ -112,7 +112,7 @@ public class ControllerType {
 
     @FXML
     private void setLink_deco(){
-        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/authentification1.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/authentification.fxml"));
         try {
             Parent root1 = (Parent) fxmlLoader.load ();
             Stage stage = (Stage) link_deco.getScene ().getWindow ();

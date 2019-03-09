@@ -1,6 +1,5 @@
 package Program.Controller;
 
-import Program.Model.ModelListOfFood;
 import Program.Model.ModelListOfUsers;
 import Program.Model.ModelUser;
 import Program.StageFactory;
@@ -54,7 +53,7 @@ public class ControllerInscription {
 
     @FXML
     private void setLink_auth(){
-        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/authentification1.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/authentification.fxml"));
         try {
             Parent root1 = (Parent) fxmlLoader.load ();
             Stage stage = (Stage) link_auth.getScene ().getWindow ();

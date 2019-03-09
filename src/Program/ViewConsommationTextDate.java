@@ -36,6 +36,10 @@ public class ViewConsommationTextDate {
             controller.getList_cons().setItems(modelSum.getListOfConsomByType());
             controller.getList_gas().setItems(modelSum.getListOfGasByType());
             controller.getList_taux().setItems(modelSum.getListOfRateByType());
+        }else {
+            controller.getList_cons().setItems(modelSum.getListOfConsomByAli());
+            controller.getList_gas().setItems(modelSum.getListOfGasByAli());
+            controller.getList_taux().setItems(modelSum.getListOfRateByAli());
         }
         adaptItems(controller.getList_cons() );
         adaptItems(controller.getList_gas());

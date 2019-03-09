@@ -12,6 +12,9 @@ public class ModelListOfSum {
     private ObservableList<ModelSum> listOfConsomByType;
     private ObservableList<ModelSum> listOfGasByType;
     private ObservableList<ModelSum> listOfRateByType;
+    private ObservableList<ModelSum> listOfConsomByAli;
+    private ObservableList<ModelSum> listOfGasByAli;
+    private ObservableList<ModelSum> listOfRateByAli;
     private ObservableList<ModelFood> listOfFoodConsom;
     private ObservableList<ModelFood> listOfFoodGas;
     private ObservableList<ModelTag> listOfTag;
@@ -24,6 +27,9 @@ public class ModelListOfSum {
         listOfTag = FXCollections.observableList(new ArrayList<>());
         listOfGasByType = FXCollections.observableList(new ArrayList<>());
         listOfRateByType = FXCollections.observableList(new ArrayList<>());
+        listOfConsomByAli = FXCollections.observableList(new ArrayList<>());
+        listOfGasByAli = FXCollections.observableList(new ArrayList<>());
+        listOfRateByAli = FXCollections.observableList(new ArrayList<>());
     }
 
     public void init(ModelListOfFood modelListOfFood,ModelListOfTags modelListOfTags){
@@ -74,6 +80,29 @@ public class ModelListOfSum {
         }
     }
 
+    public ObservableList<ModelSum> getListOfConsomByAli(){
+        getListInAliment(listOfConsomByAli,listOfFoodConsom);
+        return listOfConsomByAli;
+    }
+
+    public ObservableList<ModelSum> getListOfGasByAli(){
+        getListInAliment(listOfGasByAli,listOfFoodGas);
+        return listOfGasByAli;
+    }
+
+    public void getListInAliment(ObservableList<ModelSum> sum,ObservableList<ModelFood> food){
+        sum.removeAll(sum);
+        for(ModelFood foodAll:listOfFoodConsom) {
+            int somme = 0;
+            for (ModelFood aFood : food) {
+                if(aFood.equals(foodAll)){
+                    somme = aFood.getQuantity();
+                }
+            }
+            sum.add(new ModelSum(foodAll.getName(), String.valueOf(somme)));
+        }
+    }
+
     public ObservableList<ModelSum> getListOfRate(){
         listOfRate.removeAll(listOfRate);
         String rate = "0%";
@@ -86,13 +115,25 @@ public class ModelListOfSum {
 
     public ObservableList<ModelSum> getListOfRateByType(){
         listOfRateByType.removeAll(listOfRateByType);
-        String rate = "0%";
         for (int cmp = 0;cmp < listOfConsomByType.size();cmp ++) {
+            String rate = "0%";
             if (Integer.parseInt(listOfConsomByType.get(cmp).getSum()) != 0) {
                 rate = (float) Integer.parseInt(listOfGasByType.get(cmp).getSum()) / (float) Integer.parseInt(listOfConsomByType.get(cmp).getSum()) * 100 + "%";
             }
             listOfRateByType.add(new ModelSum(listOfConsomByType.get(cmp).getName(),rate));
         }
         return listOfRateByType;
+    }
+
+    public ObservableList<ModelSum> getListOfRateByAli(){
+        listOfRateByAli.removeAll(listOfRateByAli);
+        String rate = "0%";
+        for (int cmp = 0;cmp < listOfConsomByAli.size();cmp ++) {
+            if (Integer.parseInt(listOfConsomByAli.get(cmp).getSum()) != 0) {
+                rate = (float) Integer.parseInt(listOfGasByAli.get(cmp).getSum()) / (float) Integer.parseInt(listOfConsomByAli.get(cmp).getSum()) * 100 + "%";
+            }
+            listOfRateByAli.add(new ModelSum(listOfConsomByAli.get(cmp).getName(),rate));
+        }
+        return listOfRateByAli;
     }
 }

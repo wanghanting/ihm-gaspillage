@@ -98,6 +98,31 @@ public class ControllerConsommationTextDate {
                 e.printStackTrace();
             }
         });
+        par_ali.setOnAction(event -> {
+            try {
+                stageFactory.setTypeOfConsom("aliment");
+                openNewPage(stage,stageFactory);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        });
+        link_aide.setOnAction(event -> {
+            try {
+                setLink_aide(stageFactory);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        });
+        btn_close.setOnAction(event -> {
+            stage.close();
+        });
+        link_accueil.setOnAction(event -> {
+            try {
+                setLink_accueil(stage,stageFactory);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        });
     }
 
     @FXML
@@ -110,4 +135,16 @@ public class ControllerConsommationTextDate {
     public void setSel_cosm_type(String type){
         sel_cosm_type.setText(type);
     }
+
+    @FXML
+    private void setLink_aide(StageFactory factory)throws IOException {
+        factory.initAide ();
+    }
+
+    @FXML
+    private void setLink_accueil(Stage stageold,StageFactory factory)throws IOException{
+        stageold.close();
+        factory.initAccueil();
+    }
+
 }

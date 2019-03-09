@@ -1,15 +1,10 @@
 package Program.Controller;
 
-import Program.Model.ModelFood;
 import Program.Model.ModelListOfFood;
-import Program.Model.ModelListOfTags;
 import Program.StageFactory;
 import Program.ViewAccueil;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -18,7 +13,6 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.time.LocalDate;
 
 
 public class ControllerAccueil {
@@ -91,7 +85,7 @@ public class ControllerAccueil {
 
    @FXML
     private void setLink_deco(){
-        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/authentification1.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/authentification.fxml"));
         try {
             Parent root1 = (Parent) fxmlLoader.load ();
             Stage stage = (Stage) link_deco.getScene ().getWindow ();

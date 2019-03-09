@@ -15,7 +15,7 @@ import java.io.IOException;
 
 public class ViewAuthentification{
 
-    static final String XML_FILE = "resources/authentification1.fxml";
+    static final String XML_FILE = "resources/authentification.fxml";
     //   static final String CSS = "sample/resources/custumerView.css";
     static final String LABEL = "Please Login";
     static final int WIDTH = 640;

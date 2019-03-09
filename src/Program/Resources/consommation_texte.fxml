@@ -58,8 +58,8 @@
       </TitledPane>
       <MenuButton fx:id="sel_cosm_type" layoutX="537.0" layoutY="87.0" mnemonicParsing="false" text="somme">
          <items>
-            <MenuItem fx:id="par_date" mnemonicParsing="false" text="somme" />
-            <MenuItem fx:id="par_type_ali" mnemonicParsing="false" text="par type d'aliment" />
+            <MenuItem fx:id="somme" mnemonicParsing="false" text="somme" />
+            <MenuItem fx:id="par_type_ali" mnemonicParsing="false" text="par type" />
             <MenuItem fx:id="par_ali" mnemonicParsing="false" text="par aliment" />
          </items>
       </MenuButton>

@@ -38,6 +38,14 @@ public class ControllerConsommationTextDate {
     private Label lab_from;
     @FXML
     private Label lab_to;
+    @FXML
+    private MenuButton sel_cosm_type;
+    @FXML
+    private MenuItem somme;
+    @FXML
+    private MenuItem par_type_ali;
+    @FXML
+    private MenuItem par_ali;
 
     public ListView getList_cons(){return list_cons;}
     public ListView getList_gas(){return list_gas;}
@@ -61,15 +69,31 @@ public class ControllerConsommationTextDate {
         date_from.setOnAction(event -> {
             try {
                 stageFactory.getModelListOfFood().setDateFrom(date_from.getValue());
-                setDate(stage,stageFactory);
+                openNewPage(stage,stageFactory);
             }catch (IOException e){
                 e.printStackTrace();
             }
         });
-        date_to.setOnAction(event -> {
+        somme.setOnAction(event -> {
             try {
                 stageFactory.getModelListOfFood().setDateTo(date_to.getValue());
-                setDate(stage,stageFactory);
+                openNewPage(stage,stageFactory);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        });
+        par_type_ali.setOnAction(event -> {
+            try {
+                stageFactory.setTypeOfConsom("type");
+                openNewPage(stage,stageFactory);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        });
+        somme.setOnAction(event -> {
+            try {
+                stageFactory.setTypeOfConsom("somme");
+                openNewPage(stage,stageFactory);
             }catch (IOException e){
                 e.printStackTrace();
             }
@@ -77,8 +101,13 @@ public class ControllerConsommationTextDate {
     }
 
     @FXML
-    private void setDate(Stage stage,StageFactory factory)throws IOException{
+    private void openNewPage(Stage stage,StageFactory factory)throws IOException{
         stage.close();
         factory.initCosommationT();
+    }
+
+    @FXML
+    public void setSel_cosm_type(String type){
+        sel_cosm_type.setText(type);
     }
 }

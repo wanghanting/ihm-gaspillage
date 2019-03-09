@@ -4,8 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -24,13 +23,38 @@ public class ControllerFollow {
     private Hyperlink link_deco;
 
     @FXML
-    private void closeButtonAction(){
+    private Label lbl_1;
+
+    @FXML
+    private Label lbl_2;
+
+    @FXML
+    private ListView lst_1;
+
+    @FXML
+    private ListView lst_2;
+
+    @FXML
+    private TextArea text_pro;
+
+    @FXML
+    private Button btn_msg;
+
+    public void closeButtonAction(){
         Stage stage = (Stage) btn_close.getScene ().getWindow ();
         stage.close();
     }
 
-    @FXML
-    private void setLink_aide() {
+    public ListView getLst_1() {
+        return lst_1;
+    }
+
+    public ListView getLst_2() {
+        return lst_2;
+    }
+
+
+    public void setLink_aide() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/aide.fxml"));
             Parent root1 = (Parent) fxmlLoader.load ();
@@ -43,8 +67,7 @@ public class ControllerFollow {
         }
     }
 
-    @FXML
-    private void setLink_accueil(){
+    public void setLink_accueil(){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/page_d'accueil.fxml"));
             Parent root1 = (Parent) fxmlLoader.load ();
@@ -57,8 +80,7 @@ public class ControllerFollow {
         }
     }
 
-    @FXML
-    private void setLink_deco(){
+    public void setLink_deco(){
         FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/authentification1.fxml"));
         try {
             Parent root1 = (Parent) fxmlLoader.load ();
@@ -69,5 +91,8 @@ public class ControllerFollow {
         } catch (IOException e) {
             e.printStackTrace ();
         }
+    }
+
+    public void initFollow(){
     }
 }

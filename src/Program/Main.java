@@ -1,11 +1,8 @@
 package Program;
 
-import Program.Controller.ControllerAuthentification;
 import Program.Controller.ControllerEnregistrer;
-import Program.Controller.ControllerInscription;
 import Program.Model.ModelListOfFood;
 import Program.Model.ModelListOfTags;
-import Program.Model.ModelListOfUsers;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,51 +15,23 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-
-//        FXMLLoader loader = new FXMLLoader();
-//
-//        StageFactory stages = new StageFactory();
-//
-//        ViewAuthentification view = new ViewAuthentification();
-//
-//        //create a controller
-//        ControllerAuthentification controller = new ControllerAuthentification();
-//
-//        //attach controller
-//        loader.setController(controller);
-//
-//        //attach XML file
-//        Parent root = loader.load(getClass().getResourceAsStream("Resources/authentification1.fxml"));
-//
-//
-//        ModelListOfUsers model = new ModelListOfUsers();
-//
-//        //initialize the controller
-//        controller.init(model,primaryStage,stages);
-//
-//        view.init( model, controller );
-//
-//        //create the view
-//        primaryStage.setScene(new Scene(root, view.WIDTH, view.HEIGHT));
-//        primaryStage.setTitle(view.LABEL);
-
-        //show the view
-//        primaryStage.show();
         StageFactory stages = new StageFactory();
         //create a loader
         FXMLLoader loader = new FXMLLoader();
-        ModelListOfUsers modelListOfUsers = new ModelListOfUsers();
-        ControllerInscription controllerinscription= new ControllerInscription();
-        ViewInscription viewInscription=new ViewInscription();
-        loader.setController(controllerinscription);
-        Parent root = loader.load(getClass().getResourceAsStream("Resources/inscription.fxml"));
-        controllerinscription.init(modelListOfUsers,primaryStage,stages);
-        viewInscription.init(modelListOfUsers,controllerinscription);
+        ModelListOfFood modelListOfFood = new ModelListOfFood();
+        ModelListOfTags modelListOfTags = new ModelListOfTags();
+        ControllerEnregistrer controllerenregistrer= new ControllerEnregistrer();
+        ViewEnregistrer viewEnregistrer=new ViewEnregistrer();
+        loader.setController(controllerenregistrer);
+        Parent root = loader.load(getClass().getResourceAsStream("Resources/enregistrer.fxml"));
+        root.getStylesheets().add(getClass().getResource("Resources/view.css").toExternalForm());
+        //controllerenregistrer.getBtn_ajouter().getStyleClass().add("buttonFred");
+        controllerenregistrer.init(modelListOfFood,primaryStage,stages);
+        viewEnregistrer.init(modelListOfTags,controllerenregistrer);
 
-        primaryStage.setTitle("Inscription!");
-        primaryStage.setScene(new Scene(root, 600, 475));
+        primaryStage.setTitle("Gaspillage");
+        primaryStage.setScene(new Scene(root, 700, 375));
         primaryStage.show();
-
 
     }
 

@@ -4,6 +4,7 @@ import Program.Controller.*;
 import Program.Model.ModelListOfFood;
 import Program.Model.ModelListOfTags;
 import Program.Model.ModelListOfUsers;
+import Program.Model.ModelUser;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,6 +18,7 @@ import java.io.IOException;
 public class StageFactory {
     static int width = 600;
     static int height = 475;
+    public ModelUser user = null;
 
     private ModelListOfTags modelListOfTags = new ModelListOfTags();
     private ModelListOfFood modelListOfFood = new ModelListOfFood();
@@ -35,7 +37,11 @@ public class StageFactory {
 
         controllerAccueil.init(modelListOfFood,viewFood,stage,this);
         viewFood.init(modelListOfFood, controllerAccueil);
-        stage.setScene(new Scene(root, width, height));
+
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
+
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
@@ -72,6 +78,7 @@ public class StageFactory {
         return stage;
     }
 
+
     public Stage initEnregistrer() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         Stage stage = new Stage();
@@ -83,7 +90,11 @@ public class StageFactory {
 
         controllerenregistrer.init(modelListOfFood, stage,this);
         viewEnregistrer.init(modelListOfTags, controllerenregistrer);
-        stage.setScene(new Scene(root, width, height));
+
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
+
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
@@ -105,7 +116,11 @@ public class StageFactory {
 
         controller.init (modelListOfTags, viewType, stage, this);
         viewType.init (modelListOfTags, controller);
-        stage.setScene (new Scene (root, width, height));
+
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
+
         stage.show ();
         stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
             @Override
@@ -124,7 +139,11 @@ public class StageFactory {
         loader.setController (controllerAide);
         Parent root = loader.load (getClass ().getResourceAsStream ("Resources/aide.fxml"));
         controllerAide.init (stage);
-        stage.setScene (new Scene (root, width, height));
+
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
+
         stage.show();
         stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
             @Override
@@ -136,6 +155,13 @@ public class StageFactory {
     }
 
     public Stage initProfil() throws IOException{
+        ModelUser user1 = new ModelUser ("hahaha", "asd");
+        user1.setFirstName ("Hanting");
+        user1.setLastName ("WANG");
+        user1.setSmallDescription ("asddd");
+        user1.setLongDescription ("dadas");
+        user = user1;
+
         FXMLLoader loader = new FXMLLoader ();
         Stage stage = new Stage ();
         ControllerProfil controllerProfil = new ControllerProfil ();
@@ -154,28 +180,17 @@ public class StageFactory {
         return stage;
     }
 
-    public Stage initInscription(ModelListOfUsers modelListOfUser) throws IOException {
-        FXMLLoader loader= new FXMLLoader();
-        Stage stage = new Stage();
+    public Stage initConsomation() throws IOException {
+        FXMLLoader loader = new FXMLLoader ();
+        Stage stage = new Stage ();
+        ControllerConsomationG controllerConsomationG=new ControllerConsomationG();
+        ViewConsomationG viewConsomationG = new ViewConsomationG();
 
-        ViewInscription viewUser = new ViewInscription();
-        ControllerInscription controllerInscription = new ControllerInscription();
-
-
-        loader.setController(controllerInscription);
-        Parent root = loader.load(getClass().getResourceAsStream("Resources/inscription.fxml"));
-
-        controllerInscription.init(modelListOfUser, stage,this);
-        viewUser.init(modelListOfUser, controllerInscription);
-        stage.setScene(new Scene(root, width, height));
-        stage.show();
-        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-            @Override
-            public void handle(WindowEvent event) {
-                //�˴���stage�ر�ʱ��ͬʱ�������򣬱���stage�رպ󣬳������ر��ˣ�����̨�߳�ȴ��Ȼ���е�����
-                System.exit(0);
-            }
-        });
+        loader.setController (controllerConsomationG);
+        Parent root = loader.load (getClass ().getResourceAsStream ("Resources/consommation_graphique.fxml"));
+        viewConsomationG.init(controllerConsomationG,modelListOfFood);
+        stage.setScene (new Scene (root, width, height));
+        stage.show ();
         return stage;
     }
 
@@ -195,43 +210,11 @@ public class StageFactory {
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
-                //�˴���stage�ر�ʱ��ͬʱ�������򣬱���stage�رպ󣬳������ر��ˣ�����̨�߳�ȴ��Ȼ���е�����
                 System.exit(0);
             }
         });
         return stage;
     }
-    public Stage initInscriptionError( ) throws IOException {
-        FXMLLoader loader= new FXMLLoader();
-        Stage stage = new Stage();
-
-        Parent root = loader.load(getClass().getResourceAsStream("Resources/inscription_error.fxml"));
-        stage.setScene(new Scene(root, width, height));
-        stage.show();
-        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-            @Override
-            public void handle(WindowEvent event) {
-                System.exit(0);
-            }
-        });
-        return stage;
-    }
-
-    public Stage initConsomation() throws IOException {
-        FXMLLoader loader = new FXMLLoader ();
-        Stage stage = new Stage ();
-        ControllerConsomationG controllerConsomationG=new ControllerConsomationG();
-        ViewConsomationG viewConsomationG = new ViewConsomationG();
-
-        loader.setController (controllerConsomationG);
-        Parent root = loader.load (getClass ().getResourceAsStream ("Resources/consommation_graphique.fxml"));
-        viewConsomationG.init(controllerConsomationG,modelListOfFood);
-        stage.setScene (new Scene (root, width, height));
-        stage.show ();
-        return stage;
-
-    }
-
 
     public void setModelListOfFood(ModelListOfFood modelListOfFood){
         this.modelListOfFood = modelListOfFood;
@@ -239,10 +222,6 @@ public class StageFactory {
 
     public void setModelListOfTags(ModelListOfTags modelListOfTags){
         this.modelListOfTags = modelListOfTags;
-    }
-
-    public ModelListOfFood getModelListOfFood(){
-        return modelListOfFood;
     }
 
 }

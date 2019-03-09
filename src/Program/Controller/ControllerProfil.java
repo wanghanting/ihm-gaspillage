@@ -1,12 +1,15 @@
 package Program.Controller;
 
 import Program.StageFactory;
+import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
+
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -18,6 +21,18 @@ public class ControllerProfil {
     @FXML
     private Hyperlink link_accueil;
 
+    @FXML
+    private Label lbl_nom;
+
+    @FXML
+    private Label lbl_prenom;
+
+    @FXML
+    private Label lbl_mot;
+
+    @FXML
+    private Label lbl_profil;
+
     private void closeButtonAction(Stage stage) {
         stage.close ();
     }
@@ -25,6 +40,22 @@ public class ControllerProfil {
     private void setLink_accueil(Stage stageold, StageFactory factory) throws IOException{
         stageold.close ();
         factory.initAccueil ();
+    }
+
+    private Label getLbl_nom(){
+        return lbl_nom;
+    }
+
+    private Label getLbl_prenom(){
+        return lbl_prenom;
+    }
+
+    private Label getLbl_mot(){
+        return lbl_mot;
+    }
+
+    private Label getLbl_profil(){
+        return lbl_profil;
     }
 
 
@@ -40,6 +71,15 @@ public class ControllerProfil {
                 e.printStackTrace ();
             }
         });
+
+        this.getLbl_nom().setText (factory.user.getLastName ());
+
+        this.getLbl_prenom ().setText (factory.user.getFirstName ());
+
+        this.getLbl_mot ().setText (factory.user.getSmallDescription ());
+
+        this.getLbl_profil ().setText (factory.user.getLongDescription ());
+
     }
 
 //    @FXML

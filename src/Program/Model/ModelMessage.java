@@ -18,4 +18,5 @@ public class ModelMessage {
     public LocalDateTime getDate() {return date;}
     public String getMessage() {return message;}
     public ModelUser getSender(){return sender;}
+    public ModelUser getReceivor(){return receivor;}
 }

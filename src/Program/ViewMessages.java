@@ -4,6 +4,9 @@ import Program.Controller.Controller;
 import Program.Controller.ControllerMessage;
 import Program.Controller.ControllerMessages;
 import Program.Model.ModelMessage;
+import Program.Model.ModelUser;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
@@ -11,16 +14,16 @@ import javafx.scene.control.ListView;
 import javafx.util.Callback;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ViewMessages extends View{
     private static final String MESSAGE = "Resources/message.fxml";
 
     @Override
     public void init(Controller controllerMessages, StageFactory stages){
-        System.out.println(111);
+
         ControllerMessages controllerMessages1=(ControllerMessages)controllerMessages;
-        System.out.println(stages.getModelListOfMes().getListOfMes().size());
-        controllerMessages1.getList_newm().setItems(stages.getModelListOfMes().getListOfMes());
+        controllerMessages1.getList_newm().setItems(findMes(stages.getModelListOfMes().getListOfMes(),stages.getUser()));
 
 
         adaptItems(controllerMessages1.getList_newm());
@@ -63,4 +66,14 @@ public class ViewMessages extends View{
                     }
                 });
     }
+    ObservableList findMes(ObservableList<ModelMessage> listmes, ModelUser user){
+        ObservableList<ModelMessage> list = FXCollections.observableList (new ArrayList<>());
+        for(ModelMessage mes:listmes){
+            if(mes.getReceivor().getUsername().equals(user.getUsername())){
+                list.add(mes);
+            }
+        }
+        return list;
+    }
+
 }

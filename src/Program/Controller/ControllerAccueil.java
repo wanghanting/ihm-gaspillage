@@ -97,7 +97,7 @@ public class ControllerAccueil {
     }
     void setBtn_conso(Stage stageold,StageFactory factory)throws IOException {
         stageold.close();
-        factory.initConsomation();
+        factory.initCosommationT();
     }
 
     void setBtn_follow(Stage stageold, StageFactory factory)throws IOException{

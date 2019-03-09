@@ -1,8 +1,7 @@
 package Program.Model;
-import javafx.beans.property.StringProperty;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -18,7 +17,11 @@ public class ModelListOfFood {
     private ObservableList<ModelFood> listOfOkFoodOfOneType;
     private ObservableList<ModelFood> listOfPerimeFoodOfOneType;
     private ObservableList<ModelFood> listOfPPFoodOfOneType;
+    private ObservableList<ModelFood> listOfConsom;
+    private ObservableList<ModelFood> listOfGas;
     private String type;
+    private LocalDate dateFrom;
+    private LocalDate dateTo;
 
     public ModelListOfFood(){
         listOfFoodA= FXCollections.observableList(new ArrayList<>());
@@ -32,6 +35,8 @@ public class ModelListOfFood {
         listOfOkFoodOfOneType = FXCollections.observableList(new ArrayList<>());
         listOfPerimeFoodOfOneType = FXCollections.observableList(new ArrayList<>());
         listOfPPFoodOfOneType = FXCollections.observableList(new ArrayList<>());
+        listOfConsom = FXCollections.observableList(new ArrayList<>());
+        listOfGas = FXCollections.observableList(new ArrayList<>());
         listOfFoodA.add(new ModelFood("apple","fruit",1,LocalDate.of(2019, 1, 8),LocalDate.of(2019, 2, 8),1,"from England"));
         listOfFoodG.add(new ModelFood("apple","fruit",1,LocalDate.of(2019, 1, 8),LocalDate.of(2019, 2, 8),1,"from England"));
     }
@@ -108,4 +113,47 @@ public class ModelListOfFood {
         return listOfPPFoodOfOneType;
     }
 
+    public ObservableList<ModelFood> getlistOfConsom(){
+        listOfConsom.removeAll(listOfConsom);
+        if(dateFrom == null || dateTo == null){
+            return this.listOfFoodA;
+        }else {
+            for (ModelFood food : this.listOfFoodG) {
+                if (food.getDatePurchase().compareTo(dateFrom) >= 0 && food.getDatePurchase().compareTo(dateTo) <= 0) {
+                    listOfConsom.add(food);
+                }
+            }
+            return listOfConsom;
+        }
+    }
+
+    public ObservableList<ModelFood> getListOfGas(){
+        listOfGas.removeAll(listOfGas);
+        if(dateFrom == null || dateTo == null){
+            return this.listOfPerimeFoodG;
+        }else {
+            for (ModelFood food : this.listOfPerimeFoodG) {
+                if (food.getDateExpiration().compareTo(dateFrom) >= 0 && food.getDateExpiration().compareTo(dateTo) <= 0) {
+                    listOfGas.add(food);
+                }
+            }
+            return listOfGas;
+        }
+    }
+
+    public void setDateFrom(LocalDate dateFrom){
+        this.dateFrom = dateFrom;
+    }
+
+    public void setDateTo(LocalDate dateTo){
+        this.dateTo = dateTo;
+    }
+
+    public LocalDate getDateFrom(){
+        return dateFrom;
+    }
+
+    public LocalDate getDateTo(){
+        return dateTo;
+    }
 }

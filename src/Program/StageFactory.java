@@ -241,12 +241,41 @@ public class StageFactory {
         return stage;
     }
 
+    public Stage initCosommationT()throws IOException{
+        FXMLLoader loader= new FXMLLoader();
+        Stage stage = new Stage();
+
+        ViewConsommationTextDate view = new ViewConsommationTextDate();
+        ControllerConsommationTextDate controller = new ControllerConsommationTextDate();
+
+
+        loader.setController(controller);
+        Parent root = loader.load(getClass().getResourceAsStream("Resources/consommation_texte.fxml"));
+
+        ModelListOfSum model = new ModelListOfSum();
+        controller.init(model,view,stage,this);
+        view.init(model,modelListOfFood, controller);
+        stage.setScene(new Scene(root, width, height));
+        stage.show();
+        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                System.exit(0);
+            }
+        });
+        return stage;
+    }
+
     public void setModelListOfFood(ModelListOfFood modelListOfFood){
         this.modelListOfFood = modelListOfFood;
     }
 
     public void setModelListOfTags(ModelListOfTags modelListOfTags){
         this.modelListOfTags = modelListOfTags;
+    }
+
+    public ModelListOfFood getModelListOfFood(){
+        return modelListOfFood;
     }
 
 }

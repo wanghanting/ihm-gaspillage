@@ -1,13 +1,15 @@
 package Program.Controller;
 
+import Program.Model.ModelListOfFood;
+import Program.Model.ModelListOfSum;
+import Program.StageFactory;
+import Program.ViewConsommationTextDate;
+import Program.ViewFoodByType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -32,56 +34,51 @@ public class ControllerConsommationTextDate {
     private DatePicker date_from;
     @FXML
     private DatePicker date_to;
+    @FXML
+    private Label lab_from;
+    @FXML
+    private Label lab_to;
 
     public ListView getList_cons(){return list_cons;}
     public ListView getList_gas(){return list_gas;}
     public ListView getList_taux(){return list_taux;}
+    public DatePicker getDate_from(){return date_from;}
+    public DatePicker getDate_to(){return date_to;}
+
 
     @FXML
-    private void setBtn_close(){
-        Stage stage = (Stage) btn_close.getScene ().getWindow ();
-        stage.close ();
+    public void init(ModelListOfSum sum, ViewConsommationTextDate view, Stage stage , StageFactory stageFactory){
+        if(stageFactory.getModelListOfFood().getDateFrom() == null ){
+            lab_from.setText("Pas choisir");
+        }else {
+            lab_from.setText(stageFactory.getModelListOfFood().getDateFrom().toString());
+        }
+        if(stageFactory.getModelListOfFood().getDateTo() == null){
+            lab_to.setText("Pas choisir");
+        }else {
+            lab_to.setText(stageFactory.getModelListOfFood().getDateTo().toString());
+        }
+        date_from.setOnAction(event -> {
+            try {
+                stageFactory.getModelListOfFood().setDateFrom(date_from.getValue());
+                setDate(stage,stageFactory);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        });
+        date_to.setOnAction(event -> {
+            try {
+                stageFactory.getModelListOfFood().setDateTo(date_to.getValue());
+                setDate(stage,stageFactory);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        });
     }
 
     @FXML
-    private void setLink_aide() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/aide.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = new Stage ();
-            stage.setTitle ("Aide");
-            stage.setScene (new Scene (root1));
-            stage.show ();
-        } catch (IOException e) {
-            e.printStackTrace ();
-        }
-    }
-
-    @FXML
-    private void setLink_accueil(){
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/page_d'accueil.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) link_accueil.getScene ().getWindow ();
-            stage.setTitle ("Page d'accueil");
-            stage.setScene (new Scene (root1));
-            stage.show ();
-        } catch (IOException e) {
-            e.printStackTrace ();
-        }
-    }
-
-    @FXML
-    private void setLink_deco(){
-        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/authentification.fxml"));
-        try {
-            Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) link_deco.getScene ().getWindow ();
-            stage.setTitle ("Gaspillage");
-            stage.setScene (new Scene (root1));
-            stage.show ();
-        } catch (IOException e) {
-            e.printStackTrace ();
-        }
+    private void setDate(Stage stage,StageFactory factory)throws IOException{
+        stage.close();
+        factory.initCosommationT();
     }
 }

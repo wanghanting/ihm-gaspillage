@@ -74,7 +74,7 @@ public class ControllerConsommationTextDate {
                 e.printStackTrace();
             }
         });
-        somme.setOnAction(event -> {
+        date_to.setOnAction(event -> {
             try {
                 stageFactory.getModelListOfFood().setDateTo(date_to.getValue());
                 openNewPage(stage,stageFactory);

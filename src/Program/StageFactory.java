@@ -21,6 +21,7 @@ public class StageFactory {
     private ModelListOfFood modelListOfFood = new ModelListOfFood();
     private ModelListOfFollow modelListOfAmi = new ModelListOfFollow ();
     private ModelListOfFollow modelListOfFans = new ModelListOfFollow ();
+    private String typeOfConsom = "somme";
     private ModelListOfMes modelListOfMes = new ModelListOfMes();
 
     public Stage initAccueil() throws IOException {
@@ -255,7 +256,12 @@ public class StageFactory {
 
         ModelListOfSum model = new ModelListOfSum();
         controller.init(model,view,stage,this);
-        view.init(model,modelListOfFood, controller);
+        if(typeOfConsom.equals("somme")){
+            controller.setSel_cosm_type(typeOfConsom);
+        }else {
+            controller.setSel_cosm_type("par " + typeOfConsom);
+        }
+        view.init(model,modelListOfFood,modelListOfTags, controller,typeOfConsom);
         stage.setScene(new Scene(root, width, height));
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
@@ -287,6 +293,10 @@ public class StageFactory {
 
     public ModelListOfFood getModelListOfFood(){
         return modelListOfFood;
+    }
+
+    public void setTypeOfConsom(String type){
+        typeOfConsom = type;
     }
 
     public ModelListOfMes getModelListOfMes(){

@@ -116,7 +116,7 @@ public class ModelListOfFood {
     public ObservableList<ModelFood> getlistOfConsom(){
         listOfConsom.removeAll(listOfConsom);
         if(dateFrom == null || dateTo == null){
-            return this.listOfFoodA;
+            return this.listOfFoodG;
         }else {
             for (ModelFood food : this.listOfFoodG) {
                 if (food.getDatePurchase().compareTo(dateFrom) >= 0 && food.getDatePurchase().compareTo(dateTo) <= 0) {

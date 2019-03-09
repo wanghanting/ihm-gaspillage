@@ -2,10 +2,7 @@ package Program;
 
 import Program.Controller.ControllerConsommationTextDate;
 import Program.Controller.ControllerSum;
-import Program.Model.ModelListOfFood;
-import Program.Model.ModelListOfSum;
-import Program.Model.ModelSum;
-import Program.Model.ModelTag;
+import Program.Model.*;
 import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,7 +15,6 @@ import java.io.IOException;
 public class ViewConsommationTextDate {
     private static final String SUM = "Resources/sum.fxml";
     private static int rangeSelectedItem = -1;
-    private static ModelListOfFood modelFood;
     private static ModelListOfSum modelSum;
     private static ControllerConsommationTextDate controller;
 
@@ -26,16 +22,25 @@ public class ViewConsommationTextDate {
         return rangeSelectedItem;
     }
 
-    public void init(ModelListOfSum modelSum,ModelListOfFood modelFood, ControllerConsommationTextDate controller) {
-        ViewConsommationTextDate.modelFood = modelFood;
+    public void init(ModelListOfSum modelSum, ModelListOfFood modelFood, ModelListOfTags modelTag, ControllerConsommationTextDate controller, String type) {
         ViewConsommationTextDate.modelSum = modelSum;
         ViewConsommationTextDate.controller = controller;
         //init the ObservableList of food to the ListView
         modelFood.init();
-        modelSum.init(modelFood);
-        controller.getList_cons().setItems(modelSum.getListOfConsom());
-        controller.getList_gas().setItems(modelSum.getListOfGas());
-        controller.getList_taux().setItems(modelSum.getListOfRate());
+        modelSum.init(modelFood,modelTag);
+        if(type.equals("somme")){
+            controller.getList_cons().setItems(modelSum.getListOfConsom());
+            controller.getList_gas().setItems(modelSum.getListOfGas());
+            controller.getList_taux().setItems(modelSum.getListOfRate());
+        }else if(type.equals("type")){
+            controller.getList_cons().setItems(modelSum.getListOfConsomByType());
+            controller.getList_gas().setItems(modelSum.getListOfGasByType());
+            controller.getList_taux().setItems(modelSum.getListOfRateByType());
+        }else {
+            controller.getList_cons().setItems(modelSum.getListOfConsomByAli());
+            controller.getList_gas().setItems(modelSum.getListOfGasByAli());
+            controller.getList_taux().setItems(modelSum.getListOfRateByAli());
+        }
         adaptItems(controller.getList_cons() );
         adaptItems(controller.getList_gas());
         adaptItems(controller.getList_taux());

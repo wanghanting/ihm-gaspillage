@@ -12,6 +12,6 @@ public class ControllerSum {
 
     @FXML
     public void init(ModelSum sum){
-        this.sum.setText(sum.getName() + "    " + sum.getSum());
+        this.sum.setText(sum.getName() + "       " + sum.getSum());
     }
 }

@@ -18,6 +18,6 @@ public class ControllerUser {
     private Label user;
 
     public void init(ModelUser name) {
-        user.setText(name.getFirstName()+name.getLastName()+name.getLongDescription()+name.getSmallDescription()+name.getUsername()+name.getPassword());
+        user.setText(name.getUsername());
     }
 }

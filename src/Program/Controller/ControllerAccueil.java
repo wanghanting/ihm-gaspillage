@@ -47,18 +47,6 @@ public class ControllerAccueil {
 
     @FXML
     private void setLink_aide(StageFactory stageFactory) throws IOException{
-//        try {
-//            FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/aide.fxml"));
-//            Parent root = (Parent) fxmlLoader.load ();
-//            Stage stage = new Stage ();
-//            stage.initModality (Modality.APPLICATION_MODAL);
-//            stage.initStyle (StageStyle.UNDECORATED);
-//            stage.setTitle ("Aide");
-//            stage.setScene (new Scene (root));
-//            stage.show ();
-//        } catch (IOException e) {
-//            e.printStackTrace ();
-//        }
         stageFactory.initAide ();
 
     }
@@ -128,6 +116,11 @@ public class ControllerAccueil {
         factory.initConsomation();
     }
 
+    void setBtn_follow(Stage stageold, StageFactory factory)throws IOException{
+        stageold.close ();
+        factory.initFollow ();
+    }
+
     public ListView getPerimeFoodListView(){ return list_perimes;}
     public ListView getOkFoodListView(){ return this.list_aliok;}
     public ListView getPPFoodListView(){return  this.list_alipp;}
@@ -180,6 +173,13 @@ public class ControllerAccueil {
         btn_conso.setOnAction(event -> {
             try {
                 setBtn_conso(stage,factory);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        });
+        btn_follow.setOnAction(event -> {
+            try {
+                setBtn_follow (stage,factory);
             }catch (IOException e){
                 e.printStackTrace();
             }

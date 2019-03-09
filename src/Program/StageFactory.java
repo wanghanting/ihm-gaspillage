@@ -1,10 +1,7 @@
 package Program;
 
 import Program.Controller.*;
-import Program.Model.ModelListOfFood;
-import Program.Model.ModelListOfTags;
-import Program.Model.ModelListOfUsers;
-import Program.Model.ModelUser;
+import Program.Model.*;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -22,6 +19,8 @@ public class StageFactory {
 
     private ModelListOfTags modelListOfTags = new ModelListOfTags();
     private ModelListOfFood modelListOfFood = new ModelListOfFood();
+    private ModelListOfFollow modelListOfAmi = new ModelListOfFollow ();
+    private ModelListOfFollow modelListOfFans = new ModelListOfFollow ();
 
     public Stage initAccueil() throws IOException {
 
@@ -116,6 +115,32 @@ public class StageFactory {
 
         controller.init (modelListOfTags, viewType, stage, this);
         viewType.init (modelListOfTags, controller);
+
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
+
+        stage.show ();
+        stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
+            @Override
+            public void handle(WindowEvent event) {
+                System.exit (0);
+            }
+        });
+        return stage;
+    }
+
+    public Stage initFollow() throws IOException {
+        FXMLLoader loader = new FXMLLoader ();
+        Stage stage = new Stage ();
+        ViewFollow viewFollow = new ViewFollow ();
+        ControllerFollow controller = new ControllerFollow ();
+
+        loader.setController (controller);
+        Parent root = loader.load (getClass ().getResourceAsStream ("Resources/follower.fxml"));
+
+        controller.init (modelListOfFans, modelListOfAmi, viewFollow, stage, this);
+        viewFollow.init (modelListOfAmi, controller);
 
         Scene scene = new Scene(root, width, height);
         scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());

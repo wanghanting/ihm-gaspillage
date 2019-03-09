@@ -86,7 +86,6 @@ public class ViewType{
                     rangeSelectedItem = modelListOfTags.getListOfTag().indexOf(newValue);
                     controllerType.setType(newValue.getName());
                 }
-
         );
     }
 

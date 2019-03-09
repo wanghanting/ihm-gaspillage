@@ -1,5 +1,8 @@
 package Program.Controller;
 
+import Program.Model.ModelListOfFollow;
+import Program.StageFactory;
+import Program.ViewFollow;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,6 +13,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class ControllerFollow {
+
+    private ModelListOfFollow modelListOfAmi = null;
+    private ModelListOfFollow modelListOfUsers = null;
+    private String user;
+
     @FXML
     private Button btn_close;
 
@@ -23,36 +31,38 @@ public class ControllerFollow {
     private Hyperlink link_deco;
 
     @FXML
-    private Label lbl_1;
+    private Label lbl_fans;
 
     @FXML
-    private Label lbl_2;
+    private Label lbl_ami;
 
     @FXML
-    private ListView lst_1;
+    private ListView lst_fans;
 
     @FXML
-    private ListView lst_2;
+    private ListView lst_ami;
 
     @FXML
-    private TextArea text_pro;
+    private TextField text_pro;
 
     @FXML
     private Button btn_msg;
 
-    public void closeButtonAction(){
-        Stage stage = (Stage) btn_close.getScene ().getWindow ();
+    public void setBtn_close(Stage stage){
         stage.close();
     }
 
-    public ListView getLst_1() {
-        return lst_1;
+    public ListView getLst_fans() {
+        return lst_fans;
     }
 
-    public ListView getLst_2() {
-        return lst_2;
+    public ListView getLst_ami() {
+        return lst_ami;
     }
 
+    public TextField getText_pro() {
+        return text_pro;
+    }
 
     public void setLink_aide() {
         try {
@@ -93,6 +103,16 @@ public class ControllerFollow {
         }
     }
 
-    public void initFollow(){
+    public void init(ModelListOfFollow listOfAmi, ModelListOfFollow listOfUsers, ViewFollow view, Stage stage, StageFactory factory){
+        this.modelListOfAmi = listOfAmi;
+        this.modelListOfUsers = listOfUsers;
+
+        btn_close.setOnAction (event -> {
+            setBtn_close (stage);
+        });
+    }
+
+    public void setUser(String user){
+        this.user = user;
     }
 }

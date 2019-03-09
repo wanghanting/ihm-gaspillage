@@ -14,7 +14,6 @@
       <Hyperlink fx:id="link_accueil" layoutX="35.0" layoutY="20.0" text="page d'accueil" underline="true" />
       <Hyperlink fx:id="link_aide" layoutX="134.0" layoutY="20.0" text="aide" underline="true" />
       <Hyperlink fx:id="link_deco" layoutX="439.0" layoutY="20.0" text="se deconnecter" underline="true" />
-      <Button fx:id="btn_close" layoutX="550.0" layoutY="-2.0" mnemonicParsing="false" text="close" />
       <TextField fx:id="text_pro" layoutX="217.0" layoutY="74.0" promptText="profil..." />
       <Text layoutX="176.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Followers/Following">
          <font>
@@ -26,5 +25,6 @@
       <Label fx:id="lbl_ami" layoutX="344.0" layoutY="110.0" prefHeight="17.0" prefWidth="200.0" text="Vous suivez" />
       <ListView fx:id="lst_ami" layoutX="344.0" layoutY="128.0" prefHeight="200.0" prefWidth="200.0" />
       <Button fx:id="btn_msg" layoutX="246.0" layoutY="348.0" mnemonicParsing="false" text="Send message" />
+      <Button fx:id="btn_close" layoutX="550.0" mnemonicParsing="false" text="close" />
    </children>
 </Pane>

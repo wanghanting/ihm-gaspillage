@@ -38,7 +38,6 @@ public class ViewAccueil {
         controller.getPerimeFoodListView().setItems(model.getListOfPerimeFood());
         controller.getOkFoodListView().setItems(model.getListOfOkFood());
         controller.getPPFoodListView().setItems(model.getListOfPPFood());
-        System.out.println(model.getListOfPerimeFood().size());
 
         //call a cell factory and display each observable item in the ListView
         adaptItems(controller.getPerimeFoodListView() );

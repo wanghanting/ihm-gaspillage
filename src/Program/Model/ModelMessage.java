@@ -1,22 +1,21 @@
 package Program.Model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class ModelMessage {
-    private ModelOtherUser otherUser;
-    private boolean isOtherUserTheSender;
+    private ModelUser sender;
+    private ModelUser receivor;
     private LocalDateTime date;
     private String message;
 
-    public ModelMessage(ModelOtherUser otherUser, boolean isOtherUserTheSender, String message){
-        this.otherUser = otherUser;
-        this.isOtherUserTheSender = isOtherUserTheSender;
-        this.date = date.now();
+    public ModelMessage(ModelUser User,ModelUser receivor, String message,LocalDateTime date){
+        this.sender = User;
+        this.receivor = receivor;
+        this.date = date;
         this.message = message;
     }
-
-    public ModelOtherUser getOtherUser() {return otherUser;}
-    public boolean getIsOtherUserTheSender() {return isOtherUserTheSender;}
     public LocalDateTime getDate() {return date;}
     public String getMessage() {return message;}
+    public ModelUser getSender(){return sender;}
 }

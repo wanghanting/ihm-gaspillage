@@ -2,45 +2,29 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.ScrollBar?>
-<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Program.Controller.ControllerFollow">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Hyperlink fx:id="link_accueil" layoutX="35.0" layoutY="20.0" text="page d'accueil" underline="true" onAction="#setLink_accueil"/>
-      <Hyperlink fx:id="link_aide" layoutX="134.0" layoutY="20.0" text="aide" underline="true" onAction="#setLink_aide"/>
-      <Hyperlink fx:id="link_deco" layoutX="439.0" layoutY="20.0" text="se deconnecter" underline="true" onAction="#setLink_deco"/>
-      <TabPane layoutX="355.0" layoutY="114.0" prefHeight="264.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" />
-      <Button fx:id="btn_close" layoutX="550.0" layoutY="-2.0" mnemonicParsing="false" text="close" onAction="#closeButtonAction"/>
+      <Hyperlink fx:id="link_accueil" layoutX="35.0" layoutY="20.0" text="page d'accueil" underline="true" />
+      <Hyperlink fx:id="link_aide" layoutX="134.0" layoutY="20.0" text="aide" underline="true" />
+      <Hyperlink fx:id="link_deco" layoutX="439.0" layoutY="20.0" text="se deconnecter" underline="true" />
       <TextField fx:id="text_pro" layoutX="217.0" layoutY="74.0" promptText="profil..." />
-      <TitledPane animated="false" layoutX="69.0" layoutY="125.0" text="personnes vous suivent">
-        <content>
-          <AnchorPane fx:id="pane_sui" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <ScrollBar layoutX="183.0" orientation="VERTICAL" prefHeight="181.0" prefWidth="17.0" />
-               </children>
-            </AnchorPane>
-        </content>
-      </TitledPane>
-      <TitledPane animated="false" layoutX="344.0" layoutY="124.0" text="Vous suivez">
-        <content>
-          <AnchorPane fx:id="pane_me_sui" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <ScrollBar layoutX="183.0" orientation="VERTICAL" prefHeight="181.0" prefWidth="17.0" />
-               </children>
-            </AnchorPane>
-        </content>
-      </TitledPane>
       <Text layoutX="176.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Followers/Following">
          <font>
             <Font size="28.0" />
          </font>
       </Text>
+      <ListView fx:id="lst_fans" layoutX="52.0" layoutY="128.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="lbl_fans" layoutX="52.0" layoutY="106.0" prefHeight="25.0" prefWidth="200.0" text="personnes vous suivent" />
+      <Label fx:id="lbl_ami" layoutX="344.0" layoutY="110.0" prefHeight="17.0" prefWidth="200.0" text="Vous suivez" />
+      <ListView fx:id="lst_ami" layoutX="344.0" layoutY="128.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="btn_msg" layoutX="246.0" layoutY="348.0" mnemonicParsing="false" text="Send message" />
+      <Button fx:id="btn_close" layoutX="550.0" mnemonicParsing="false" text="close" />
    </children>
 </Pane>

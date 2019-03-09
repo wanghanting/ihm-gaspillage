@@ -3,52 +3,34 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Program.Controller.ControllerMessages">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Hyperlink fx:id="link_accueil" layoutX="35.0" layoutY="21.0" text="page d'accueil" onAction="#setLink_accueil" underline="true" />
-      <Hyperlink fx:id="link_aide" layoutX="157.0" layoutY="21.0" text="aide" onAction="#setLink_aide" underline="true" />
-      <Hyperlink fx:id="link_deco" layoutX="434.0" layoutY="24.0" text="se deconnecter" underline="true" onAction="#setLink_deco"/>
+      <Hyperlink fx:id="link_accueil" layoutX="35.0" layoutY="21.0" text="page d'accueil" underline="true" />
+      <Hyperlink fx:id="link_aide" layoutX="157.0" layoutY="21.0" text="aide" underline="true" />
+      <Hyperlink fx:id="link_deco" layoutX="434.0" layoutY="24.0" text="se deconnecter" underline="true" />
       <Label layoutX="219.0" layoutY="10.0" text="Messages">
          <font>
             <Font size="39.0" />
          </font>
       </Label>
-      <TitledPane animated="false" layoutX="14.0" layoutY="105.0" prefHeight="266.0" prefWidth="177.0" text="Nouvelles notifications">
-        <content>
-          <AnchorPane fx:id="title_noti" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <ScrollBar layoutX="161.0" orientation="VERTICAL" prefHeight="243.0" prefWidth="17.0" />
-               </children>
-            </AnchorPane>
-        </content>
-      </TitledPane>
-      <TitledPane animated="false" layoutX="193.0" layoutY="105.0" prefHeight="266.0" prefWidth="177.0" text="Nouveaux messages">
+      <TitledPane animated="false" layoutX="93.0" layoutY="105.0" prefHeight="266.0" prefWidth="209.0" text="Nouveaux messages">
          <content>
-            <AnchorPane fx:id="title_mes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <ScrollBar layoutX="161.0" orientation="VERTICAL" prefHeight="243.0" prefWidth="17.0" />
-               </children>
-            </AnchorPane>
+            <ListView fx:id="list_newm" prefHeight="200.0" prefWidth="200.0" />
          </content>
       </TitledPane>
-      <TitledPane animated="false" layoutX="372.0" layoutY="105.0" prefHeight="266.0" prefWidth="133.0" text="Historique des conversations">
+      <TitledPane animated="false" layoutX="302.0" layoutY="105.0" prefHeight="266.0" prefWidth="133.0" text="Historique des conversations">
          <content>
-            <AnchorPane fx:id="title_con" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <ScrollBar layoutX="200.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="243.0" prefWidth="17.0" />
-               </children>
-            </AnchorPane>
+            <ListView fx:id="list_oldm" prefHeight="200.0" prefWidth="200.0" />
          </content>
       </TitledPane>
-      <Button fx:id="btn_close" layoutX="549.0" layoutY="1.0" mnemonicParsing="false" onAction="#setBtn_close" text="close" />
+      <Button fx:id="btn_close" layoutX="549.0" layoutY="1.0" mnemonicParsing="false" text="close" />
       <Text layoutX="219.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Envoyer un message a :">
          <font>
             <Font size="15.0" />

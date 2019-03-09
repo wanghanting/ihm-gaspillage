@@ -16,11 +16,12 @@ public class StageFactory {
     static int width = 600;
     static int height = 475;
     public ModelUser user = null;
-
+    private ModelListOfUsers modelListOfUsers=new ModelListOfUsers();
     private ModelListOfTags modelListOfTags = new ModelListOfTags();
     private ModelListOfFood modelListOfFood = new ModelListOfFood();
     private ModelListOfFollow modelListOfAmi = new ModelListOfFollow ();
     private ModelListOfFollow modelListOfFans = new ModelListOfFollow ();
+    private ModelListOfMes modelListOfMes = new ModelListOfMes();
 
     public Stage initAccueil() throws IOException {
 
@@ -265,6 +266,16 @@ public class StageFactory {
         });
         return stage;
     }
+    public void initMes(String path, Controller controller, View view) throws IOException {
+        FXMLLoader loader = new FXMLLoader ();
+        Stage stage = new Stage ();
+        loader.setController (controller);
+        Parent root = loader.load (getClass ().getResourceAsStream (path));
+        controller.init(stage,this);
+        view.init(controller,this);
+        stage.setScene (new Scene (root, width, height));
+        stage.show ();
+    }
 
     public void setModelListOfFood(ModelListOfFood modelListOfFood){
         this.modelListOfFood = modelListOfFood;
@@ -277,5 +288,12 @@ public class StageFactory {
     public ModelListOfFood getModelListOfFood(){
         return modelListOfFood;
     }
+
+    public ModelListOfMes getModelListOfMes(){
+        return modelListOfMes;
+    }
+    public void setUser(){this.user = new ModelUser("user1","shagua");}
+    public ModelUser getUser(){return this.user;}
+    public ModelListOfUsers getModelListOfUsers(){return this.modelListOfUsers;}
 
 }

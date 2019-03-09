@@ -2,6 +2,7 @@ package Program.Controller;
 
 import Program.Model.ModelListOfFood;
 import Program.StageFactory;
+import Program.ViewMessages;
 import Program.ViewAccueil;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +18,8 @@ import java.io.IOException;
 
 public class ControllerAccueil {
     private ModelListOfFood modelListfood = null;
+    private ControllerMessages controllerMessages=new ControllerMessages();
+    private ViewMessages viewMessages = new ViewMessages();
     private int chosenfood;
     @FXML
     private ListView list_alipp;
@@ -176,6 +179,14 @@ public class ControllerAccueil {
             stage.close();
             try {
                 factory.initAccueil();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        btn_mes.setOnAction(event -> {
+            stage.close();
+            try {
+                factory.initMes("Resources/messages.fxml",controllerMessages,viewMessages);
             } catch (IOException e) {
                 e.printStackTrace();
             }

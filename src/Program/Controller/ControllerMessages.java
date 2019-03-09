@@ -6,11 +6,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ControllerMessages {
+public class ControllerMessages extends Controller {
     @FXML
     private Button btn_close;
 
@@ -22,6 +23,12 @@ public class ControllerMessages {
 
     @FXML
     private Hyperlink link_deco;
+
+    @FXML
+    private ListView list_newm;
+
+    @FXML
+    private ListView list_oldm;
 
     @FXML
     private void setBtn_close(){
@@ -70,4 +77,6 @@ public class ControllerMessages {
             e.printStackTrace ();
         }
     }
+    public ListView getList_newm(){return list_newm;}
+    public ListView getList_oldm(){return list_oldm;}
 }

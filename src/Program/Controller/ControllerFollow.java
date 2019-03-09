@@ -3,6 +3,7 @@ package Program.Controller;
 import Program.Model.ModelListOfFollow;
 import Program.StageFactory;
 import Program.ViewFollow;
+import Program.ViewSend;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,6 +17,8 @@ public class ControllerFollow {
 
     private ModelListOfFollow modelListOfAmi = null;
     private ModelListOfFollow modelListOfUsers = null;
+    private ControllerSend controllerSend=new ControllerSend();
+    private ViewSend viewSend = new ViewSend();
     private String user;
 
     @FXML
@@ -105,6 +108,14 @@ public class ControllerFollow {
                 setLink_deco (stage, factory);
             }catch (IOException e){
                 e.printStackTrace ();
+            }
+        });
+        btn_msg.setOnAction(event -> {
+            stage.close();
+            try {
+                factory.initMes("Resources/send.fxml",controllerSend,viewSend);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         });
     }

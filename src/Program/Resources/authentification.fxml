@@ -6,36 +6,107 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="btn_close1" layoutX="548.0" layoutY="-1.0" mnemonicParsing="false" text="Close" textFill="#f50303" />
-      <Label layoutX="242.0" layoutY="25.0" prefHeight="57.0" prefWidth="343.0" text="Bienvenue sur StopAuGaspillage">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="244.0" layoutY="119.0" text="utilisateur ">
-         <font>
-            <Font name="System Bold Italic" size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="247.0" layoutY="216.0" prefHeight="18.0" prefWidth="117.0" text="mot de passe">
-         <font>
-            <Font name="System Bold Italic" size="13.0" />
-         </font>
-      </Label>
-      <Button fx:id="btn_authentifier" layoutX="332.0" layoutY="306.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="132.0" text="    S'authentifier    " textFill="#1490e3" />
-      <Label layoutX="244.0" layoutY="356.0" prefHeight="30.0" prefWidth="240.0" text="vous n'avez pas encore de compte?">
-         <font>
-            <Font name="Arial Bold Italic" size="12.0" />
-         </font>
-      </Label>
-      <Hyperlink fx:id="link_inscri" layoutX="461.0" layoutY="360.0" text="inscription " />
-      <TextField fx:id="txt_frame1" layoutX="244.0" layoutY="160.0" prefHeight="47.0" prefWidth="301.0" />
-      <TextField fx:id="txt_frame2" layoutX="247.0" layoutY="247.0" prefHeight="47.0" prefWidth="301.0" />
-      <Label fx:id="authenerr" layoutX="247.0" layoutY="82.0" />
-      <ImageView id="image_1" fx:id="image_1" fitHeight="176.0" fitWidth="162.0" layoutX="42.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" />
+      <HBox fx:id="hboxa" layoutY="4.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="249.0">
+               <children>
+                  <VBox prefHeight="85.0" prefWidth="242.0" />
+                  <HBox prefHeight="209.0" prefWidth="242.0">
+                     <children>
+                        <HBox prefHeight="209.0" prefWidth="54.0" />
+                        <VBox prefHeight="209.0" prefWidth="123.0">
+                           <children>
+                              <HBox prefHeight="45.0" prefWidth="123.0" />
+                              <ImageView id="image_1" fx:id="image_1" fitHeight="150.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox prefHeight="400.0" prefWidth="366.0">
+               <children>
+                  <VBox prefHeight="400.0" prefWidth="407.0">
+                     <children>
+                        <HBox prefHeight="39.0" prefWidth="359.0">
+                           <children>
+                              <HBox prefHeight="39.0" prefWidth="307.0" />
+                              <HBox prefHeight="39.0" prefWidth="53.0">
+                                 <children>
+                                    <Button fx:id="btn_close1" mnemonicParsing="false" text="Close" textFill="#f50303" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="57.0" prefWidth="359.0">
+                           <children>
+                              <Label prefHeight="49.0" prefWidth="343.0" text="Bienvenue sur StopAuGaspillage">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="21.0" prefWidth="359.0">
+                           <children>
+                              <Label fx:id="authenerr" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="38.0" prefWidth="359.0">
+                           <children>
+                              <Label text="utilisateur ">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="60.0" prefWidth="359.0">
+                           <children>
+                              <TextField fx:id="txt_frame1" prefHeight="47.0" prefWidth="301.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="29.0" prefWidth="359.0">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="117.0" text="mot de passe">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="58.0" prefWidth="359.0">
+                           <children>
+                              <TextField fx:id="txt_frame2" prefHeight="47.0" prefWidth="301.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="59.0" prefWidth="359.0">
+                           <children>
+                              <HBox prefHeight="59.0" prefWidth="91.0" />
+                              <Button fx:id="btn_authentifier" mnemonicParsing="false" prefHeight="36.0" prefWidth="132.0" text="    S'authentifier    " textFill="#1490e3" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="36.0" prefWidth="359.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="240.0" text="vous n'avez pas encore de compte?">
+                                 <font>
+                                    <Font name="Arial Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Hyperlink fx:id="link_inscri" text="inscription " />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

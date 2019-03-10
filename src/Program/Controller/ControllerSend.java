@@ -6,6 +6,7 @@ import Program.Model.ModelUser;
 import Program.StageFactory;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -20,16 +21,21 @@ public class ControllerSend extends Controller {
     @FXML
     private Button btn_send;
     @FXML
-    private TextField txt_rece;
+    private Label lab_rece;
     @FXML
     private TextArea txt_mes;
+
+    public Label getLab_rece() {
+        return lab_rece;
+    }
+
     @Override
     public void init(Stage stage, StageFactory factory){
         this.factory = factory;
         modelListOfMes = factory.getModelListOfMes();
         btn_send.setOnAction(event -> {
             stage.close();
-            modelListOfMes.getListOfMes().add(new ModelMessage(factory.getUser(),findUser(txt_rece.getText()),txt_mes.getText(), LocalDateTime.now()));
+            modelListOfMes.getListOfMes().add(new ModelMessage(factory.getUser(),findUser(lab_rece.getText()),txt_mes.getText(), LocalDateTime.now()));
             try {
                 factory.initAccueil();
             } catch (IOException e) {

@@ -11,6 +11,9 @@ public class ModelListOfUsers {
 
         ListOfUsers = FXCollections.observableList( new ArrayList<>());
         ListOfUsers.add(new ModelUser("user1","shagua"));
+        ListOfUsers.add(new ModelUser("hahaha","shagua"));
+        ListOfUsers.add(new ModelUser("superdemon","shagua"));
+
     }
     public void addUser(ModelUser user){
         ListOfUsers.add(user);

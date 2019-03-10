@@ -174,8 +174,6 @@ public class ControllerAccueil {
             System.out.println(view.getRangeSelectedItem());
             this.modelListfood.getListOfFoodA().remove(view.getRangeSelectedItem());
             factory.setModelListOfFood(this.modelListfood);
-
-            System.out.println(this.modelListfood.getListOfFoodA().size());
             stage.close();
             try {
                 factory.initAccueil();

@@ -15,7 +15,7 @@
 
 <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="380.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
       <children>
-      <HBox fx:id="hbox1" layoutX="25.0" prefHeight="380.0" prefWidth="641.0" snapToPixel="false">
+      <HBox fx:id="hboxa" layoutX="25.0" prefHeight="380.0" prefWidth="641.0" snapToPixel="false">
          <children>
             <VBox prefHeight="380.0" prefWidth="600.0">
                <children>

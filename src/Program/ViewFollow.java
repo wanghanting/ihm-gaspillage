@@ -84,7 +84,7 @@ public class ViewFollow {
                 (ChangeListener<ModelUser>) (observable, oldValue, newValue) -> {
                     rangeSelectedItem = modelListOfFollow.getListOfAmi ().indexOf(newValue);
                     rangeSelectedItem = modelListOfFollow.getListOfFans ().indexOf(newValue);
-                    controllerFollow.setUser (newValue.getUsername ());
+                    controllerFollow.setRece (newValue);
                 }
         );
     }

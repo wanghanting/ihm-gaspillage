@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class ControllerEnregistrer {
     private ModelListOfFood modelListFood;
     @FXML
-    private HBox hbox1;
+    private HBox hboxa;
     @FXML
     private TextField txt_nom;
     @FXML
@@ -43,7 +43,7 @@ public class ControllerEnregistrer {
     @FXML
     private Button btn_close;
 
-
+    public HBox getHboxa(){return  hboxa;}
     public ChoiceBox getSel_type(){ return sel_type; }
 
     public Spinner getSpi_quan(){return spi_quan;}

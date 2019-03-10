@@ -1,6 +1,7 @@
 package Program.Controller;
 
 import Program.Model.ModelListOfFollow;
+import Program.Model.ModelUser;
 import Program.StageFactory;
 import Program.ViewFollow;
 import Program.ViewSend;
@@ -19,7 +20,7 @@ public class ControllerFollow {
     private ModelListOfFollow modelListOfUsers = null;
     private ControllerSend controllerSend=new ControllerSend();
     private ViewSend viewSend = new ViewSend();
-    private String user;
+    private ModelUser user;
 
     @FXML
     private Button btn_close;
@@ -111,6 +112,7 @@ public class ControllerFollow {
             }
         });
         btn_msg.setOnAction(event -> {
+            factory.setRece(this.user);
             stage.close();
             try {
                 factory.initMes("Resources/send.fxml",controllerSend,viewSend);
@@ -120,7 +122,7 @@ public class ControllerFollow {
         });
     }
 
-    public void setUser(String user){
+    public void setRece(ModelUser user){
         this.user = user;
     }
 }

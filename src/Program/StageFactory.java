@@ -23,6 +23,7 @@ public class StageFactory {
     private ModelListOfFollow modelListOfFans = new ModelListOfFollow ();
     private String typeOfConsom = "somme";
     private ModelListOfMes modelListOfMes = new ModelListOfMes();
+    private ModelUser rece = new ModelUser("U","HHH");
 
     public Stage initAccueil() throws IOException {
 
@@ -305,5 +306,6 @@ public class StageFactory {
     public void setUser(){this.user = new ModelUser("user1","shagua");}
     public ModelUser getUser(){return this.user;}
     public ModelListOfUsers getModelListOfUsers(){return this.modelListOfUsers;}
-
+    public void setRece(ModelUser u){this.rece = u;}
+    public ModelUser getRece(){return this.rece;}
 }

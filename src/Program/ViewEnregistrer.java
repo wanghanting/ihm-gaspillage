@@ -27,7 +27,6 @@ public class ViewEnregistrer {
         choiceBox.getSelectionModel().selectedIndexProperty().addListener(
                 (ObservableValue<? extends Number> ov,
                  Number old_val,Number new_val) -> {
-                    System.out.println(new_val.intValue());
                     if (new_val.intValue()>=0){
                         label.setText("");
                     }else{
@@ -46,6 +45,8 @@ public class ViewEnregistrer {
         listenTo(controller.getTxt_nom(),controller.getLab_noti());
         controller.getLab_notifi().setText("Enter la type!");
         listenTo(controller.getSel_type(),controller.getLab_notifi());
+        controller.getHboxa().setPrefWidth(600);
+        controller.getHboxa().setPrefHeight(475);
     }
 
 }

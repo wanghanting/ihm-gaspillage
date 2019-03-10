@@ -166,7 +166,7 @@ public class StageFactory {
 
         loader.setController (controllerAide);
         Parent root = loader.load (getClass ().getResourceAsStream ("Resources/aide.fxml"));
-        controllerAide.init (stage);
+        controllerAide.init (stage,this);
 
         Scene scene = new Scene(root, width, height);
         scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());

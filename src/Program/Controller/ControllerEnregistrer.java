@@ -84,7 +84,8 @@ public class ControllerEnregistrer extends Controller{
                 }
                 if(sel_type.getValue()==null){
                     this.lab_notifi.getStyleClass().add("labelred");
-                }else{
+                }
+                if((!txt_nom.getText().equals(""))&&!(sel_type.getValue()==null)){
                     try {
                         modelListFood.addFood( new ModelFood(txt_nom.getText(),(String)sel_type.getValue(),(int)spi_quan.getValue(),jour_achatj.getValue(),jour_expira.getValue(),(int)spi_jour.getValue(),txt_info.getText()));
                     }catch (Exception e){

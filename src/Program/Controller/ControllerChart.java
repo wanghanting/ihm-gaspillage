@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.chart.PieChart;
 import javafx.scene.text.Text;
 
-public class ControllerChart {
+public class ControllerChart extends Controller{
     @FXML
     private PieChart chart;
     @FXML

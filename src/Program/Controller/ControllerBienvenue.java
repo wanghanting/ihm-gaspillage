@@ -10,8 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class
-ControllerBienvenue {
+public class ControllerBienvenue extends Controller {
     @FXML
     private Button btn_close1;
 

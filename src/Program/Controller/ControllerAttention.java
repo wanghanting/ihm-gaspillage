@@ -3,7 +3,7 @@ package Program.Controller;
 import javafx.fxml.FXML;
 import javafx.scene.text.Text;
 
-public class ControllerAttention {
+public class ControllerAttention extends Controller{
     @FXML
     private Text txt_attention;
 

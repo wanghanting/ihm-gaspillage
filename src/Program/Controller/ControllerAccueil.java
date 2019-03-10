@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 
-public class ControllerAccueil {
+public class ControllerAccueil extends Controller{
     private ModelListOfFood modelListfood = null;
     private ControllerMessages controllerMessages=new ControllerMessages();
     private ViewMessages viewMessages = new ViewMessages();

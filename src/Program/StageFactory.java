@@ -52,6 +52,7 @@ public class StageFactory {
                 System.exit(0);
             }
         });
+        listenToSize(stage,controllerAccueil);
         return stage;
     }
 

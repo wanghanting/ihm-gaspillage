@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ControllerFollow {
+public class ControllerFollow extends Controller {
 
     private ModelListOfFollow modelListOfAmi = null;
     private ModelListOfFollow modelListOfUsers = null;

@@ -18,7 +18,7 @@ import javax.imageio.IIOException;
 import java.io.IOException;
 
 
-public class ControllerAuthentification {
+public class ControllerAuthentification extends Controller {
     @FXML
     private javafx.scene.control.Button btn_authentifier;
 

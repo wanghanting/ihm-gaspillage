@@ -2,6 +2,7 @@ package Program.Controller;
 
 import Program.Model.ModelListOfFood;
 import Program.StageFactory;
+import Program.View;
 import Program.ViewMessages;
 import Program.ViewAccueil;
 import javafx.fxml.FXML;
@@ -20,6 +21,9 @@ public class ControllerAccueil {
     private ModelListOfFood modelListfood = null;
     private ControllerMessages controllerMessages=new ControllerMessages();
     private ViewMessages viewMessages = new ViewMessages();
+    private ControllerProfil controllerProfil = new ControllerProfil ();
+    private ControllerAide controllerAide = new ControllerAide();
+    private View viewp = new View();
     private int chosenfood;
     @FXML
     private ListView list_alipp;
@@ -49,13 +53,13 @@ public class ControllerAccueil {
     private Button btn_delete;
 
     private void setLink_aide(StageFactory stageFactory) throws IOException{
-        stageFactory.initAide ();
+        stageFactory.initMes ("Resources/aide.fxml",controllerAide,viewp);
     }
 
     @FXML
     private void setBtn_pro(Stage stageold, StageFactory factory) throws IOException{
         stageold.close();
-        factory.initProfil ();
+        factory.initMes ("Resources/profil.fxml",controllerProfil,viewp);
     }
 
     @FXML

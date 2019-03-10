@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ControllerFoodByType {
+public class ControllerFoodByType extends Controller{
     private ModelListOfFood modelListOfFood = null;
 
     @FXML

@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ControllerProfil {
+public class ControllerProfil extends Controller {
     @FXML
     private Button btn_close;
 
@@ -54,7 +54,7 @@ public class ControllerProfil {
         return lbl_profil;
     }
 
-
+    @Override
     public void init(Stage stage, StageFactory factory){
         btn_close.setOnAction (event -> {
             closeButtonAction (stage);

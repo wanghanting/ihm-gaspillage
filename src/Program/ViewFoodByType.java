@@ -17,7 +17,7 @@ import javafx.util.Callback;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ViewFoodByType {
+public class ViewFoodByType extends View {
     private static final String FOOD = "Resources/food.fxml";
     private static int rangeSelectedItem = -1;
     private static ModelListOfFood model;

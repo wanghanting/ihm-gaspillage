@@ -1,8 +1,10 @@
 package Program;
 
-import Program.Controller.ControllerEnregistrer;
-import Program.Model.ModelListOfFood;
-import Program.Model.ModelListOfTags;
+import Program.Controller.ControllerAuthentification;
+//import Program.Controller.ControllerEnregistrer;
+//import Program.Model.ModelListOfFood;
+//import Program.Model.ModelListOfTags;
+import Program.Model.ModelListOfUsers;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -32,8 +34,6 @@ public class Main extends Application {
         Parent root = loader.load(getClass().getResourceAsStream("Resources/authentification.fxml"));
 
 
-        primaryStage.setTitle("Gaspillage");
-        primaryStage.setScene(new Scene(root, 600, 475));
         ModelListOfUsers model = new ModelListOfUsers();
 
         //initialize the controller
@@ -41,14 +41,14 @@ public class Main extends Application {
 
         view.init(model, controller);
 
+        primaryStage.setScene(new Scene(root, 600, 475));
+
         //create the view
-        primaryStage.setScene(new Scene(root, view.WIDTH, view.HEIGHT));
-        primaryStage.setTitle(view.LABEL);
 
         //   show the view
         primaryStage.show();
-
     }
+
 
 
     public static void main(String[] args) {

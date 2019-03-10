@@ -89,6 +89,7 @@ public class ControllerInscription {
             try {
                 factory.user = new ModelUser (text_frame1.getText(), text_frame2.getText());
                 userInformation.addUser(factory.user);
+                factory.setModelListOfUsers(userInformation);
             } catch (Exception e) {
                 e.getStackTrace();
             }

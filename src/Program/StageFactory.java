@@ -197,7 +197,9 @@ public class StageFactory {
         loader.setController (controllerProfil);
         Parent root = loader.load (getClass ().getResourceAsStream ("Resources/profil.fxml"));
         controllerProfil.init (stage, this);
-        stage.setScene (new Scene (root, width, height));
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
         stage.show();
         stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
             @Override
@@ -217,7 +219,9 @@ public class StageFactory {
         loader.setController (controllerProfilIns);
         Parent root = loader.load (getClass ().getResourceAsStream ("Resources/profil_torempli.fxml"));
         controllerProfilIns.init (stage, this);
-        stage.setScene (new Scene (root, width, height));
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
         stage.show();
         stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
             @Override
@@ -392,9 +396,9 @@ public class StageFactory {
     public ModelListOfMes getModelListOfMes(){
         return modelListOfMes;
     }
-    public void setUser(){this.user = new ModelUser("user1","shagua");}
     public ModelUser getUser(){return this.user;}
     public ModelListOfUsers getModelListOfUsers(){return this.modelListOfUsers;}
+    public void setModelListOfUsers(ModelListOfUsers user){this.modelListOfUsers = user;}
     public void setRece(ModelUser u){this.rece = u;}
     public ModelUser getRece(){return this.rece;}
     void listenToSize(Stage stage,Controller controller){

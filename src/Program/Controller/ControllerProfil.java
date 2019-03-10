@@ -29,6 +29,9 @@ public class ControllerProfil extends Controller {
     @FXML
     private Label lbl_profil;
 
+    @FXML
+    private Button btn_changer;
+
     private void closeButtonAction(Stage stage) {
         stage.close ();
     }
@@ -67,6 +70,14 @@ public class ControllerProfil extends Controller {
                 e.printStackTrace ();
             }
         });
+        btn_changer.setOnAction(event -> {
+            try {
+                stage.close();
+                factory.initProfilIns();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        });
 
         this.getLbl_nom().setText (factory.user.getLastName ());
 
@@ -79,3 +90,4 @@ public class ControllerProfil extends Controller {
     }
 
 }
+

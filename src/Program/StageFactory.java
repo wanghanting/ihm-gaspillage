@@ -16,7 +16,8 @@ import java.io.IOException;
 public class StageFactory {
     static int width = 600;
     static int height = 400;
-    public ModelUser user =  new ModelUser("user1","shagua");
+    public ModelUser user;
+//    public ModelUser user =  new ModelUser("user1","shagua");
     private ModelListOfUsers modelListOfUsers=new ModelListOfUsers();
     private ModelListOfTags modelListOfTags = new ModelListOfTags();
     private ModelListOfFood modelListOfFood = new ModelListOfFood();
@@ -188,12 +189,12 @@ public class StageFactory {
     }
 
     public Stage initProfil() throws IOException{
-        ModelUser user1 = new ModelUser ("hahaha", "asd");
-        user1.setFirstName ("Hanting");
-        user1.setLastName ("WANG");
-        user1.setSmallDescription ("asddd");
-        user1.setLongDescription ("dadas");
-        user = user1;
+//        ModelUser user1 = new ModelUser ("hahaha", "asd");
+//        user1.setFirstName ("Hanting");
+//        user1.setLastName ("WANG");
+//        user1.setSmallDescription ("asddd");
+//        user1.setLongDescription ("dadas");
+//        user = user1;
 
         FXMLLoader loader = new FXMLLoader ();
         Stage stage = new Stage ();
@@ -202,6 +203,26 @@ public class StageFactory {
         loader.setController (controllerProfil);
         Parent root = loader.load (getClass ().getResourceAsStream ("Resources/profil.fxml"));
         controllerProfil.init (stage, this);
+        stage.setScene (new Scene (root, width, height));
+        stage.show();
+        stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
+            @Override
+            public void handle(WindowEvent event) {
+                System.exit (0);
+            }
+        });
+        return stage;
+    }
+
+    public Stage initProfilIns() throws IOException{
+
+        FXMLLoader loader = new FXMLLoader ();
+        Stage stage = new Stage ();
+        ControllerProfilIns controllerProfilIns = new ControllerProfilIns ();
+
+        loader.setController (controllerProfilIns);
+        Parent root = loader.load (getClass ().getResourceAsStream ("Resources/profil_torempli.fxml"));
+        controllerProfilIns.init (stage, this);
         stage.setScene (new Scene (root, width, height));
         stage.show();
         stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
@@ -242,10 +263,12 @@ public class StageFactory {
     public Stage initAuthentification(ModelListOfUsers modelListOfUser) throws IOException {
         FXMLLoader loader= new FXMLLoader();
         Stage stage = new Stage();
+        ControllerProfilIns controllerProfilIns = new ControllerProfilIns ();
 
 //        ViewAuthentification viewUser = new ViewAuthentification();
 //        ControllerAuthentification controllerAuthentification = new ControllerAuthentification();
 //        loader.setController(controllerAuthentification);
+        loader.setController (controllerProfilIns);
         Parent root = loader.load(getClass().getResourceAsStream("Resources/profil_torempli.fxml"));
 //         controllerAuthentification.init(modelListOfUser, stage,this);
 //         viewUser.init(modelListOfUser, controllerAuthentification);

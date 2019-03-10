@@ -87,12 +87,14 @@ public class ControllerInscription {
     void setBtn_suivant(Stage stageold,StageFactory factory) throws IOException {
         if(comfirmInformation()== true) {
             try {
-                userInformation.addUser(new ModelUser(text_frame1.getText(), text_frame2.getText()));
+                factory.user = new ModelUser (text_frame1.getText(), text_frame2.getText());
+                userInformation.addUser(factory.user);
             } catch (Exception e) {
                 e.getStackTrace();
             }
             stageold.close();
-            factory.initAuthentification(userInformation);
+//            factory.initAuthentification(userInformation);
+            factory.initProfilIns ();
         }else{
             text_frame1.setText(" ");
             text_frame2.setText(" ");

@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class StageFactory {
     static int width = 600;
-    static int height = 475;
+    static int height = 400;
     public ModelUser user =  new ModelUser("user1","shagua");
     private ModelListOfUsers modelListOfUsers=new ModelListOfUsers();
     private ModelListOfTags modelListOfTags = new ModelListOfTags();

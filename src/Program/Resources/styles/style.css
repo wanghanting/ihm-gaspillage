@@ -1,18 +1,16 @@
+.root{
+    -fx-background-image: url(background.jpg);
+    -fx-background-size: 100%,100%;
+}
 .button{
-    -fx-background-color : #99CC99;
+    -fx-background-color : #339966;
     -fx-font-weight: bold;
     -fx-text-fill:  #FFFFCC;
 }
 
-#btn_close, #btn_close1, #btn_close2, #btn_close3{
-    -fx-background-color : #99CC99;
-    -fx-text-fill: #FFFFCC;
-}
-
 .button:hover {
     -fx-cursor: hand;
-    -fx-background-color: #336699
-;
+    -fx-background-color: #336699;
 }
 
 #btn_close:hover{
@@ -41,4 +39,8 @@
 
 .labelred {
     -fx-text-fill: red;
+}
+
+#image_1 {
+    -fx-image: url(legume.jpg);
 }

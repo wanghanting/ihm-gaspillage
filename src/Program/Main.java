@@ -40,7 +40,7 @@ public class Main extends Application {
         controller.init(model, primaryStage, stages);
 
         view.init(model, controller);
-        Scene scene = new Scene(root, 600, 475);
+        Scene scene = new Scene(root, 600, 400);
         scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
         primaryStage.setScene(scene);
 

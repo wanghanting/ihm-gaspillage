@@ -4,10 +4,11 @@
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button fx:id="btn_close1" layoutX="548.0" layoutY="-1.0" mnemonicParsing="false" text="Close" textFill="#f50303" />
       <Label layoutX="242.0" layoutY="25.0" prefHeight="57.0" prefWidth="343.0" text="Bienvenue sur StopAuGaspillage">
@@ -31,9 +32,10 @@
             <Font name="Arial Bold Italic" size="12.0" />
          </font>
       </Label>
-      <Hyperlink fx:id="link_inscri" layoutX="461.0" layoutY="360.0"  text="inscription " />
+      <Hyperlink fx:id="link_inscri" layoutX="461.0" layoutY="360.0" text="inscription " />
       <TextField fx:id="txt_frame1" layoutX="244.0" layoutY="160.0" prefHeight="47.0" prefWidth="301.0" />
       <TextField fx:id="txt_frame2" layoutX="247.0" layoutY="247.0" prefHeight="47.0" prefWidth="301.0" />
       <Label fx:id="authenerr" layoutX="247.0" layoutY="82.0" />
+      <ImageView id="image_1" fx:id="image_1" fitHeight="176.0" fitWidth="162.0" layoutX="42.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

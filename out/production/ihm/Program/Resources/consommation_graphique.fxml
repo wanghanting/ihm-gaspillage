@@ -1,43 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="392.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Hyperlink id="acces_page_d'accueil" layoutX="49.0" layoutY="14.0" text="page d'accueil" />
-      <Hyperlink id="acces_aide" layoutX="165.0" layoutY="14.0" text="aide" />
-      <Hyperlink id="acces_deconnecter" layoutX="517.0" layoutY="14.0" text="se déconnecter" />
-      <Label id="title" layoutX="166.0" layoutY="40.0" text="Consommation" textAlignment="CENTER">
+      <Hyperlink fx:id="link_accueil" layoutX="30.0" layoutY="14.0" text="Page d'accueil" />
+      <Hyperlink id="link_aide" fx:id="link_aide" layoutX="152.0" layoutY="14.0" text="Aide" />
+      <Hyperlink fx:id="link_deconn" layoutX="423.0" layoutY="14.0" text="Se déconnecter" />
+      <Label id="title" layoutX="163.0" layoutY="25.0" text="Consommation" textAlignment="CENTER">
          <font>
             <Font size="42.0" />
          </font>
       </Label>
-      <ButtonBar layoutX="7.0" layoutY="82.0" prefHeight="40.0" prefWidth="200.0">
+      <ButtonBar layoutX="3.0" layoutY="81.0" prefHeight="40.0" prefWidth="156.0">
          <buttons>
-            <Button id="sel_text" mnemonicParsing="false" text="texte " />
-            <Button id="sel_chart" mnemonicParsing="false" text="graphique" />
+            <Button id="sel_graphique" fx:id="btn_gra" mnemonicParsing="false" text="graphique" />
+            <Button id="sel_texte" fx:id="btn_tex" mnemonicParsing="false" text="texte " />
          </buttons>
       </ButtonBar>
-      <MenuButton id="sel_date_type" layoutX="535.0" layoutY="90.0" mnemonicParsing="false" text=" par jour">
+      <MenuButton fx:id="sel_cosm_type" layoutX="523.0" layoutY="87.0" mnemonicParsing="false" text="somme">
          <items>
-            <MenuItem mnemonicParsing="false" text="par semaine" />
-            <MenuItem mnemonicParsing="false" text="par mois" />
-            <MenuItem mnemonicParsing="false" text="par année" />
-            <MenuItem mnemonicParsing="false" text="par type d'aliment" />
-            <MenuItem mnemonicParsing="false" text="par aliment" />
-            <MenuItem mnemonicParsing="false" text="par période" />
+            <MenuItem fx:id="somme" mnemonicParsing="false" text="somme" />
+            <MenuItem fx:id="par_type_ali" mnemonicParsing="false" text="par type d'aliment" />
+            <MenuItem fx:id="par_ali" mnemonicParsing="false" text="par aliment" />
          </items>
       </MenuButton>
-      <DatePicker id="sel_date" layoutX="227.0" layoutY="90.0" />
-      <PieChart fx:id="piechart" layoutX="181.0" layoutY="122.0" prefHeight="250.0" prefWidth="278.0" />
+      <DatePicker id="sel_date" fx:id="date_to" layoutX="391.0" layoutY="70.0" prefHeight="23.0" prefWidth="125.0" />
+      <Text layoutX="204.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="De" />
+      <Text layoutX="370.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="à" />
+      <DatePicker id="sel_date" fx:id="date_from" layoutX="231.0" layoutY="70.0" prefHeight="23.0" prefWidth="125.0" />
+      <Label fx:id="lab_from" layoutX="246.0" layoutY="101.0" prefHeight="23.0" prefWidth="96.0" />
+      <Label fx:id="lab_to" layoutX="406.0" layoutY="101.0" prefHeight="23.0" prefWidth="96.0" />
+      <Button fx:id="btn_close" layoutX="551.0" layoutY="13.0" mnemonicParsing="false" text="Close" />
+      <Pane fx:id="pane_chart" layoutX="20.0" layoutY="124.0" prefHeight="249.0" prefWidth="590.0">
+         <children>
+            <ListView fx:id="list_chart" layoutX="123.0" prefHeight="250.0" prefWidth="344.0" />
+         </children></Pane>
    </children>
 </AnchorPane>

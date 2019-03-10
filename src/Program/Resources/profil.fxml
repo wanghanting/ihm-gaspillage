@@ -5,32 +5,97 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="btn_close" layoutX="548.0" layoutY="-1.0" mnemonicParsing="false" text="Close" textFill="#f50303" />
-      <Label layoutX="176.0" layoutY="14.0" prefHeight="60.0" prefWidth="264.0" text="    Mon profil" textAlignment="CENTER">
-         <font>
-            <Font name="Arial" size="37.0" />
-         </font>
-      </Label>
-      <Button fx:id="btn_changeimage" layoutX="56.0" layoutY="352.0" mnemonicParsing="false" text="Charger une image " />
-      <Label layoutX="236.0" layoutY="160.0" text="Nom" />
-      <Label layoutX="236.0" layoutY="236.0" text="Prénom" />
-      <Label layoutX="235.0" layoutY="314.0" text="Vous en quelque mots" />
-      <Label layoutX="388.0" layoutY="160.0" text="Description détaillée de votre profil ">
-         <font>
-            <Font name="Arial Bold" size="12.0" />
-         </font>
-      </Label>
-      <ImageView fx:id="img2" fitHeight="187.0" fitWidth="200.0" layoutX="21.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" />
-      <Hyperlink fx:id="link_accueil" layoutX="448.0" layoutY="353.0" text="page d'accueil" />
-      <Text layoutX="17.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aucun de ces champs n'est obligatoire, mais il est recommander d'en remplir un certain nombre afin que d'autres utilisateurs puises vous identifier et  vous suivez si cela les intéresse." wrappingWidth="581.4912109375" />
-      <Label fx:id="lbl_nom" layoutX="235.0" layoutY="183.0" prefHeight="34.0" prefWidth="123.0" />
-      <Label fx:id="lbl_prenom" layoutX="235.0" layoutY="261.0" prefHeight="34.0" prefWidth="123.0" />
-      <Label fx:id="lbl_mot" layoutX="235.0" layoutY="336.0" prefHeight="34.0" prefWidth="123.0" />
-      <Label fx:id="lbl_profil" layoutX="388.0" layoutY="192.0" prefHeight="148.0" prefWidth="193.0" />
+      <HBox fx:id="hbox_1" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="607.0">
+               <children>
+                  <HBox prefHeight="72.0" prefWidth="600.0">
+                     <children>
+                        <HBox prefHeight="72.0" prefWidth="184.0" />
+                        <Label prefHeight="60.0" prefWidth="264.0" text="    Mon profil" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="37.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="72.0" prefWidth="100.0" />
+                        <HBox prefHeight="72.0" prefWidth="52.0">
+                           <children>
+                              <Button fx:id="btn_close" mnemonicParsing="false" text="Close" textFill="#f50303" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="82.0" prefWidth="600.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aucun de ces champs n'est obligatoire, mais il est recommander d'en remplir un certain nombre afin que d'autres utilisateurs puises vous identifier et  vous suivez si cela les intéresse." textAlignment="CENTER" wrappingWidth="600.4912109375" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="255.0" prefWidth="601.0">
+                     <children>
+                        <VBox prefHeight="252.0" prefWidth="210.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fx:id="img2" fitHeight="205.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="52.0" prefWidth="210.0">
+                                 <children>
+                                    <Button fx:id="btn_changeimage" mnemonicParsing="false" prefHeight="27.0" prefWidth="211.0" text="Charger une image " />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="252.0" prefWidth="169.0">
+                           <children>
+                              <VBox prefHeight="261.0" prefWidth="169.0">
+                                 <children>
+                                    <Label prefHeight="41.0" prefWidth="137.0" text="Nom" />
+                                    <Label fx:id="lbl_nom" prefHeight="34.0" prefWidth="123.0" />
+                                    <Label prefHeight="30.0" prefWidth="169.0" text="Prénom" />
+                                    <Label fx:id="lbl_prenom" prefHeight="45.0" prefWidth="166.0" />
+                                    <Label prefHeight="31.0" prefWidth="169.0" text="Vous en quelque mots" />
+                                    <Label fx:id="lbl_mot" prefHeight="42.0" prefWidth="169.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="252.0" prefWidth="221.0">
+                           <children>
+                              <VBox prefHeight="266.0" prefWidth="221.0">
+                                 <children>
+                                    <Label prefHeight="38.0" prefWidth="205.0" text="Description détaillée de votre profil ">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_profil" prefHeight="173.0" prefWidth="222.0" />
+                                    <HBox prefHeight="41.0" prefWidth="221.0">
+                                       <children>
+                                          <HBox prefHeight="41.0" prefWidth="73.0" />
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Hyperlink fx:id="link_accueil" text="page d'accueil" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

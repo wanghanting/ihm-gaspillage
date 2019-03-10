@@ -216,7 +216,17 @@ public class StageFactory {
 
         loader.setController (controllerConsomationG);
         Parent root = loader.load (getClass ().getResourceAsStream ("Resources/consommation_graphique.fxml"));
-        viewConsomationG.init(controllerConsomationG,modelListOfFood);
+        ModelListOfSum modelSum = new ModelListOfSum();
+        ModelListOfChart modelChart = new ModelListOfChart();
+        modelSum.init(modelListOfFood,modelListOfTags);
+        modelChart.init(modelSum);
+        controllerConsomationG.init(stage,this);
+        if(typeOfConsom.equals("somme")){
+            controllerConsomationG.setSel_cosm_type(typeOfConsom);
+        }else {
+            controllerConsomationG.setSel_cosm_type("par " + typeOfConsom);
+        }
+        viewConsomationG.init(modelChart,modelSum,modelListOfFood,modelListOfTags,controllerConsomationG,typeOfConsom);
         stage.setScene (new Scene (root, width, height));
         stage.show ();
         return stage;

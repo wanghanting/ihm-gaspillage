@@ -46,6 +46,8 @@ public class ControllerConsommationTextDate {
     private MenuItem par_type_ali;
     @FXML
     private MenuItem par_ali;
+    @FXML
+    private Button btn_gra;
 
     public ListView getList_cons(){return list_cons;}
     public ListView getList_gas(){return list_gas;}
@@ -119,6 +121,14 @@ public class ControllerConsommationTextDate {
         link_accueil.setOnAction(event -> {
             try {
                 setLink_accueil(stage,stageFactory);
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        });
+        btn_gra.setOnAction(event -> {
+            try {
+                stage.close();
+                stageFactory.initConsomation();
             }catch (IOException e){
                 e.printStackTrace();
             }

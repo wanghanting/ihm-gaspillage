@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="265.0" prefWidth="291.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <PieChart fx:id="chart" layoutY="20.0" prefHeight="245.0" prefWidth="291.0" />
+      <Text fx:id="name" layoutX="108.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="74.64020538330078" />
+   </children>
+</Pane>

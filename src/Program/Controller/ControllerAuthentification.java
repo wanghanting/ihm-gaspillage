@@ -46,19 +46,11 @@ public class ControllerAuthentification {
 
     public void init(ModelListOfUsers model, Stage stage, StageFactory factory){
         this.userInformation = model;
-//        System.out.printf(userInformation.getListOfUsers().get(0).getUsername());
-//        System.out.printf(userInformation.getListOfUsers().get(1).getUsername());
-        for(int i = 0;i<userInformation.getListOfUsers().size();i++){
-            System.out.printf(userInformation.getListOfUsers().get(i).getUsername());
-        }
-        System.out.printf(userInformation.getListOfUsers().get(2).getUsername());
-        System.out.printf("用户已经注册");
         btn_authentifier.setOnAction( event -> {
             if(isRegistred()==false){
                 authenerr.setText("You have not registered an account yet, please register first");
             }else {
                 if (comfirmedPassword() == true) {
-                    System.out.printf("hhhh");
                     try {
                         setBtn_authentifier(stage, factory);
                     } catch (IOException e) {
@@ -71,7 +63,7 @@ public class ControllerAuthentification {
         });
         link_inscri.setOnAction (event -> {
             stage.close();
-            setLink_inscri (stage,factory);
+            setLink_inscri(stage,factory);
         });
     }
 
@@ -87,7 +79,7 @@ public class ControllerAuthentification {
     }
     void setBtn_authentifier(Stage stageold,StageFactory factory) throws IOException {
         stageold.close();
-        factory.initAuthentification(userInformation);
+        factory.initAccueil();
     }
 
 

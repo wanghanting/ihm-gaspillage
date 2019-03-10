@@ -1,6 +1,7 @@
 package Program.Controller;
 
 import Program.Model.ModelListOfFood;
+import Program.Model.ModelListOfUsers;
 import Program.StageFactory;
 import Program.View;
 import Program.ViewMessages;
@@ -25,6 +26,8 @@ public class ControllerAccueil {
     private ControllerAide controllerAide = new ControllerAide();
     private View viewp = new View();
     private int chosenfood;
+    @FXML
+    ModelListOfUsers userInformation = new ModelListOfUsers();
     @FXML
     private ListView list_alipp;
     @FXML
@@ -52,6 +55,7 @@ public class ControllerAccueil {
     @FXML
     private Button btn_delete;
 
+    ControllerInscription controller;
     private void setLink_aide(StageFactory stageFactory) throws IOException{
         stageFactory.initMes ("Resources/aide.fxml",controllerAide,viewp);
     }
@@ -76,19 +80,7 @@ public class ControllerAccueil {
         }
     }
 
-   @FXML
-    private void setLink_deco(){
-        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/authentification.fxml"));
-        try {
-            Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) link_deco.getScene ().getWindow ();
-            stage.setTitle ("Gaspillage");
-            stage.setScene (new Scene (root1));
-            stage.show ();
-        } catch (IOException e) {
-            e.printStackTrace ();
-        }
-    }
+
 
      void setBtn_ajouter(Stage stageold,StageFactory factory) throws IOException {
 
@@ -98,6 +90,16 @@ public class ControllerAccueil {
 
     }
 
+    private void setLink_deco(Stage stageold, StageFactory factory) {
+        try{
+            stageold.close();
+            factory.initAuthentification1(userInformation);
+
+        }
+        catch (Exception e ){
+            e.getStackTrace();
+        }
+    }
     void setBtn_type(Stage stageold,StageFactory factory)throws IOException{
         stageold.close();
         factory.initType();
@@ -120,12 +122,14 @@ public class ControllerAccueil {
         stage.close ();
     }
 
-    void deletefood(){
-
-    }
 
     public void init(ModelListOfFood food, ViewAccueil view, Stage stage, StageFactory factory) {
         this.modelListfood = food;
+        link_deco.setOnAction (event -> {
+            stage.close();
+            setLink_deco(stage,factory);
+        });
+
         btn_close.setOnAction (event -> {
             setBtn_close (stage);
         });
@@ -193,6 +197,7 @@ public class ControllerAccueil {
                 e.printStackTrace();
             }
         });
+
     }
 
 }

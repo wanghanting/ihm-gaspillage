@@ -43,12 +43,15 @@ public class ControllerAuthentification extends Controller {
     @FXML
     Hyperlink link_inscri;
 
+    @FXML
+    private Button btn_close;
+
 
     public void init(ModelListOfUsers model, Stage stage, StageFactory factory){
         this.userInformation = model;
         btn_authentifier.setOnAction( event -> {
             if(isRegistred()==false){
-                authenerr.setText("You have not registered an account yet, please register first");
+                authenerr.setText("You have not registered an account yet"+"\n"+"please register first");
             }else {
                 if (comfirmedPassword() == true) {
                     try {
@@ -57,7 +60,7 @@ public class ControllerAuthentification extends Controller {
                         e.getStackTrace();
                     }
                 } else {
-                    authenerr.setText("The account name and password you entered do not match. Please confirm and re-enter");
+                    authenerr.setText("The account name and password you entered do not match"+"\n"+" Please confirm and re-enter");
                 }
             }
         });
@@ -65,8 +68,15 @@ public class ControllerAuthentification extends Controller {
             stage.close();
             setLink_inscri(stage,factory);
         });
+
+        btn_close.setOnAction (event -> {
+            setBtn_close (stage);
+        });
     }
 
+    void setBtn_close(Stage stage){
+        stage.close ();
+    }
 
     @FXML
     private void setLink_inscri(Stage stageold, StageFactory factory) {

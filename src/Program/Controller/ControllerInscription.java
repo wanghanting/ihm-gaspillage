@@ -46,11 +46,6 @@ public class ControllerInscription {
     Hyperlink link_authen;
 
 
-    @FXML
-    private void setBtn_close(){
-        Stage stage = (Stage) btn_close.getScene ().getWindow ();
-        stage.close();
-    }
 
 
     public TextField getText_frame1() {
@@ -82,23 +77,35 @@ public class ControllerInscription {
             stage.close();
             setLink_authen(stage,factory);
         });
+
+        btn_close.setOnAction (event -> {
+            setBtn_close (stage);
+        });
+    }
+
+    void setBtn_close(Stage stage){
+        stage.close ();
     }
 
     void setBtn_suivant(Stage stageold,StageFactory factory) throws IOException {
-        if(comfirmInformation()== true) {
-            try {
-                userInformation.addUser(new ModelUser(text_frame1.getText(), text_frame2.getText()));
-            } catch (Exception e) {
-                e.getStackTrace();
+        if(!text_frame1.getText().isEmpty()&&!text_frame2.getText().isEmpty()) {
+            if (comfirmInformation() == true) {
+                try {
+                    userInformation.addUser(new ModelUser(text_frame1.getText(), text_frame2.getText()));
+                } catch (Exception e) {
+                    e.getStackTrace();
+                }
+                stageold.close();
+                factory.initAuthentification(userInformation);
+            } else {
+                text_frame1.setText(" ");
+                text_frame2.setText(" ");
+                text_frame3.setText(" ");
+                inscrierr.setText("The passwords entered twice do not match" + "\n" + "please re-enter.");
             }
-            stageold.close();
-            factory.initAuthentification(userInformation);
         }else{
-            text_frame1.setText(" ");
-            text_frame2.setText(" ");
-            text_frame3.setText(" ");
-            inscrierr.setText("The passwords entered twice do not match"+"\n"+"please re-enter.");
-        }
+            inscrierr.setText("Your password and username cannot be empty"+"\n"+"please re-enter.");
+            }
 
     }
 
@@ -115,7 +122,8 @@ public class ControllerInscription {
 
 
     public boolean comfirmInformation(){
-        if(text_frame1.getText()!= null && text_frame1.getText()!=null && text_frame2.getText().equals(text_frame3.getText())){
+        if(text_frame2.getText().equals(text_frame3.getText())){
+//            inscrierr.setText("Your password and username cannot be empty"+"\n"+"please re-enter.");
             passwordComfirmed = true;
             System.out.printf("ok!");
         }

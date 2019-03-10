@@ -24,16 +24,15 @@ public class ViewEnregistrer {
         });
     }
     private void listenTo(ChoiceBox choiceBox, Label label) {
-        choiceBox.itemsProperty().addListener(new ChangeListener<Type>() {
-            @Override
-            public void changed(ObservableValue<? extends Type> observable, Type oldValue, Type newValue) {
-                if (choiceBox.getValue().equals("")){
-                    label.setText("Entrer la type!");
-                }else{
-                    label.setText("");
-                }
-            }
-        });
+        choiceBox.getSelectionModel().selectedIndexProperty().addListener(
+                (ObservableValue<? extends Number> ov,
+                 Number old_val,Number new_val) -> {
+                    System.out.println(new_val.intValue());
+                    if (new_val.intValue()>=0){
+                        label.setText("");
+                    }else{
+                        label.setText("Entrer la type!");
+                    }});
     }
 
 

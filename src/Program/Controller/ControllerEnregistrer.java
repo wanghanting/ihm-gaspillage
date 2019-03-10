@@ -59,7 +59,7 @@ public class ControllerEnregistrer {
     public Label getLab_notifi(){return lab_notifi;}
 
     void setBtn_ajouter(Stage stageold,StageFactory factory) throws IOException {
-        if((!txt_nom.getText().equals(""))){
+        if((!txt_nom.getText().equals(""))&&(!sel_type.getValue().equals(""))){
             try {
                 modelListFood.addFood( new ModelFood(txt_nom.getText(),(String)sel_type.getValue(),(int)spi_quan.getValue(),jour_achatj.getValue(),jour_expira.getValue(),(int)spi_jour.getValue(),txt_info.getText()));
             }catch (Exception e){

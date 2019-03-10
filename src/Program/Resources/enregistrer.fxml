@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="380.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
       <children>
-      <HBox fx:id="hboxa" layoutX="25.0" prefHeight="380.0" prefWidth="641.0" snapToPixel="false">
+      <HBox fx:id="hboxa" layoutX="25.0" prefHeight="379.0" prefWidth="600.0" snapToPixel="false">
          <children>
             <VBox prefHeight="380.0" prefWidth="600.0">
                <children>
@@ -54,96 +54,96 @@
                      <children>
                         <VBox prefHeight="117.0" prefWidth="112.0">
                            <children>
-                              <VBox prefHeight="35.0" prefWidth="100.0">
+                              <VBox prefHeight="50.0" prefWidth="101.0">
                                  <children>
                                     <Label text="Nom" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="46.0" prefWidth="100.0">
+                              <VBox prefHeight="50.0" prefWidth="101.0">
                                  <children>
                                     <Label text="Type" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="41.0" prefWidth="112.0">
+                              <VBox prefHeight="50.0" prefWidth="101.0">
                                  <children>
                                     <Label text="Quantité" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="41.0" prefWidth="100.0">
+                              <VBox prefHeight="50.0" prefWidth="101.0">
                                  <children>
                                     <Label text="Achat" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="40.0" prefWidth="100.0">
+                              <VBox prefHeight="50.0" prefWidth="101.0">
                                  <children>
                                     <Label text="Expiration" />
                                  </children>
                               </VBox>
                            </children>
                         </VBox>
-                        <VBox prefHeight="314.0" prefWidth="223.0">
+                        <VBox prefHeight="279.0" prefWidth="231.0">
                            <children>
-                              <VBox prefHeight="41.0" prefWidth="235.0">
+                              <VBox prefHeight="50.0" prefWidth="221.0">
                                  <children>
                                     <TextField fx:id="txt_nom" maxWidth="150.0" prefWidth="150.0" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="42.0" prefWidth="251.0">
+                              <VBox prefHeight="50.0" prefWidth="221.0">
                                  <children>
                                     <ChoiceBox fx:id="sel_type" prefWidth="150.0" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="40.0" prefWidth="136.0">
+                              <VBox prefHeight="50.0" prefWidth="221.0">
                                  <children>
                                     <Spinner fx:id="spi_quan" editable="true" prefHeight="23.0" prefWidth="150.0" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="44.0" prefWidth="136.0">
+                              <VBox prefHeight="50.0" prefWidth="221.0">
                                  <children>
                                     <DatePicker fx:id="jour_achatj" prefHeight="23.0" prefWidth="150.0" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="53.0" prefWidth="110.0">
+                              <VBox prefHeight="50.0" prefWidth="221.0">
                                  <children>
                                     <DatePicker fx:id="jour_expira" prefHeight="23.0" prefWidth="150.0" showWeekNumbers="true" />
                                  </children>
                               </VBox>
                            </children>
                         </VBox>
-                        <VBox fx:id="lab_noti2" fillWidth="false" prefHeight="314.0" prefWidth="213.0">
+                        <VBox fx:id="lab_noti2" fillWidth="false" prefHeight="297.0" prefWidth="290.0" HBox.hgrow="ALWAYS">
                            <children>
-                              <VBox prefHeight="44.0" prefWidth="253.0">
+                              <VBox prefHeight="47.0" prefWidth="253.0">
                                  <children>
-                                    <Label prefHeight="74.0" prefWidth="207.0" text="Nombre de jours avant expirqtion quand l'aliment est presque périmé" wrapText="true" />
+                                    <Label prefHeight="50.0" prefWidth="207.0" text="Nombre de jours avant expirqtion quand l'aliment est presque périmé" wrapText="true" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="37.0" prefWidth="231.0">
+                              <VBox prefHeight="50.0" prefWidth="231.0">
                                  <children>
                                     <Spinner fx:id="spi_jour" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="31.0" prefWidth="215.0">
+                              <VBox prefHeight="50.0" prefWidth="215.0">
                                  <children>
-                                    <Label text="Information à propos de l'aliment" />
+                                    <Label prefHeight="47.0" prefWidth="200.0" text="Information à propos de l'aliment" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="79.0" prefWidth="235.0">
+                              <VBox prefHeight="83.0" prefWidth="235.0">
                                  <children>
-                                    <TextArea fx:id="txt_info" prefHeight="79.0" prefWidth="218.0" />
+                                    <TextArea fx:id="txt_info" prefHeight="50.0" prefWidth="235.0" />
                                  </children>
                               </VBox>
-                              <Button fx:id="btn_ajouter" mnemonicParsing="false" text="Ajouter" textFill="#484eca" />
+                              <VBox prefHeight="50.0" prefWidth="232.0">
+                                 <children>
+                                    <VBox prefHeight="20.0" prefWidth="232.0" />
+                                    <Button fx:id="btn_ajouter" mnemonicParsing="false" text="Ajouter" textFill="#484eca" />
+                                 </children>
+                              </VBox>
                            </children>
                         </VBox>
                      </children>
                   </HBox>
                </children>
             </VBox>
-         </children>
-      </HBox>
-      <HBox layoutX="26.0" layoutY="353.0" prefHeight="42.0" prefWidth="622.0">
-         <children>
-            <Label fx:id="lab_null" prefHeight="54.0" prefWidth="635.0" textFill="RED" textOverrun="CLIP" />
          </children>
       </HBox>
 </children>

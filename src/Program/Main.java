@@ -6,6 +6,7 @@ import Program.Controller.ControllerAuthentification;
 //import Program.Model.ModelListOfTags;
 import Program.Model.ModelListOfUsers;
 import javafx.application.Application;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -48,6 +49,12 @@ public class Main extends Application {
 
         //   show the view
         primaryStage.show();
+        primaryStage.widthProperty().addListener((ObservableValue<? extends Number> ov,
+                                           Number old_val, Number new_val) -> {
+            //controllerenregistrer.getHboxa().setPrefWidth(600);
+
+        });
+
     }
 
 

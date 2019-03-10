@@ -12,7 +12,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox fx:id="hboxa" prefHeight="400.0" prefWidth="600.0">
+      <HBox fx:id="hboxa" maxHeight="800.0" maxWidth="1000.0" minHeight="100.0" minWidth="100.0" prefHeight="400.0" prefWidth="600.0">
          <children>
             <VBox prefHeight="400.0" prefWidth="718.0">
                <children>

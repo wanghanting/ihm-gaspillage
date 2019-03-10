@@ -105,7 +105,7 @@ public class ModelListOfFood {
 
     public ObservableList<ModelFood> getListOfPPFoodOfOneType(){
         listOfPPFoodOfOneType.removeAll(listOfPPFoodOfOneType);
-        for(ModelFood food:this.listOfPPFoodOfOneType){
+        for(ModelFood food:this.listOfPPFood){
             if(food.getFoodType().equals(this.type)){
                 listOfPPFoodOfOneType.add(food);
             }

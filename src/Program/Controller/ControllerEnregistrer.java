@@ -74,7 +74,6 @@ public class ControllerEnregistrer {
 
     //public Button getBtn_ajouter() {return btn_ajouter;}
     public void init(ModelListOfFood foodList, Stage stage, StageFactory factory) {
-        this.btn_ajouter.getStyleClass().add("buttonFred");
         this.modelListFood = foodList;
         this.jour_expira.setValue(LocalDate.now());
         //listner on the buttons

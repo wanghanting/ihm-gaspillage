@@ -1,36 +1,37 @@
 .button{
-    -fx-background-color : blue;
+    -fx-background-color : #99CC99;
     -fx-font-weight: bold;
-    -fx-text-fill: white;
+    -fx-text-fill:  #FFFFCC;
 }
 
 #btn_close, #btn_close1, #btn_close2, #btn_close3{
-    -fx-background-color : red;
-    -fx-text-fill: white;
+    -fx-background-color : #99CC99;
+    -fx-text-fill: #FFFFCC;
 }
 
 .button:hover {
     -fx-cursor: hand;
-    -fx-background-color: rgb(0,0,128);
+    -fx-background-color: #336699
+;
 }
 
 #btn_close:hover{
-    -fx-background-color : darkred;
+    -fx-background-color : #336699;
     -fx-text-fill: white;
 }
 
 #btn_close1:hover{
-    -fx-background-color : darkred;
+    -fx-background-color : #336699;
     -fx-text-fill: white;
 }
 
 #btn_close2:hover{
-    -fx-background-color : darkred;
+    -fx-background-color : #336699;
     -fx-text-fill: white;
 }
 
 #btn_close3:hover{
-    -fx-background-color : darkred;
+    -fx-background-color : #336699;
     -fx-text-fill: white;
 }
 

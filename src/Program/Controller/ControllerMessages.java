@@ -1,5 +1,6 @@
 package Program.Controller;
 
+import Program.StageFactory;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -79,4 +80,31 @@ public class ControllerMessages extends Controller {
     }
     public ListView getList_newm(){return list_newm;}
     public ListView getList_oldm(){return list_oldm;}
+    public void init(Stage stage, StageFactory stageFactory){
+        link_accueil.setOnAction(event ->
+        {
+            stage.close();
+            try {
+                stageFactory.initAccueil();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        link_aide.setOnAction(event -> {
+            stage.close();
+            try {
+                stageFactory.initAide();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        link_deco.setOnAction(event -> {
+            stage.close();
+            try {
+                stageFactory.initAuthentification(stageFactory.getModelListOfUsers());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
 }

@@ -69,7 +69,9 @@ public class StageFactory {
         modelListOfFood.setType(type);
         controller.init(modelListOfFood,view,stage,this,type);
         view.init(modelListOfFood, controller);
-        stage.setScene(new Scene(root, width, height));
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
@@ -227,7 +229,9 @@ public class StageFactory {
             controllerConsomationG.setSel_cosm_type("par " + typeOfConsom);
         }
         viewConsomationG.init(modelChart,modelSum,modelListOfFood,modelListOfTags,controllerConsomationG,typeOfConsom);
-        stage.setScene (new Scene (root, width, height));
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
         stage.show ();
         return stage;
     }
@@ -242,7 +246,9 @@ public class StageFactory {
         Parent root = loader.load(getClass().getResourceAsStream("Resources/profil_torempli.fxml"));
 //         controllerAuthentification.init(modelListOfUser, stage,this);
 //         viewUser.init(modelListOfUser, controllerAuthentification);
-        stage.setScene(new Scene(root, width, height));
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
@@ -263,7 +269,9 @@ public class StageFactory {
         Parent root = loader.load(getClass().getResourceAsStream("Resources/authentification.fxml"));
         controllerAuthentification.init(modelListOfUser, stage,this);
         viewUser.init(modelListOfUser, controllerAuthentification);
-        stage.setScene(new Scene(root, width, height));
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
@@ -293,7 +301,9 @@ public class StageFactory {
             controller.setSel_cosm_type("par " + typeOfConsom);
         }
         view.init(model,modelListOfFood,modelListOfTags, controller,typeOfConsom);
-        stage.setScene(new Scene(root, width, height));
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
@@ -310,7 +320,9 @@ public class StageFactory {
         Parent root = loader.load (getClass ().getResourceAsStream (path));
         controller.init(stage,this);
         view.init(controller,this);
-        stage.setScene (new Scene (root, width, height));
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
         stage.show ();
     }
 
@@ -327,7 +339,9 @@ public class StageFactory {
 
         controllerInscription.init(modelListOfUser, stage,this);
         viewUser.init(modelListOfUser, controllerInscription);
-        stage.setScene(new Scene(root, width, height));
+        Scene scene = new Scene(root, width, height);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        stage.setScene(scene);
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override

@@ -40,8 +40,9 @@ public class Main extends Application {
         controller.init(model, primaryStage, stages);
 
         view.init(model, controller);
-
-        primaryStage.setScene(new Scene(root, 600, 475));
+        Scene scene = new Scene(root, 600, 475);
+        scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
+        primaryStage.setScene(scene);
 
         //create the view
 

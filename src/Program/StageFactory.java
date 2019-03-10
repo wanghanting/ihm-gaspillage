@@ -226,13 +226,33 @@ public class StageFactory {
         FXMLLoader loader= new FXMLLoader();
         Stage stage = new Stage();
 
+//        ViewAuthentification viewUser = new ViewAuthentification();
+//        ControllerAuthentification controllerAuthentification = new ControllerAuthentification();
+//        loader.setController(controllerAuthentification);
+        Parent root = loader.load(getClass().getResourceAsStream("Resources/profil_torempli.fxml"));
+//         controllerAuthentification.init(modelListOfUser, stage,this);
+//         viewUser.init(modelListOfUser, controllerAuthentification);
+        stage.setScene(new Scene(root, width, height));
+        stage.show();
+        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                System.exit(0);
+            }
+        });
+        return stage;
+    }
+
+    public Stage initAuthentification1(ModelListOfUsers modelListOfUser) throws IOException {
+        FXMLLoader loader= new FXMLLoader();
+        Stage stage = new Stage();
+
         ViewAuthentification viewUser = new ViewAuthentification();
         ControllerAuthentification controllerAuthentification = new ControllerAuthentification();
-        //ControllerAuthentification controllerInscription = new ControllerAuthentification();
-        //loader.setController(controllerAuthentification);
-        Parent root = loader.load(getClass().getResourceAsStream("Resources/profil.fxml"));
-        // controllerAuthentification.init(modelListOfUser, stage,this);
-        // viewUser.init(modelListOfUser, controllerAuthentification);
+        loader.setController(controllerAuthentification);
+        Parent root = loader.load(getClass().getResourceAsStream("Resources/authentification.fxml"));
+        controllerAuthentification.init(modelListOfUser, stage,this);
+        viewUser.init(modelListOfUser, controllerAuthentification);
         stage.setScene(new Scene(root, width, height));
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
@@ -307,6 +327,7 @@ public class StageFactory {
         });
         return stage;
     }
+
 
     public void setModelListOfFood(ModelListOfFood modelListOfFood){
         this.modelListOfFood = modelListOfFood;

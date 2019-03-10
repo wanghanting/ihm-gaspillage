@@ -17,7 +17,7 @@ import java.io.IOException;
 
 public class ControllerInscription {
     @FXML
-    private ModelListOfUsers userInformation;
+    ModelListOfUsers userInformation;
 
     @FXML
     private Button btn_close;
@@ -25,8 +25,6 @@ public class ControllerInscription {
     @FXML
     private Button btn_suivant;
 
-    @FXML
-    private Hyperlink link_auth;
 
     @FXML
     private TextField text_frame1;
@@ -44,6 +42,9 @@ public class ControllerInscription {
     @FXML
     private Label inscrierr;
 
+    @FXML
+    Hyperlink link_authen;
+
 
     @FXML
     private void setBtn_close(){
@@ -51,19 +52,7 @@ public class ControllerInscription {
         stage.close();
     }
 
-    @FXML
-    private void setLink_auth(){
-        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/authentification.fxml"));
-        try {
-            Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) link_auth.getScene ().getWindow ();
-            stage.setTitle ("Gaspillage");
-            stage.setScene (new Scene (root1));
-            stage.show ();
-        } catch (IOException e) {
-            e.printStackTrace ();
-        }
-    }
+
     public TextField getText_frame1() {
         return text_frame1;
     }
@@ -88,6 +77,11 @@ public class ControllerInscription {
                 e.getStackTrace();
             }
         });
+
+        link_authen.setOnAction (event -> {
+            stage.close();
+            setLink_authen(stage,factory);
+        });
     }
 
     void setBtn_suivant(Stage stageold,StageFactory factory) throws IOException {
@@ -100,19 +94,22 @@ public class ControllerInscription {
             stageold.close();
             factory.initAuthentification(userInformation);
         }else{
-//            try{
-//                stageold.close();
-//                factory.initInscriptionError();
-//            } catch(Exception e) {
-//                e.getStackTrace();
-//            }
             text_frame1.setText(" ");
             text_frame2.setText(" ");
             text_frame3.setText(" ");
             inscrierr.setText("The passwords entered twice do not match"+"\n"+"please re-enter.");
-            //init(model,stageold,factory);
         }
 
+    }
+
+    @FXML
+    private void setLink_authen(Stage stageold, StageFactory factory) {
+        try{
+            stageold.close();
+            factory.initAuthentification1(userInformation);}
+        catch (Exception e ){
+            e.getStackTrace();
+        }
     }
 
 

@@ -11,6 +11,6 @@ public class ControllerMessage extends Controller{
 
     public void init(ModelMessage modelMessage){
         lab_mes.setText(modelMessage.getMessage()+"  sender:"+modelMessage.getSender().getUsername()+" "+modelMessage.getDate());
-
+        lab_mes.setWrapText(true);
     }
 }

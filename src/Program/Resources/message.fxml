@@ -3,9 +3,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="87.0" prefWidth="183.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="lab_mes" prefHeight="87.0" prefWidth="189.0" />
+      <Label fx:id="lab_mes" prefHeight="87.0" prefWidth="189.0" textAlignment="JUSTIFY" />
    </children>
 </AnchorPane>

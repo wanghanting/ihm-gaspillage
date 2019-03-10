@@ -4,11 +4,17 @@ import Program.Model.ModelListOfUsers;
 import Program.Model.ModelUser;
 import Program.StageFactory;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import sun.security.smartcardio.SunPCSC;
 
+import javax.imageio.IIOException;
 import java.io.IOException;
 
 
@@ -34,6 +40,9 @@ public class ControllerAuthentification {
     @FXML
     Label authenerr;
 
+    @FXML
+    Hyperlink link_inscri;
+
 
     public void init(ModelListOfUsers model, Stage stage, StageFactory factory){
         this.userInformation = model;
@@ -53,12 +62,27 @@ public class ControllerAuthentification {
                 }
             }
         });
+        link_inscri.setOnAction (event -> {
+            stage.close();
+            setLink_inscri (stage,factory);
+        });
     }
 
+
+    @FXML
+    private void setLink_inscri(Stage stageold, StageFactory factory) {
+        try{
+            stageold.close();
+            factory.initInscription(userInformation);}
+        catch (Exception e ){
+            e.getStackTrace();
+        }
+    }
     void setBtn_authentifier(Stage stageold,StageFactory factory) throws IOException {
         stageold.close();
         factory.initAuthentification(userInformation);
     }
+
 
     public boolean comfirmedPassword(){
         for(int i = 0;i<userInformation.ListOfUsers.size();i++){

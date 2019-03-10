@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btn_close" layoutX="548.0" layoutY="-1.0" mnemonicParsing="false" text="Close" textFill="#f50303" />
+      <Label layoutX="176.0" layoutY="14.0" prefHeight="60.0" prefWidth="264.0" text="    Mon profil" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="37.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_changeimage" layoutX="57.0" layoutY="341.0" mnemonicParsing="false" text="Charger une image " />
+      <Label layoutX="235.0" layoutY="134.0" text="Nom" />
+      <Label layoutX="235.0" layoutY="192.0" text="Prénom" />
+      <Label layoutX="231.0" layoutY="251.0" text="Vous en quelque mots" />
+      <Label layoutX="387.0" layoutY="134.0" text="Description détaillée de votre profil ">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="img2" fitHeight="170.0" fitWidth="177.0" layoutX="33.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="txt_frame1" layoutX="235.0" layoutY="149.0" prefHeight="31.0" prefWidth="122.0" />
+      <TextField fx:id="txt_frame2" layoutX="235.0" layoutY="207.0" prefHeight="31.0" prefWidth="122.0" />
+      <TextField fx:id="txt_frame3" layoutX="235.0" layoutY="274.0" prefHeight="31.0" prefWidth="122.0" />
+      <TextArea fx:id="txt_description" layoutX="393.0" layoutY="159.0" prefHeight="147.0" prefWidth="191.0" />
+      <Hyperlink fx:id="link_accueil" layoutX="457.0" layoutY="375.0" text="page d'accueil" />
+      <Text layoutX="17.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aucun de ces champs n'est obligatoire, mais il est recommander d'en remplir un certain nombre afin que d'autres utilisateurs puises vous identifier et  vous suivez si cela les intéresse." wrappingWidth="581.4912109375" />
+      <Button fx:id="btn_sub" layoutX="268.0" layoutY="352.0" mnemonicParsing="false" text="submit" />
+   </children>
+</AnchorPane>

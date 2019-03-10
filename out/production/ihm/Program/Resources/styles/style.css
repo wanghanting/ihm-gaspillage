@@ -1,0 +1,39 @@
+.button{
+    -fx-background-color : blue;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+#btn_close, #btn_close1, #btn_close2, #btn_close3{
+    -fx-background-color : red;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-cursor: hand;
+    -fx-background-color: rgb(0,0,128);
+}
+
+#btn_close:hover{
+    -fx-background-color : darkred;
+    -fx-text-fill: white;
+}
+
+#btn_close1:hover{
+    -fx-background-color : darkred;
+    -fx-text-fill: white;
+}
+
+#btn_close2:hover{
+    -fx-background-color : darkred;
+    -fx-text-fill: white;
+}
+
+#btn_close3:hover{
+    -fx-background-color : darkred;
+    -fx-text-fill: white;
+}
+
+#aliments_perimes, #aliments_presque_perimes, #aliments_ok{
+    -fx-font-weight: bold;
+}

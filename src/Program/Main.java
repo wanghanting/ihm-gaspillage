@@ -14,23 +14,38 @@ public class Main extends Application {
 
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        StageFactory stages = new StageFactory();
-        //create a loader
+    public void start(Stage primaryStage) throws Exception {
+
         FXMLLoader loader = new FXMLLoader();
-        ModelListOfFood modelListOfFood = new ModelListOfFood();
-        ModelListOfTags modelListOfTags = new ModelListOfTags();
-        ControllerEnregistrer controllerenregistrer= new ControllerEnregistrer();
-        ViewEnregistrer viewEnregistrer=new ViewEnregistrer();
-        loader.setController(controllerenregistrer);
-        Parent root = loader.load(getClass().getResourceAsStream("Resources/enregistrer.fxml"));
-        root.getStylesheets().add(getClass().getResource("Resources/view.css").toExternalForm());
-        //controllerenregistrer.getBtn_ajouter().getStyleClass().add("buttonFred");
-        controllerenregistrer.init(modelListOfFood,primaryStage,stages);
-        viewEnregistrer.init(modelListOfTags,controllerenregistrer);
+
+        StageFactory stages = new StageFactory();
+
+        ViewAuthentification view = new ViewAuthentification();
+
+        //create a controller
+        ControllerAuthentification controller = new ControllerAuthentification();
+
+        //attach controller
+        loader.setController(controller);
+
+        //attach XML file
+        Parent root = loader.load(getClass().getResourceAsStream("Resources/authentification.fxml"));
+
 
         primaryStage.setTitle("Gaspillage");
         primaryStage.setScene(new Scene(root, 600, 475));
+        ModelListOfUsers model = new ModelListOfUsers();
+
+        //initialize the controller
+        controller.init(model, primaryStage, stages);
+
+        view.init(model, controller);
+
+        //create the view
+        primaryStage.setScene(new Scene(root, view.WIDTH, view.HEIGHT));
+        primaryStage.setTitle(view.LABEL);
+
+        //   show the view
         primaryStage.show();
 
     }

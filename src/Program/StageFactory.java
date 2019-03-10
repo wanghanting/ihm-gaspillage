@@ -284,6 +284,30 @@ public class StageFactory {
         stage.show ();
     }
 
+    public Stage initInscription(ModelListOfUsers modelListOfUser) throws IOException {
+        FXMLLoader loader= new FXMLLoader();
+        Stage stage = new Stage();
+
+        ViewInscription viewUser = new ViewInscription();
+        ControllerInscription controllerInscription = new ControllerInscription();
+
+
+        loader.setController(controllerInscription);
+        Parent root = loader.load(getClass().getResourceAsStream("Resources/inscription.fxml"));
+
+        controllerInscription.init(modelListOfUser, stage,this);
+        viewUser.init(modelListOfUser, controllerInscription);
+        stage.setScene(new Scene(root, width, height));
+        stage.show();
+        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                System.exit(0);
+            }
+        });
+        return stage;
+    }
+
     public void setModelListOfFood(ModelListOfFood modelListOfFood){
         this.modelListOfFood = modelListOfFood;
     }

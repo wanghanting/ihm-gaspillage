@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class ControllerEnregistrer {
+public class ControllerEnregistrer extends Controller{
     private ModelListOfFood modelListFood;
     @FXML
     private HBox hboxa;

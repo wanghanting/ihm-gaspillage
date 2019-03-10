@@ -20,14 +20,9 @@
             <Font size="39.0" />
          </font>
       </Label>
-      <TitledPane animated="false" layoutX="93.0" layoutY="105.0" prefHeight="266.0" prefWidth="209.0" text="Nouveaux messages">
+      <TitledPane animated="false" layoutX="199.0" layoutY="106.0" prefHeight="266.0" prefWidth="209.0" text="Nouveaux messages">
          <content>
-            <ListView fx:id="list_newm" prefHeight="200.0" prefWidth="200.0" />
-         </content>
-      </TitledPane>
-      <TitledPane animated="false" layoutX="302.0" layoutY="105.0" prefHeight="266.0" prefWidth="133.0" text="Historique des conversations">
-         <content>
-            <ListView fx:id="list_oldm" prefHeight="200.0" prefWidth="200.0" />
+            <ListView fx:id="list_newm" prefHeight="233.0" prefWidth="271.0" />
          </content>
       </TitledPane>
       <Button fx:id="btn_close" layoutX="549.0" layoutY="1.0" mnemonicParsing="false" text="close" />

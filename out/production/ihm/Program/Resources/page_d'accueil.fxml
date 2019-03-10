@@ -5,31 +5,114 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Hyperlink fx:id="link_aide" layoutX="126.0" layoutY="24.0" text="Aide" underline="true" />
-      <Hyperlink fx:id="link_deco" layoutX="399.0" layoutY="24.0" text="Se deconnecter" underline="true" />
-      <Label layoutX="160.0" layoutY="57.0" text="Page d'accueil">
-         <font>
-            <Font size="41.0" />
-         </font>
-      </Label>
-      <TitledPane fx:id="aliments_perimes" animated="false" layoutX="21.0" layoutY="156.0" prefHeight="25.0" prefWidth="180.0" text="Aliments perimes" textFill="RED" />
-      <TitledPane fx:id="aliments_presque_perimes" animated="false" layoutX="201.0" layoutY="156.0" prefHeight="25.0" prefWidth="180.0" text="Presque perimes" textFill="#ffac00" />
-      <TitledPane fx:id="aliments_ok" animated="false" layoutX="380.0" layoutY="156.0" prefHeight="25.0" prefWidth="180.0" text="C'est OK!" textFill="#23bb0e" />
-      <Button fx:id="btn_close" layoutX="550.0" mnemonicParsing="false" text="close" />
-    <Button fx:id="btn_pro" layoutX="34.0" layoutY="111.0" mnemonicParsing="false" text="Mon profile" />
-      <Button fx:id="btn_mes" layoutX="145.0" layoutY="111.0" mnemonicParsing="false" text="Message" />
-      <Button fx:id="btn_type" layoutX="401.0" layoutY="111.0" mnemonicParsing="false" text="Type" />
-      <Button fx:id="btn_follow" layoutX="238.0" layoutY="111.0" mnemonicParsing="false" prefHeight="27.0" text="Followers/Following" />
-      <Button fx:id="btn_conso" layoutX="466.0" layoutY="111.0" mnemonicParsing="false" text="Consommation" />
-      <ListView fx:id="list_perimes" layoutX="21.0" layoutY="181.0" prefHeight="181.0" prefWidth="180.0" />
-      <ListView fx:id="list_alipp" layoutX="201.0" layoutY="181.0" prefHeight="181.0" prefWidth="180.0" />
-      <ListView fx:id="list_aliok" layoutX="381.0" layoutY="181.0" prefHeight="181.0" prefWidth="180.0" />
-      <Button fx:id="btn_ajouterali" layoutX="352.0" layoutY="367.0" mnemonicParsing="false" text="Ajouter" />
-      <Button fx:id="btn_delete" layoutX="162.0" layoutY="367.0" mnemonicParsing="false" text="Supprimer" />
+      <HBox fx:id="hboxa" maxHeight="800.0" maxWidth="1000.0" minHeight="100.0" minWidth="100.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="718.0">
+               <children>
+                  <HBox prefHeight="60.0" prefWidth="600.0">
+                     <children>
+                        <HBox prefHeight="60.0" prefWidth="130.0" />
+                        <HBox prefHeight="60.0" prefWidth="274.0">
+                           <children>
+                              <Hyperlink fx:id="link_aide" prefHeight="136.0" prefWidth="38.0" text="Aide" underline="true" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="60.0" prefWidth="147.0">
+                           <children>
+                              <Hyperlink fx:id="link_deco" prefHeight="125.0" prefWidth="107.0" text="Se deconnecter" underline="true" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="btn_close" mnemonicParsing="false" text="close" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="51.0" prefWidth="600.0">
+                     <children>
+                        <HBox prefHeight="51.0" prefWidth="162.0" />
+                        <Label text="Page d'accueil">
+                           <font>
+                              <Font size="41.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="45.0" prefWidth="600.0">
+                     <children>
+                        <HBox prefHeight="45.0" prefWidth="35.0" />
+                        <HBox prefHeight="45.0" prefWidth="111.0">
+                           <children>
+                            <Button fx:id="btn_pro" mnemonicParsing="false" text="Mon profile" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="45.0" prefWidth="93.0">
+                           <children>
+                              <Button fx:id="btn_mes" mnemonicParsing="false" text="Message" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="45.0" prefWidth="162.0">
+                           <children>
+                              <Button fx:id="btn_follow" mnemonicParsing="false" prefHeight="27.0" text="Followers/Following" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="45.0" prefWidth="65.0">
+                           <children>
+                              <Button fx:id="btn_type" mnemonicParsing="false" text="Type" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="45.0" prefWidth="135.0">
+                           <children>
+                              <Button fx:id="btn_conso" mnemonicParsing="false" text="Consommation" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="211.0" prefWidth="600.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="22.0" />
+                        <VBox prefHeight="211.0" prefWidth="178.0">
+                           <children>
+                              <TitledPane fx:id="aliments_perimes" animated="false" prefHeight="25.0" prefWidth="180.0" text="Aliments perimes" textFill="RED" />
+                              <ListView fx:id="list_perimes" prefHeight="181.0" prefWidth="180.0" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="211.0" prefWidth="181.0">
+                           <children>
+                              <TitledPane fx:id="aliments_presque_perimes" animated="false" prefHeight="25.0" prefWidth="180.0" text="Presque perimes" textFill="#ffac00" />
+                              <ListView fx:id="list_alipp" prefHeight="181.0" prefWidth="180.0" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="211.0" prefWidth="180.0">
+                           <children>
+                              <TitledPane fx:id="aliments_ok" animated="false" prefHeight="25.0" prefWidth="180.0" text="C'est OK!" textFill="#23bb0e" />
+                              <ListView fx:id="list_aliok" prefHeight="181.0" prefWidth="180.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="33.0" prefWidth="600.0">
+                     <children>
+                        <HBox prefHeight="33.0" prefWidth="164.0" />
+                        <HBox prefHeight="33.0" prefWidth="189.0">
+                           <children>
+                              <Button fx:id="btn_delete" mnemonicParsing="false" text="Supprimer" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="btn_ajouterali" mnemonicParsing="false" text="Ajouter" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
    </children>
 </Pane>

@@ -2,6 +2,7 @@ package Program;
 
 import Program.Controller.*;
 import Program.Model.*;
+import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -106,6 +107,7 @@ public class StageFactory {
                 System.exit(0);
             }
         });
+        listenToSize(stage,controllerenregistrer);
         return stage;
     }
 
@@ -377,4 +379,17 @@ public class StageFactory {
     public ModelListOfUsers getModelListOfUsers(){return this.modelListOfUsers;}
     public void setRece(ModelUser u){this.rece = u;}
     public ModelUser getRece(){return this.rece;}
+    void listenToSize(Stage stage,Controller controller){
+        stage.widthProperty().addListener((ObservableValue<? extends Number> ov,
+                                           Number old_val, Number new_val) -> {
+            controller.getHboxa().setPrefWidth(new_val.doubleValue());
+
+        });
+        stage.heightProperty().addListener((ObservableValue<? extends Number> ov,
+                                            Number old_val, Number new_val) -> {
+            controller.getHboxa().setPrefHeight(new_val.doubleValue());
+
+        });
+
+    }
 }

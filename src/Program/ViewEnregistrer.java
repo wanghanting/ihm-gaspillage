@@ -30,7 +30,7 @@ public class ViewEnregistrer {
                     if (new_val.intValue()>=0){
                         label.setText("");
                     }else{
-                        label.setText("Entrer la type!");
+                        label.setText("Choisir la type!");
                     }});
     }
 
@@ -43,7 +43,7 @@ public class ViewEnregistrer {
         controller.getSpi_jour().setValueFactory(svf2);
         controller.getLab_noti().setText("Enter le nom!");
         listenTo(controller.getTxt_nom(),controller.getLab_noti());
-        controller.getLab_notifi().setText("Enter la type!");
+        controller.getLab_notifi().setText("Choisir la type!");
         listenTo(controller.getSel_type(),controller.getLab_notifi());
         controller.getHboxa().setPrefWidth(600);
         controller.getHboxa().setPrefHeight(475);

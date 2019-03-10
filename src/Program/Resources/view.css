@@ -8,6 +8,9 @@
     -fx-background-color: linear-gradient(#87CEFA, #2A5058);
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
 }
+.labelred {
+    -fx-text-fill: red;
+}
 
 .buttonFred:hover{
     -fx-background-color: #87CEFA;
@@ -25,17 +28,5 @@
     -fx-background-color: #fcfad7;
 }
 
-
-.displayListOfContact {
-    -fx-background-image: url("images/background_list.jpg");
-}
-
-.addContact {
-    -fx-background-image: url("images/background_addContact.jpg");
-}
-
-.addDetails {
-    -fx-background-image: url("images/background_details.jpg");
-}
 
 

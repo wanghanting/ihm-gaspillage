@@ -58,18 +58,6 @@ public class ControllerEnregistrer {
 
     public Label getLab_notifi(){return lab_notifi;}
 
-    void setBtn_ajouter(Stage stageold,StageFactory factory) throws IOException {
-        if((!txt_nom.getText().equals(""))&&(!sel_type.getValue().equals(""))){
-            try {
-                modelListFood.addFood( new ModelFood(txt_nom.getText(),(String)sel_type.getValue(),(int)spi_quan.getValue(),jour_achatj.getValue(),jour_expira.getValue(),(int)spi_jour.getValue(),txt_info.getText()));
-            }catch (Exception e){
-                System.out.println(e);
-            }
-            stageold.close();
-            factory.setModelListOfFood(modelListFood);
-            factory.initAccueil();
-        }
-    }
 
     public void setBtn_close(Stage stage){
         stage.close();
@@ -92,7 +80,21 @@ public class ControllerEnregistrer {
         //listner on the buttons
         btn_ajouter.setOnAction( event -> {
             try {
-                setBtn_ajouter(stage,factory);
+                if((txt_nom.getText().equals(""))) {
+                    lab_noti.getStyleClass().add("labelred");
+                }
+                if(sel_type.getValue()==null){
+                    this.lab_notifi.getStyleClass().add("labelred");
+                }else{
+                    try {
+                        modelListFood.addFood( new ModelFood(txt_nom.getText(),(String)sel_type.getValue(),(int)spi_quan.getValue(),jour_achatj.getValue(),jour_expira.getValue(),(int)spi_jour.getValue(),txt_info.getText()));
+                    }catch (Exception e){
+                        System.out.println(e);
+                    }
+                    stage.close();
+                    factory.setModelListOfFood(modelListFood);
+                    factory.initAccueil();
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }

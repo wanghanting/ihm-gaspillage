@@ -37,3 +37,7 @@
 #aliments_perimes, #aliments_presque_perimes, #aliments_ok{
     -fx-font-weight: bold;
 }
+
+.labelred {
+    -fx-text-fill: red;
+}

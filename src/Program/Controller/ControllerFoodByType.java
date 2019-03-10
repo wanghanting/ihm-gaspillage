@@ -1,3 +1,4 @@
+
 package Program.Controller;
 
 import Program.Model.ModelListOfFood;
@@ -12,7 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ControllerFoodByType extends Controller{
+public class ControllerFoodByType {
     private ModelListOfFood modelListOfFood = null;
 
     @FXML

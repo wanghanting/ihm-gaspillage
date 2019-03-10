@@ -189,12 +189,6 @@ public class StageFactory {
     }
 
     public Stage initProfil() throws IOException{
-//        ModelUser user1 = new ModelUser ("hahaha", "asd");
-//        user1.setFirstName ("Hanting");
-//        user1.setLastName ("WANG");
-//        user1.setSmallDescription ("asddd");
-//        user1.setLongDescription ("dadas");
-//        user = user1;
 
         FXMLLoader loader = new FXMLLoader ();
         Stage stage = new Stage ();

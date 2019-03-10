@@ -93,7 +93,6 @@ public class ControllerInscription {
                 e.getStackTrace();
             }
             stageold.close();
-//            factory.initAuthentification(userInformation);
             factory.initProfilIns ();
         }else{
             text_frame1.setText(" ");

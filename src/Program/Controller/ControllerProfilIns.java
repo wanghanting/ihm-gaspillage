@@ -45,13 +45,6 @@ public class ControllerProfilIns extends Controller{
                 e.getStackTrace();
             }
         });
-//        controller.getLbl_nom().setText (txt_frame1.getText());
-//
-//        controller.getLbl_prenom().setText (txt_frame2.getText());
-//
-//        controller.getLbl_mot().setText (txt_description.getText());
-//
-//        controller.getLbl_profil().setText (txt_frame3.getText());
     }
 
     //
@@ -60,12 +53,6 @@ public class ControllerProfilIns extends Controller{
         factory.user.setFirstName (txt_frame2.getText ());
         factory.user.setSmallDescription (txt_frame3.getText ());
         factory.user.setLongDescription (txt_description.getText ());
-//            controller.userInformation.ListOfUsers.get(0).setLastName(txt_frame1.getText());
-//            controller.lbl_nom.setText(txt_frame1.getText());
-//            controller.lbl_prenom.setText(txt_frame2.getText());
-//            controller.lbl_mot.setText(txt_frame3.getText());
-//            controller.lbl_profil.setText(txt_description.getText());
-            //上传图片的程序；
         stageold.close();
         factory.initProfil();
     }

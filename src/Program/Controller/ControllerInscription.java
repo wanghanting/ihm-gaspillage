@@ -17,7 +17,7 @@ import java.io.IOException;
 
 public class ControllerInscription {
     @FXML
-    ModelListOfUsers userInformation;
+    ModelListOfUsers userInformation = new ModelListOfUsers();
 
     @FXML
     private Button btn_close;

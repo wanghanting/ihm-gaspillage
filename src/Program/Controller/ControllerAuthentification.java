@@ -23,7 +23,7 @@ public class ControllerAuthentification {
     private javafx.scene.control.Button btn_authentifier;
 
     @FXML
-    private ModelListOfUsers userInformation;
+    private ModelListOfUsers userInformation = new ModelListOfUsers();
 
     @FXML
     TextField txt_frame1;
@@ -46,12 +46,19 @@ public class ControllerAuthentification {
 
     public void init(ModelListOfUsers model, Stage stage, StageFactory factory){
         this.userInformation = model;
+//        System.out.printf(userInformation.getListOfUsers().get(0).getUsername());
+//        System.out.printf(userInformation.getListOfUsers().get(1).getUsername());
+        for(int i = 0;i<userInformation.getListOfUsers().size();i++){
+            System.out.printf(userInformation.getListOfUsers().get(i).getUsername());
+        }
+        System.out.printf(userInformation.getListOfUsers().get(2).getUsername());
+        System.out.printf("用户已经注册");
         btn_authentifier.setOnAction( event -> {
             if(isRegistred()==false){
                 authenerr.setText("You have not registered an account yet, please register first");
             }else {
                 if (comfirmedPassword() == true) {
-
+                    System.out.printf("hhhh");
                     try {
                         setBtn_authentifier(stage, factory);
                     } catch (IOException e) {
@@ -85,8 +92,8 @@ public class ControllerAuthentification {
 
 
     public boolean comfirmedPassword(){
-        for(int i = 0;i<userInformation.ListOfUsers.size();i++){
-            if(txt_frame1.getText()==userInformation.ListOfUsers.get(i).getUsername()&&txt_frame2.getText()==userInformation.ListOfUsers.get(i).getPassword()){
+        for(int i = 0;i<userInformation.getListOfUsers().size();i++){
+            if(txt_frame1.getText().equals(userInformation.getListOfUsers().get(i).getUsername())&&txt_frame2.getText().equals(userInformation.getListOfUsers().get(i).getPassword())){
                 System.out.printf("information confrimed!");
                 comfirmedPassword = true;
             }
@@ -95,8 +102,8 @@ public class ControllerAuthentification {
     }
 
     public boolean isRegistred() {
-        for (int i = 0; i < userInformation.ListOfUsers.size(); i++) {
-            if (txt_frame1.getText() == userInformation.ListOfUsers.get(i).getUsername()) {
+        for (int i = 0; i < userInformation.getListOfUsers().size(); i++) {
+            if (txt_frame1.getText().equals(userInformation.getListOfUsers().get(i).getUsername()) ){
                 System.out.printf("you're registred!");
                 isRegistred = true;
             }

@@ -5,14 +5,18 @@ import javafx.collections.ObservableList;
 import java.util.*;
 
 public class ModelListOfUsers {
+
     public ObservableList<ModelUser> ListOfUsers;
+    public ModelListOfUsers() {
+       ListOfUsers = FXCollections.observableList(new ArrayList<>());
+        adduser(ListOfUsers);
+    }
+    public void adduser( ObservableList<ModelUser> ListOfUsers1){
 
-    public ModelListOfUsers(){
 
-        ListOfUsers = FXCollections.observableList( new ArrayList<>());
-        ListOfUsers.add(new ModelUser("user1","shagua"));
-        ListOfUsers.add(new ModelUser("hahaha","shagua"));
-        ListOfUsers.add(new ModelUser("superdemon","shagua"));
+        ListOfUsers1.add(new ModelUser("user1","shagua"));
+        ListOfUsers1.add(new ModelUser("hahaha","shagua"));
+        ListOfUsers1.add(new ModelUser("superdemon","shagua"));
 
     }
     public void addUser(ModelUser user){

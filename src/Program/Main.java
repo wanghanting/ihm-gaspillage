@@ -22,7 +22,7 @@ public class Main extends Application {
 
         FXMLLoader loader = new FXMLLoader();
 
-        StageFactory stages = new StageFactory();
+        StageFactory stages = new StageFactory(primaryStage);
 
         ViewAuthentification view = new ViewAuthentification();
 

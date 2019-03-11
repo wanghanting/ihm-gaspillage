@@ -72,22 +72,21 @@ public class ControllerInscription {
 
         btn_suivant.setOnAction(event -> {
             try {
-                setBtn_suivant(stage, factory);
+                setBtn_suivant(factory);
             } catch (IOException e) {
                 e.getStackTrace();
             }
         });
 
         link_authen.setOnAction (event -> {
-            stage.close();
-            setLink_authen(stage,factory);
+            setLink_authen(factory);
         });
         btn_close.setOnAction(event -> {
             stage.close();
         });
     }
 
-    void setBtn_suivant(Stage stageold,StageFactory factory) throws IOException {
+    void setBtn_suivant(StageFactory factory) throws IOException {
         if(comfirmInformation()== true) {
             try {
                 factory.user = new ModelUser (text_frame1.getText(), text_frame2.getText());
@@ -96,7 +95,6 @@ public class ControllerInscription {
             } catch (Exception e) {
                 e.getStackTrace();
             }
-            stageold.close();
             factory.initProfilIns ();
         }else{
             text_frame1.setText(" ");
@@ -108,9 +106,8 @@ public class ControllerInscription {
     }
 
     @FXML
-    private void setLink_authen(Stage stageold, StageFactory factory) {
+    private void setLink_authen( StageFactory factory) {
         try{
-            stageold.close();
             factory.initAuthentification1();}
         catch (Exception e ){
             e.getStackTrace();

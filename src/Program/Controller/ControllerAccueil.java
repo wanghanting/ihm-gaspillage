@@ -58,13 +58,13 @@ public class ControllerAccueil extends Controller{
     public HBox getHboxa(){return hboxa;}
 
     ControllerInscription controller;
-    private void setLink_aide(StageFactory stageFactory) throws IOException{
-        stageFactory.initMes ("Resources/aide.fxml",controllerAide,viewp);
+
+    private void setLink_aide(StageFactory factory)throws IOException {
+        factory.initAide ();
     }
 
     @FXML
-    private void setBtn_pro(Stage stageold, StageFactory factory) throws IOException{
-        stageold.close();
+    private void setBtn_pro(StageFactory factory) throws IOException{
         factory.initMes ("Resources/profil.fxml",controllerProfil,viewp);
     }
 
@@ -84,17 +84,15 @@ public class ControllerAccueil extends Controller{
 
 
 
-     void setBtn_ajouter(Stage stageold,StageFactory factory) throws IOException {
+     void setBtn_ajouter(StageFactory factory) throws IOException {
 
-            stageold.close();
             factory.setModelListOfFood(modelListfood);
             factory.initEnregistrer();
 
     }
 
-    private void setLink_deco(Stage stageold, StageFactory factory) {
+    private void setLink_deco( StageFactory factory) {
         try{
-            stageold.close();
             factory.initAuthentification1();
 
         }
@@ -102,17 +100,14 @@ public class ControllerAccueil extends Controller{
             e.getStackTrace();
         }
     }
-    void setBtn_type(Stage stageold,StageFactory factory)throws IOException{
-        stageold.close();
+    void setBtn_type(StageFactory factory)throws IOException{
         factory.initType();
     }
-    void setBtn_conso(Stage stageold,StageFactory factory)throws IOException {
-        stageold.close();
+    void setBtn_conso(StageFactory factory)throws IOException {
         factory.initCosommationT();
     }
 
-    void setBtn_follow(Stage stageold, StageFactory factory)throws IOException{
-        stageold.close ();
+    void setBtn_follow( StageFactory factory)throws IOException{
         factory.initFollow ();
     }
 
@@ -128,7 +123,7 @@ public class ControllerAccueil extends Controller{
     public void init(ModelListOfFood food, ViewAccueil view, Stage stage, StageFactory factory) {
         this.modelListfood = food;
         link_deco.setOnAction (event -> {
-            setLink_deco(stage,factory);
+            setLink_deco(factory);
         });
 
         btn_close.setOnAction (event -> {
@@ -137,7 +132,7 @@ public class ControllerAccueil extends Controller{
 
         btn_pro.setOnAction (event -> {
             try{
-                setBtn_pro (stage, factory);
+                setBtn_pro (factory);
             }catch (IOException e){
                 e.printStackTrace ();
             }
@@ -153,28 +148,28 @@ public class ControllerAccueil extends Controller{
         });
         btn_ajouterali.setOnAction( event -> {
             try {
-                setBtn_ajouter(stage,factory);
+                setBtn_ajouter(factory);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         });
         btn_type.setOnAction(event -> {
             try {
-                setBtn_type(stage,factory);
+                setBtn_type(factory);
             }catch (IOException e){
                 e.printStackTrace();
             }
         });
         btn_conso.setOnAction(event -> {
             try {
-                setBtn_conso(stage,factory);
+                setBtn_conso(factory);
             }catch (IOException e){
                 e.printStackTrace();
             }
         });
         btn_follow.setOnAction(event -> {
             try {
-                setBtn_follow (stage,factory);
+                setBtn_follow (factory);
             }catch (IOException e){
                 e.printStackTrace();
             }
@@ -183,7 +178,6 @@ public class ControllerAccueil extends Controller{
             System.out.println(view.getRangeSelectedItem());
             this.modelListfood.getListOfFoodA().remove(view.getRangeSelectedItem());
             factory.setModelListOfFood(this.modelListfood);
-            stage.close();
             try {
                 factory.initAccueil();
             } catch (IOException e) {
@@ -191,7 +185,6 @@ public class ControllerAccueil extends Controller{
             }
         });
         btn_mes.setOnAction(event -> {
-            stage.close();
             try {
                 factory.initMes("Resources/messages.fxml",controllerMessages,viewMessages);
             } catch (IOException e) {

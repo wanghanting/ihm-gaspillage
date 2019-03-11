@@ -66,7 +66,7 @@ public class ControllerConsommationTextDate {
         date_from.setOnAction(event -> {
             try {
                 stageFactory.getModelListOfFood().setDateFrom(date_from.getValue());
-                openNewPage(stage,stageFactory);
+                openNewPage(stageFactory);
             }catch (IOException e){
                 e.printStackTrace();
             }
@@ -74,7 +74,7 @@ public class ControllerConsommationTextDate {
         date_to.setOnAction(event -> {
             try {
                 stageFactory.getModelListOfFood().setDateTo(date_to.getValue());
-                openNewPage(stage,stageFactory);
+                openNewPage(stageFactory);
             }catch (IOException e){
                 e.printStackTrace();
             }
@@ -82,7 +82,7 @@ public class ControllerConsommationTextDate {
         par_type_ali.setOnAction(event -> {
             try {
                 stageFactory.setTypeOfConsom("type");
-                openNewPage(stage,stageFactory);
+                openNewPage(stageFactory);
             }catch (IOException e){
                 e.printStackTrace();
             }
@@ -90,7 +90,7 @@ public class ControllerConsommationTextDate {
         somme.setOnAction(event -> {
             try {
                 stageFactory.setTypeOfConsom("somme");
-                openNewPage(stage,stageFactory);
+                openNewPage(stageFactory);
             }catch (IOException e){
                 e.printStackTrace();
             }
@@ -98,7 +98,7 @@ public class ControllerConsommationTextDate {
         par_ali.setOnAction(event -> {
             try {
                 stageFactory.setTypeOfConsom("aliment");
-                openNewPage(stage,stageFactory);
+                openNewPage(stageFactory);
             }catch (IOException e){
                 e.printStackTrace();
             }
@@ -115,27 +115,25 @@ public class ControllerConsommationTextDate {
         });
         link_accueil.setOnAction(event -> {
             try {
-                setLink_accueil(stage,stageFactory);
+                setLink_accueil(stageFactory);
             }catch (IOException e){
                 e.printStackTrace();
             }
         });
         btn_gra.setOnAction(event -> {
             try {
-                stage.close();
                 stageFactory.initConsomation();
             }catch (IOException e){
                 e.printStackTrace();
             }
         });
         link_deconn.setOnAction (event -> {
-            setLink_deco(stage,stageFactory);
+            setLink_deco(stageFactory);
         });
     }
 
     @FXML
-    private void openNewPage(Stage stage,StageFactory factory)throws IOException{
-        stage.close();
+    private void openNewPage(StageFactory factory)throws IOException{
         factory.initCosommationT();
     }
 
@@ -150,14 +148,12 @@ public class ControllerConsommationTextDate {
     }
 
     @FXML
-    private void setLink_accueil(Stage stageold,StageFactory factory)throws IOException{
-        stageold.close();
+    private void setLink_accueil(StageFactory factory)throws IOException{
         factory.initAccueil();
     }
 
-    private void setLink_deco(Stage stageold, StageFactory factory) {
+    private void setLink_deco(StageFactory factory) {
         try{
-            stageold.close();
             factory.initAuthentification1();
         }
         catch (Exception e ){

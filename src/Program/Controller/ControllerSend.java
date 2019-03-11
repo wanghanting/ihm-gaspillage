@@ -34,7 +34,6 @@ public class ControllerSend extends Controller {
         this.factory = factory;
         modelListOfMes = factory.getModelListOfMes();
         btn_send.setOnAction(event -> {
-            stage.close();
             modelListOfMes.getListOfMes().add(new ModelMessage(factory.getUser(),findUser(lab_rece.getText()),txt_mes.getText(), LocalDateTime.now()));
             try {
                 factory.initAccueil();

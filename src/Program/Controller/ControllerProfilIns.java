@@ -44,7 +44,7 @@ public class ControllerProfilIns extends Controller{
 
         btn_sub.setOnAction(event -> {
             try {
-                setBtn_sub(stage, factory);
+                setBtn_sub(factory);
             } catch (IOException e) {
                 e.getStackTrace();
             }
@@ -56,7 +56,7 @@ public class ControllerProfilIns extends Controller{
     }
 
     //
-    void setBtn_sub(Stage stageold, StageFactory factory) throws IOException {
+    void setBtn_sub( StageFactory factory) throws IOException {
         if(txt_frame1.getText() == null){
             factory.user.setLastName (" ");
         }else {
@@ -77,7 +77,6 @@ public class ControllerProfilIns extends Controller{
         }else {
             factory.user.setLongDescription (txt_description.getText ());
         }
-        stageold.close();
         factory.initProfil();
     }
 

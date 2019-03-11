@@ -53,7 +53,7 @@ public class ControllerType extends Controller{
         this.modelListOfTags = tagList;
         link_accueil.setOnAction(event -> {
             try {
-                setLink_accueil(stage,factory);
+                setLink_accueil(factory);
             }catch (IOException e){
                 e.printStackTrace();
             }
@@ -61,7 +61,7 @@ public class ControllerType extends Controller{
 
         btn_open.setOnAction(event -> {
             try {
-                setBtn_open(stage,factory);
+                setBtn_open(factory);
             }catch (IOException e){
                 e.printStackTrace();
             }
@@ -84,7 +84,7 @@ public class ControllerType extends Controller{
             setBtn_close(stage);
         });
         link_deco.setOnAction (event -> {
-            setLink_deco(stage,factory);
+            setLink_deco(factory);
         });
     }
 
@@ -100,14 +100,12 @@ public class ControllerType extends Controller{
     }
 
     @FXML
-    private void setLink_accueil(Stage stageold,StageFactory factory)throws IOException{
-            stageold.close();
+    private void setLink_accueil(StageFactory factory)throws IOException{
             factory.initAccueil();
     }
 
     @FXML
-    private void setBtn_open(Stage stageold,StageFactory factory)throws IOException{
-        stageold.close();
+    private void setBtn_open(StageFactory factory)throws IOException{
         factory.initFoodByType(type);
     }
 
@@ -115,9 +113,8 @@ public class ControllerType extends Controller{
         stage.close ();
     }
 
-    private void setLink_deco(Stage stageold, StageFactory factory) {
+    private void setLink_deco(StageFactory factory) {
         try{
-            stageold.close();
             factory.initAuthentification1();
         }
         catch (Exception e ){

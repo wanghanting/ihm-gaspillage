@@ -69,8 +69,7 @@ public class ControllerEnregistrer extends Controller{
         stageFactory.initAide ();
     }
 
-    private void setLink_accueil(Stage stageold, StageFactory factory) throws IOException{
-        stageold.close ();
+    private void setLink_accueil( StageFactory factory) throws IOException{
         factory.initAccueil ();
     }
 
@@ -93,7 +92,6 @@ public class ControllerEnregistrer extends Controller{
                     }catch (Exception e){
                         System.out.println(e);
                     }
-                    stage.close();
                     factory.setModelListOfFood(modelListFood);
                     factory.initAccueil();
                 }
@@ -116,20 +114,19 @@ public class ControllerEnregistrer extends Controller{
 
         link_accueil.setOnAction (event -> {
             try {
-                setLink_accueil (stage, factory);
+                setLink_accueil (factory);
             } catch (IOException e){
                 e.printStackTrace ();
             }
         });
 
         link_deco.setOnAction (event -> {
-            setLink_deco(stage,factory);
+            setLink_deco(factory);
         });
 
     }
-    private void setLink_deco(Stage stageold, StageFactory factory) {
+    private void setLink_deco( StageFactory factory) {
         try{
-            stageold.close();
             factory.initAuthentification1();
 
         }

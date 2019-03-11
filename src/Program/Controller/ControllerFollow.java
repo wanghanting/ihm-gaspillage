@@ -74,8 +74,7 @@ public class ControllerFollow extends Controller {
         stageFactory.initAide ();
     }
 
-    private void setLink_accueil(Stage stageold, StageFactory factory) throws IOException{
-        stageold.close ();
+    private void setLink_accueil( StageFactory factory) throws IOException{
         factory.initAccueil ();
     }
 
@@ -97,19 +96,18 @@ public class ControllerFollow extends Controller {
 
         link_accueil.setOnAction (event -> {
             try {
-                setLink_accueil (stage, factory);
+                setLink_accueil (factory);
             } catch (IOException e){
                 e.printStackTrace ();
             }
         });
 
         link_deco.setOnAction (event -> {
-            setLink_deco(stage,factory);
+            setLink_deco(factory);
         });
 
         btn_msg.setOnAction(event -> {
             factory.setRece(this.user);
-            stage.close();
             try {
                 factory.initMes("Resources/send.fxml",controllerSend,viewSend);
             } catch (IOException e) {
@@ -122,9 +120,8 @@ public class ControllerFollow extends Controller {
         this.user = user;
     }
 
-    private void setLink_deco(Stage stageold, StageFactory factory) {
+    private void setLink_deco( StageFactory factory) {
         try{
-            stageold.close();
             factory.initAuthentification1();
         }
         catch (Exception e ){

@@ -44,7 +44,7 @@ public class ControllerFoodByType {
         this.type.setText(type);
         back.setOnAction(event -> {
             try {
-                setBack(stage,stageFactory);
+                setBack(stageFactory);
             }catch (IOException e){
                 e.printStackTrace();
             }
@@ -58,7 +58,7 @@ public class ControllerFoodByType {
         });
         link_accueil.setOnAction(event -> {
             try {
-                setLink_accueil(stage,stageFactory);
+                setLink_accueil(stageFactory);
             }catch (IOException e){
                 e.printStackTrace();
             }
@@ -67,12 +67,11 @@ public class ControllerFoodByType {
             setBtn_close(stage);
         });
         link_deco.setOnAction (event -> {
-            setLink_deco(stage,stageFactory);
+            setLink_deco(stageFactory);
         });
     }
 
-    private void setBack(Stage stageOld,StageFactory stageFactory)throws IOException {
-        stageOld.close();
+    private void setBack(StageFactory stageFactory)throws IOException {
         stageFactory.initType();
     }
 
@@ -80,8 +79,7 @@ public class ControllerFoodByType {
         factory.initAide ();
     }
 
-    private void setLink_accueil(Stage stageOld,StageFactory factory)throws IOException{
-        stageOld.close();
+    private void setLink_accueil(StageFactory factory)throws IOException{
         factory.initAccueil();
     }
 
@@ -89,9 +87,8 @@ public class ControllerFoodByType {
         stage.close ();
     }
 
-    private void setLink_deco(Stage stageold, StageFactory factory) {
+    private void setLink_deco( StageFactory factory) {
         try{
-            stageold.close();
             factory.initAuthentification1();
         }
         catch (Exception e ){

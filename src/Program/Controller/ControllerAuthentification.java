@@ -55,7 +55,7 @@ public class ControllerAuthentification extends Controller {
             }else {
                 if (comfirmedPassword() == true) {
                     try {
-                        setBtn_authentifier(stage, factory);
+                        setBtn_authentifier(factory);
                     } catch (IOException e) {
                         e.getStackTrace();
                     }
@@ -65,8 +65,7 @@ public class ControllerAuthentification extends Controller {
             }
         });
         link_inscri.setOnAction (event -> {
-            stage.close();
-            setLink_inscri(stage,factory);
+            setLink_inscri(factory);
         });
 
         btn_close.setOnAction (event -> {
@@ -79,16 +78,14 @@ public class ControllerAuthentification extends Controller {
     }
 
     @FXML
-    private void setLink_inscri(Stage stageold, StageFactory factory) {
+    private void setLink_inscri(StageFactory factory) {
         try{
-            stageold.close();
             factory.initInscription(userInformation);}
         catch (Exception e ){
             e.getStackTrace();
         }
     }
-    void setBtn_authentifier(Stage stageold,StageFactory factory) throws IOException {
-        stageold.close();
+    void setBtn_authentifier(StageFactory factory) throws IOException {
         factory.initAccueil();
     }
 

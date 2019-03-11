@@ -42,7 +42,6 @@ public class ControllerMessages extends Controller {
     public void init(Stage stage, StageFactory stageFactory){
         link_accueil.setOnAction(event ->
         {
-            stage.close();
             try {
                 stageFactory.initAccueil();
             } catch (IOException e) {
@@ -57,13 +56,12 @@ public class ControllerMessages extends Controller {
             }
         });
         link_deco.setOnAction (event -> {
-            setLink_deco(stage,stageFactory);
+            setLink_deco(stageFactory);
         });
     }
 
-    private void setLink_deco(Stage stageold, StageFactory factory) {
+    private void setLink_deco( StageFactory factory) {
         try{
-            stageold.close();
             factory.initAuthentification1();
         }
         catch (Exception e ){

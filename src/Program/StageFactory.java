@@ -27,11 +27,14 @@ public class StageFactory {
     private String typeOfConsom = "somme";
     private ModelListOfMes modelListOfMes = new ModelListOfMes();
     private ModelUser rece = new ModelUser("U","HHH");
+    private Stage stage;
 
+    public StageFactory(Stage stage){
+        this.stage = stage;
+    }
     public Stage initAccueil() throws IOException {
 
         FXMLLoader loader= new FXMLLoader();
-        Stage stage = new Stage();
 
         ViewAccueil viewFood = new ViewAccueil();
         ControllerAccueil controllerAccueil = new ControllerAccueil();
@@ -61,7 +64,6 @@ public class StageFactory {
     public Stage initFoodByType(String type) throws IOException{
 
         FXMLLoader loader= new FXMLLoader();
-        Stage stage = new Stage();
 
         ViewFoodByType view = new ViewFoodByType();
         ControllerFoodByType controller = new ControllerFoodByType();
@@ -89,7 +91,6 @@ public class StageFactory {
 
     public Stage initEnregistrer() throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        Stage stage = new Stage();
         ControllerEnregistrer controllerenregistrer = new ControllerEnregistrer();
         ViewAccueil viewFood = new ViewAccueil();
         ViewEnregistrer viewEnregistrer = new ViewEnregistrer();
@@ -116,7 +117,6 @@ public class StageFactory {
 
     public Stage initType() throws IOException {
         FXMLLoader loader = new FXMLLoader ();
-        Stage stage = new Stage ();
         ViewType viewType = new ViewType ();
         ControllerType controller = new ControllerType ();
 
@@ -143,7 +143,6 @@ public class StageFactory {
 
     public Stage initFollow() throws IOException {
         FXMLLoader loader = new FXMLLoader ();
-        Stage stage = new Stage ();
         ViewFollow viewFollow = new ViewFollow ();
         ControllerFollow controller = new ControllerFollow ();
 
@@ -170,31 +169,30 @@ public class StageFactory {
 
     public Stage initAide() throws IOException {
         FXMLLoader loader = new FXMLLoader ();
-        Stage stage = new Stage ();
         ControllerAide controllerAide = new ControllerAide ();
+        Stage stage1 = new Stage();
 
         loader.setController (controllerAide);
         Parent root = loader.load (getClass ().getResourceAsStream ("Resources/aide.fxml"));
-        controllerAide.init (stage,this);
+        controllerAide.init (stage1,this);
 
         Scene scene = new Scene(root, width, height);
         scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
-        stage.setScene(scene);
+        stage1.setScene(scene);
 
-        stage.show();
-        stage.setOnCloseRequest (new EventHandler<WindowEvent> () {
+        stage1.show();
+        stage1.setOnCloseRequest (new EventHandler<WindowEvent> () {
             @Override
             public void handle(WindowEvent event) {
                 System.exit (0);
             }
         });
-        return stage;
+        return stage1;
     }
 
     public Stage initProfil() throws IOException{
 
         FXMLLoader loader = new FXMLLoader ();
-        Stage stage = new Stage ();
         ControllerProfil controllerProfil = new ControllerProfil ();
 
         loader.setController (controllerProfil);
@@ -216,7 +214,6 @@ public class StageFactory {
     public Stage initProfilIns() throws IOException{
 
         FXMLLoader loader = new FXMLLoader ();
-        Stage stage = new Stage ();
         ControllerProfilIns controllerProfilIns = new ControllerProfilIns ();
 
         loader.setController (controllerProfilIns);
@@ -237,7 +234,6 @@ public class StageFactory {
 
     public Stage initConsomation() throws IOException {
         FXMLLoader loader = new FXMLLoader ();
-        Stage stage = new Stage ();
         ControllerConsomationG controllerConsomationG=new ControllerConsomationG();
         ViewConsomationG viewConsomationG = new ViewConsomationG();
 
@@ -263,7 +259,6 @@ public class StageFactory {
 
     public Stage initAuthentification(ModelListOfUsers modelListOfUser) throws IOException {
         FXMLLoader loader= new FXMLLoader();
-        Stage stage = new Stage();
         ControllerProfilIns controllerProfilIns = new ControllerProfilIns ();
 
 //        ViewAuthentification viewUser = new ViewAuthentification();
@@ -288,7 +283,6 @@ public class StageFactory {
 
     public Stage initAuthentification1() throws IOException {
         FXMLLoader loader= new FXMLLoader();
-        Stage stage = new Stage();
 
         ViewAuthentification viewUser = new ViewAuthentification();
         ControllerAuthentification controllerAuthentification = new ControllerAuthentification();
@@ -311,7 +305,6 @@ public class StageFactory {
 
     public Stage initCosommationT()throws IOException{
         FXMLLoader loader= new FXMLLoader();
-        Stage stage = new Stage();
 
         ViewConsommationTextDate view = new ViewConsommationTextDate();
         ControllerConsommationTextDate controller = new ControllerConsommationTextDate();
@@ -342,7 +335,6 @@ public class StageFactory {
     }
     public void initMes(String path, Controller controller, View view) throws IOException {
         FXMLLoader loader = new FXMLLoader ();
-        Stage stage = new Stage ();
         loader.setController (controller);
         Parent root = loader.load (getClass ().getResourceAsStream (path));
         controller.init(stage,this);
@@ -355,7 +347,6 @@ public class StageFactory {
 
     public Stage initInscription(ModelListOfUsers modelListOfUser) throws IOException {
         FXMLLoader loader= new FXMLLoader();
-        Stage stage = new Stage();
 
         ViewInscription viewUser = new ViewInscription();
         ControllerInscription controllerInscription = new ControllerInscription();

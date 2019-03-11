@@ -36,8 +36,7 @@ public class ControllerProfil extends Controller {
         stage.close ();
     }
 
-    private void setLink_accueil(Stage stageold, StageFactory factory) throws IOException{
-        stageold.close ();
+    private void setLink_accueil(StageFactory factory) throws IOException{
         factory.initAccueil ();
     }
 
@@ -65,14 +64,13 @@ public class ControllerProfil extends Controller {
 
         link_accueil.setOnAction (event -> {
             try {
-                setLink_accueil (stage, factory);
+                setLink_accueil (factory);
             } catch (IOException e){
                 e.printStackTrace ();
             }
         });
         btn_changer.setOnAction(event -> {
             try {
-                stage.close();
                 factory.initProfilIns();
             }catch (IOException e){
                 e.printStackTrace();

@@ -37,8 +37,8 @@ public class ModelListOfFood {
         listOfPPFoodOfOneType = FXCollections.observableList(new ArrayList<>());
         listOfConsom = FXCollections.observableList(new ArrayList<>());
         listOfGas = FXCollections.observableList(new ArrayList<>());
-        listOfFoodA.add(new ModelFood("apple","fruit",1,LocalDate.of(2019, 1, 8),LocalDate.of(2019, 2, 8),1,"from England"));
-        listOfFoodG.add(new ModelFood("apple","fruit",1,LocalDate.of(2019, 1, 8),LocalDate.of(2019, 2, 8),1,"from England"));
+        listOfFoodA.add(new ModelFood("pomme","fruit",1,LocalDate.of(2019, 1, 8),LocalDate.of(2019, 2, 8),1,"from England"));
+        listOfFoodG.add(new ModelFood("pomme","fruit",1,LocalDate.of(2019, 1, 8),LocalDate.of(2019, 2, 8),1,"from England"));
     }
 
     public void addFood(ModelFood food){

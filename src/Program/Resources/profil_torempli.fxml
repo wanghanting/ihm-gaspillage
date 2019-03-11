@@ -43,7 +43,7 @@
                   </HBox>
                   <HBox prefHeight="59.0" prefWidth="600.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aucun de ces champs n'est obligatoire, mais il est recommander d'en remplir un certain nombre afin que d'autres utilisateurs puises vous identifier et  vous suivez si cela les intéresse." textAlignment="CENTER" wrappingWidth="600.4912109375" />
+                        <Text fill="#1500ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Aucun de ces champs n'est obligatoire, mais il est recommandé d'en remplir un certain nombre afin que d'autres utilisateurs puissent facilement vous identifier et vous suivre" textAlignment="CENTER" wrappingWidth="600.4912109375" />
                      </children>
                   </HBox>
                   <HBox prefHeight="207.0" prefWidth="601.0">

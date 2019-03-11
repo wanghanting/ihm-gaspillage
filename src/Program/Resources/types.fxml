@@ -37,7 +37,7 @@
                         </HBox>
                         <HBox prefHeight="50.0" prefWidth="278.0">
                            <children>
-                                <Label prefHeight="32.0" prefWidth="280.0" text="Categorie d'aliment" textFill="#3baebb">
+                                <Label prefHeight="32.0" prefWidth="280.0" text="Categorie d'aliments" textFill="#3baebb">
                                     <font>
                                         <Font size="24.0" />
                                     </font>

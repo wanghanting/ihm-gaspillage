@@ -34,7 +34,7 @@
                   </HBox>
                   <HBox prefHeight="82.0" prefWidth="600.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aucun de ces champs n'est obligatoire, mais il est recommander d'en remplir un certain nombre afin que d'autres utilisateurs puises vous identifier et  vous suivez si cela les intéresse." textAlignment="CENTER" wrappingWidth="600.4912109375" />
+                        <Text fill="#1500ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Aucun de ces champs n'est obligatoire, mais il est recommandé d'en remplir un certain nombre afin que d'autres utilisateurs puissent facilement vous identifier et vous suivre" textAlignment="CENTER" wrappingWidth="600.4912109375" />
                      </children>
                   </HBox>
                   <HBox prefHeight="255.0" prefWidth="601.0">
@@ -61,7 +61,7 @@
                                     <Label fx:id="lbl_nom" prefHeight="34.0" prefWidth="123.0" />
                                     <Label prefHeight="30.0" prefWidth="169.0" text="Prénom" />
                                     <Label fx:id="lbl_prenom" prefHeight="33.0" prefWidth="166.0" />
-                                    <Label prefHeight="31.0" prefWidth="169.0" text="Vous en quelque mots" />
+                                    <Label prefHeight="31.0" prefWidth="169.0" text="Vous en quelques mots" />
                                     <Label fx:id="lbl_mot" prefHeight="36.0" prefWidth="170.0" />
                                     <VBox prefHeight="30.0" prefWidth="171.0">
                                        <children>

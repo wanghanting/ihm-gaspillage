@@ -44,3 +44,6 @@
     -fx-text-fill: red;
 }
 
+.hyperlink{
+    -fx-font-weight: bold;
+}

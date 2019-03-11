@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="365.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="365.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
     <children>
       <HBox fx:id="hboxa" layoutX="2.0" layoutY="1.0" prefHeight="365.0" prefWidth="649.0">
          <children>
@@ -18,7 +18,7 @@
                <children>
                   <HBox prefHeight="33.0" prefWidth="649.0">
                      <children>
-                        <HBox prefHeight="33.0" prefWidth="582.0" />
+                        <HBox prefHeight="32.0" prefWidth="546.0" />
                           <Button fx:id="btn_close" mnemonicParsing="false" text="Close" />
                      </children>
                   </HBox>
@@ -30,12 +30,12 @@
                                 <Hyperlink fx:id="link_accueil" text="Page d'accueil" />
                            </children>
                         </HBox>
-                        <HBox prefHeight="50.0" prefWidth="119.0">
+                        <HBox prefHeight="49.0" prefWidth="103.0">
                            <children>
                                 <Hyperlink fx:id="link_aide" text="Aide" />
                            </children>
                         </HBox>
-                        <HBox prefHeight="50.0" prefWidth="230.0">
+                        <HBox prefHeight="49.0" prefWidth="223.0">
                            <children>
                                 <Label text="Categorie d'aliment" textFill="#3baebb">
                                     <font>

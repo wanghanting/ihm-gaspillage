@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -51,6 +52,10 @@ public class ControllerAccueil extends Controller{
     private Button btn_conso;
     @FXML
     private Button btn_delete;
+    @FXML
+    private HBox hboxa;
+
+    public HBox getHboxa(){return hboxa;}
 
     ControllerInscription controller;
     private void setLink_aide(StageFactory stageFactory) throws IOException{

@@ -13,12 +13,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="392.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="392.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Hyperlink fx:id="link_accueil" layoutX="30.0" layoutY="14.0" text="Page d'accueil" />
-      <Hyperlink id="link_aide" fx:id="link_aide" layoutX="152.0" layoutY="14.0" text="Aide" />
-      <Hyperlink fx:id="link_deconn" layoutX="423.0" layoutY="14.0" text="Se déconnecter" />
-      <Label id="title" layoutX="163.0" layoutY="25.0" text="Consommation" textAlignment="CENTER">
+      <Hyperlink fx:id="link_accueil" layoutX="30.0" layoutY="5.0" text="Page d'accueil" />
+      <Hyperlink id="link_aide" fx:id="link_aide" layoutX="146.0" layoutY="5.0" text="Aide" />
+      <Hyperlink fx:id="link_deconn" layoutX="423.0" layoutY="7.0" text="Se déconnecter" />
+      <Label id="title" layoutX="151.0" layoutY="22.0" prefHeight="53.0" prefWidth="310.0" text="Consommation" textAlignment="CENTER">
          <font>
             <Font size="42.0" />
          </font>
@@ -29,7 +29,7 @@
             <Button id="sel_texte" fx:id="btn_tex" mnemonicParsing="false" text="texte " />
          </buttons>
       </ButtonBar>
-      <TitledPane id="title_consom" animated="false" layoutX="22.0" layoutY="132.0" text="consommée">
+      <TitledPane id="title_consom" animated="false" layoutX="5.0" layoutY="132.0" text="consommée">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="196.0">
                <children>
@@ -38,7 +38,7 @@
             </AnchorPane>
          </content>
       </TitledPane>
-      <TitledPane id="title_gas" animated="false" layoutX="220.0" layoutY="132.0" text="gaspillée">
+      <TitledPane id="title_gas" animated="false" layoutX="203.0" layoutY="132.0" text="gaspillée">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="196.0">
                <children>
@@ -47,7 +47,7 @@
             </AnchorPane>
          </content>
       </TitledPane>
-      <TitledPane id="title_taux" animated="false" layoutX="418.0" layoutY="132.0" text="le taux de gaspillage">
+      <TitledPane id="title_taux" animated="false" layoutX="401.0" layoutY="132.0" text="le taux de gaspillage">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="196.0">
                <children>
@@ -56,7 +56,7 @@
             </AnchorPane>
          </content>
       </TitledPane>
-      <MenuButton fx:id="sel_cosm_type" layoutX="523.0" layoutY="87.0" mnemonicParsing="false" text="somme">
+      <MenuButton fx:id="sel_cosm_type" layoutX="502.0" layoutY="100.0" mnemonicParsing="false" text="somme">
          <items>
             <MenuItem fx:id="somme" mnemonicParsing="false" text="somme" />
             <MenuItem fx:id="par_type_ali" mnemonicParsing="false" text="par type d'aliment" />
@@ -69,6 +69,6 @@
       <DatePicker id="sel_date" fx:id="date_from" layoutX="231.0" layoutY="70.0" prefHeight="23.0" prefWidth="125.0" />
       <Label fx:id="lab_from" layoutX="246.0" layoutY="101.0" prefHeight="23.0" prefWidth="96.0" />
       <Label fx:id="lab_to" layoutX="406.0" layoutY="101.0" prefHeight="23.0" prefWidth="96.0" />
-      <Button fx:id="btn_close" layoutX="551.0" layoutY="13.0" mnemonicParsing="false" text="Close" />
+      <Button fx:id="btn_close" layoutX="546.0" layoutY="1.0" mnemonicParsing="false" text="Close" />
    </children>
 </AnchorPane>

@@ -48,21 +48,26 @@
                               </VBox>
                               <VBox prefHeight="52.0" prefWidth="210.0">
                                  <children>
-                                    <Button fx:id="btn_changeimage" mnemonicParsing="false" prefHeight="27.0" prefWidth="211.0" text="Charger une image " />
+                                    <Button fx:id="btn_changeimage" mnemonicParsing="false" prefHeight="27.0" prefWidth="159.0" text="Charger une image " />
                                  </children>
                               </VBox>
                            </children>
                         </VBox>
-                        <VBox prefHeight="252.0" prefWidth="169.0">
+                        <VBox prefHeight="274.0" prefWidth="171.0">
                            <children>
                               <VBox prefHeight="261.0" prefWidth="169.0">
                                  <children>
                                     <Label prefHeight="41.0" prefWidth="137.0" text="Nom" />
                                     <Label fx:id="lbl_nom" prefHeight="34.0" prefWidth="123.0" />
                                     <Label prefHeight="30.0" prefWidth="169.0" text="Prénom" />
-                                    <Label fx:id="lbl_prenom" prefHeight="45.0" prefWidth="166.0" />
+                                    <Label fx:id="lbl_prenom" prefHeight="33.0" prefWidth="166.0" />
                                     <Label prefHeight="31.0" prefWidth="169.0" text="Vous en quelque mots" />
-                                    <Label fx:id="lbl_mot" prefHeight="42.0" prefWidth="169.0" />
+                                    <Label fx:id="lbl_mot" prefHeight="34.0" prefWidth="170.0" />
+                                    <VBox prefHeight="31.0" prefWidth="11.0">
+                                       <children>
+                                          <Button fx:id="btn_changer" mnemonicParsing="false" prefHeight="27.0" prefWidth="118.0" text="Changer" />
+                                       </children>
+                                    </VBox>
                                  </children>
                               </VBox>
                            </children>

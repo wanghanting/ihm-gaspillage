@@ -163,6 +163,7 @@ public class StageFactory {
                 System.exit (0);
             }
         });
+        listenToSize(stage,controller);
         return stage;
     }
 

@@ -7,6 +7,7 @@ import Program.View.ViewFollow;
 import Program.View.ViewSend;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -48,6 +49,10 @@ public class ControllerFollow extends Controller {
 
     @FXML
     private Button btn_msg;
+    @FXML
+    private HBox hboxa;
+
+    public HBox getHboxa(){return hboxa;}
 
     public void setBtn_close(Stage stage){
         stage.close();

@@ -7,33 +7,135 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="btn_close" layoutX="548.0" layoutY="-1.0" mnemonicParsing="false" text="Close" textFill="#f50303" />
-      <Label layoutX="176.0" layoutY="14.0" prefHeight="60.0" prefWidth="264.0" text="    Mon profil" textAlignment="CENTER">
-         <font>
-            <Font name="Arial" size="37.0" />
-         </font>
-      </Label>
-      <Button fx:id="btn_changeimage" layoutX="57.0" layoutY="341.0" mnemonicParsing="false" text="Charger une image " />
-      <Label layoutX="235.0" layoutY="134.0" text="Nom" />
-      <Label layoutX="235.0" layoutY="192.0" text="Prénom" />
-      <Label layoutX="231.0" layoutY="251.0" text="Vous en quelque mots" />
-      <Label layoutX="387.0" layoutY="134.0" text="Description détaillée de votre profil ">
-         <font>
-            <Font name="Arial Bold" size="12.0" />
-         </font>
-      </Label>
-      <ImageView fx:id="img2" fitHeight="170.0" fitWidth="177.0" layoutX="33.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true" />
-      <TextField fx:id="txt_frame1" layoutX="235.0" layoutY="149.0" prefHeight="31.0" prefWidth="122.0" />
-      <TextField fx:id="txt_frame2" layoutX="235.0" layoutY="207.0" prefHeight="31.0" prefWidth="122.0" />
-      <TextField fx:id="txt_frame3" layoutX="235.0" layoutY="274.0" prefHeight="31.0" prefWidth="122.0" />
-      <TextArea fx:id="txt_description" layoutX="393.0" layoutY="159.0" prefHeight="147.0" prefWidth="191.0" />
-      <Hyperlink fx:id="link_accueil" layoutX="457.0" layoutY="375.0" text="page d'accueil" />
-      <Text layoutX="17.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aucun de ces champs n'est obligatoire, mais il est recommander d'en remplir un certain nombre afin que d'autres utilisateurs puises vous identifier et  vous suivez si cela les intéresse." wrappingWidth="581.4912109375" />
-      <Button fx:id="btn_sub" layoutX="268.0" layoutY="352.0" mnemonicParsing="false" text="submit" />
+      <HBox fx:id="hboxa" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="606.0">
+               <children>
+                  <HBox prefHeight="27.0" prefWidth="600.0">
+                     <children>
+                        <HBox prefHeight="27.0" prefWidth="549.0" />
+                        <HBox prefHeight="27.0" prefWidth="52.0">
+                           <children>
+                              <Button fx:id="btn_close" mnemonicParsing="false" text="Close" textFill="#f50303" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="48.0" prefWidth="600.0">
+                     <children>
+                        <HBox prefHeight="48.0" prefWidth="178.0" />
+                        <HBox prefHeight="48.0" prefWidth="221.0">
+                           <children>
+                              <Label prefHeight="48.0" prefWidth="235.0" text="    Mon profil" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Arial" size="37.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="59.0" prefWidth="600.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aucun de ces champs n'est obligatoire, mais il est recommander d'en remplir un certain nombre afin que d'autres utilisateurs puises vous identifier et  vous suivez si cela les intéresse." textAlignment="CENTER" wrappingWidth="600.4912109375" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="207.0" prefWidth="601.0">
+                     <children>
+                        <HBox prefHeight="207.0" prefWidth="52.0" />
+                        <VBox prefHeight="207.0" prefWidth="184.0">
+                           <children>
+                              <VBox prefHeight="32.0" prefWidth="184.0" />
+                              <HBox prefHeight="155.0" prefWidth="184.0">
+                                 <children>
+                                    <HBox prefHeight="155.0" prefWidth="160.0">
+                                       <children>
+                                          <ImageView fx:id="img2" fitHeight="155.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="207.0" prefWidth="151.0">
+                           <children>
+                              <HBox prefHeight="16.0" prefWidth="151.0">
+                                 <children>
+                                    <Label text="Nom" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="43.0" prefWidth="151.0">
+                                 <children>
+                                    <TextField fx:id="txt_frame1" prefHeight="31.0" prefWidth="122.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="16.0" prefWidth="151.0">
+                                 <children>
+                                    <Label text="Prénom" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="44.0" prefWidth="151.0">
+                                 <children>
+                                    <TextField fx:id="txt_frame2" prefHeight="31.0" prefWidth="122.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="21.0" prefWidth="151.0">
+                                 <children>
+                                    <Label text="Vous en quelque mots" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="32.0" prefWidth="151.0">
+                                 <children>
+                                    <TextField fx:id="txt_frame3" prefHeight="31.0" prefWidth="122.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="207.0" prefWidth="202.0">
+                           <children>
+                              <VBox prefHeight="26.0" prefWidth="215.0">
+                                 <children>
+                                    <Label text="Description détaillée de votre profil ">
+                                       <font>
+                                          <Font name="Arial Bold" size="11.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="184.0" prefWidth="194.0">
+                                 <children>
+                                    <TextArea fx:id="txt_description" prefHeight="148.0" prefWidth="186.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="60.0" prefWidth="601.0">
+                     <children>
+                        <HBox prefHeight="60.0" prefWidth="58.0" />
+                        <HBox prefHeight="60.0" prefWidth="210.0">
+                           <children>
+                              <Button fx:id="btn_changeimage" mnemonicParsing="false" text="Charger une image " />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="60.0" prefWidth="194.0">
+                           <children>
+                              <Button fx:id="btn_sub" mnemonicParsing="false" text="submit" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

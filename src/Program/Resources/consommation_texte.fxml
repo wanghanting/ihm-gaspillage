@@ -25,7 +25,7 @@
       </Label>
       <ButtonBar layoutX="3.0" layoutY="81.0" prefHeight="40.0" prefWidth="156.0">
          <buttons>
-            <Button id="sel_graphique" fx:id="btn_gra" mnemonicParsing="false" text="graphique" />
+            <Button id="sel_graphique" fx:id="btn_gra" mnemonicParsing="false" prefHeight="30.0" prefWidth="103.0" text="graph" />
             <Button id="sel_texte" fx:id="btn_tex" mnemonicParsing="false" text="texte " />
          </buttons>
       </ButtonBar>

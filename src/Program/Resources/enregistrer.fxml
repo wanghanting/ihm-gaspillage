@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
       <children>
       <HBox fx:id="hboxa" layoutX="25.0" prefHeight="400.0" prefWidth="600.0" snapToPixel="false">
          <children>
@@ -26,7 +26,7 @@
                               <Hyperlink fx:id="link_accueil" text="Page d'accueil" />
                            </children>
                         </HBox>
-                        <HBox prefHeight="43.0" prefWidth="72.0">
+                        <HBox prefHeight="32.0" prefWidth="55.0">
                            <children>
                               <Hyperlink fx:id="link_aide" text="Aide" />
                            </children>
@@ -36,10 +36,10 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <HBox prefHeight="65.0" prefWidth="167.0">
+                        <HBox prefHeight="32.0" prefWidth="199.0">
                            <children>
-                              <Hyperlink fx:id="link_deco" text="Se déconnecter" />
-                              <Button fx:id="btn_close" mnemonicParsing="false" text="Close" />
+                              <Hyperlink fx:id="link_deco" prefHeight="28.0" prefWidth="122.0" text="Se déconnecter" />
+                              <Button fx:id="btn_close" mnemonicParsing="false" prefHeight="30.0" prefWidth="73.0" text="Close" />
                            </children>
                         </HBox>
                      </children>

@@ -1,4 +1,4 @@
-package Program;
+package Program.View;
 
 import Program.Controller.ControllerEnregistrer;
 import Program.Model.ModelListOfTags;

@@ -2,6 +2,7 @@ package Program;
 
 import Program.Controller.*;
 import Program.Model.*;
+import Program.View.*;
 import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;

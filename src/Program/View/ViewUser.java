@@ -1,18 +1,10 @@
-package Program;
+package Program.View;
 
 import Program.Controller.ControllerUser;
 import Program.Model.ModelListOfUsers;
-import javafx.beans.value.ChangeListener;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
-import javafx.util.Callback;
-
-import java.io.IOException;
 
 public class ViewUser {
-    static final String XML_FILE = "resources/inscription.fxml";
+    static final String XML_FILE = "../resources/inscription.fxml";
 //    static final String CSS = "sample/resources/   View.css";
     static final String LABEL = "HFV";
     static final int WIDTH = 640;

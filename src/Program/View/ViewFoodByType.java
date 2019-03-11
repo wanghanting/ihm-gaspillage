@@ -1,55 +1,48 @@
-package Program;
-import Program.Controller.ControllerAttention;
+package Program.View;
+
 import Program.Controller.ControllerFood;
+import Program.Controller.ControllerFoodByType;
 import Program.Model.ModelFood;
 import Program.Model.ModelListOfFood;
-import Program.Controller.ControllerAccueil;
 import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.stage.Stage;
 import javafx.util.Callback;
-import java.time.LocalDate;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
-
-public class ViewAccueil {
-    private static final String FOOD = "Resources/food.fxml";
+public class ViewFoodByType extends View {
+    private static final String FOOD = "../Resources/food.fxml";
     private static int rangeSelectedItem = -1;
     private static ModelListOfFood model;
-    private static ControllerAccueil controller;
+    private static ControllerFoodByType controller;
 
     public static int getRangeSelectedItem() {
         return rangeSelectedItem;
     }
 
-    public void init(ModelListOfFood model, ControllerAccueil controller) throws IOException {
-        ViewAccueil.model = model;
-        ViewAccueil.controller = controller;
+    public void init(ModelListOfFood model, ControllerFoodByType controller) {
+        ViewFoodByType.model = model;
+        ViewFoodByType.controller = controller;
         //init the ObservableList of food to the ListView
         model.init();
         listinit();
-        controller.getPerimeFoodListView().setItems(model.getListOfPerimeFood());
-        controller.getOkFoodListView().setItems(model.getListOfOkFood());
-        controller.getPPFoodListView().setItems(model.getListOfPPFood());
+        controller.getPerimeFoodListView().setItems(model.getListOfPerimeFoodOfOneType());
+        controller.getOkFoodListView().setItems(model.getListOfOkFoodOfOneType());
+        controller.getPPFoodListView().setItems(model.getListOfPPFoodOfOneType());
 
         //call a cell factory and display each observable item in the ListView
-        adaptItems(controller.getPerimeFoodListView() );
+        adaptItems( controller.getPerimeFoodListView() );
         adaptItems(controller.getOkFoodListView());
         adaptItems(controller.getPPFoodListView());
 
-
-
         //listner if user click in the ListView update rangeSelectedItem value
         listenTo( controller.getPerimeFoodListView() );
-        listenTo(controller.getOkFoodListView());
-        listenTo(controller.getPPFoodListView());
     }
     private void adaptItems(ListView listView) {
         //Set a new cell factory to use in the ListView.
@@ -95,8 +88,9 @@ public class ViewAccueil {
     private void listenTo(ListView listView) {
         listView.getSelectionModel().selectedItemProperty().addListener(
                 (ChangeListener<ModelFood>) (observable, oldValue, newValue) -> {
-                    rangeSelectedItem = model.getListOfFoodA().indexOf(newValue);
-                    //controller.getChoosenFood(newValue.getName(),newValue.getDateExpiration());
+                    rangeSelectedItem = model.getListOfOkFood().indexOf(newValue);
+                    // --> GRRR! in javaFX the field Name is kbown in the Controller class (not in the view)
+                    //controller.getChoosenName().setText(newValue.getName());
                 });
     }
     private void listinit(){
@@ -107,28 +101,4 @@ public class ViewAccueil {
 
     }
 
-    public void initAttention(ObservableList<ModelFood> listpp) throws IOException {
-        String attention="";
-        for(int i =0;i<listpp.size();i++){
-            ModelFood food = listpp.get(i);
-            LocalDate expiraDate = food.getDateExpiration();
-            if(expiraDate.compareTo(LocalDate.now())==0){
-                attention+=food.getName()+" expire apr¨¨s aujourd'hui /n";
-            }
-        }
-        System.out.println(attention);
-        if(!attention.isEmpty()) {
-            FXMLLoader loader = new FXMLLoader();
-            // FXMLLoader loader = new FXMLLoader (getClass ().getClassLoader().getResource ("../Resources/attention.fxml"));
-            Stage stage = new Stage();
-            ControllerAttention controllerAttention = new ControllerAttention();
-
-            loader.setController(controllerAttention);
-            Parent root = loader.load(getClass().getResourceAsStream("Resources/attention.fxml"));
-            //Parent root = loader.load (getClass().getClassLoader().);
-            controllerAttention.getTxt_attention().setText(attention);
-            stage.setScene(new Scene(root, 200, 100));
-            stage.show();
-        }
-    }
 }

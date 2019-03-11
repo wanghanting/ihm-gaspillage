@@ -3,12 +3,9 @@ package Program.Controller;
 import Program.Model.ModelListOfFollow;
 import Program.Model.ModelUser;
 import Program.StageFactory;
-import Program.ViewFollow;
-import Program.ViewSend;
+import Program.View.ViewFollow;
+import Program.View.ViewSend;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 

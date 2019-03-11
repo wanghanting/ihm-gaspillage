@@ -1,25 +1,23 @@
-package Program;
+package Program.View;
 
 
 import Program.Controller.ControllerTag;
 import Program.Controller.ControllerType;
 import Program.Model.ModelListOfTags;
 import Program.Model.ModelTag;
-import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.stage.Stage;
 import javafx.util.Callback;
 
 import java.io.IOException;
 
 public class ViewType{
-    public static final String TYPE = "Resources/types.fxml";
-    static final String TAG = "Resources/tag.fxml";
-    static final String ACCUEIL = "Resources/page_d'accueil.fxml";
+    public static final String TYPE = "../Resources/types.fxml";
+    static final String TAG = "../Resources/tag.fxml";
+    static final String ACCUEIL = "../Resources/page_d'accueil.fxml";
     public static final String LABEL = "HFV";
     private static ModelListOfTags modelListOfTags;
     private static ControllerType controllerType;

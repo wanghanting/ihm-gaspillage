@@ -1,4 +1,4 @@
-package Program;
+package Program.View;
 
 import Program.Controller.ControllerConsommationTextDate;
 import Program.Controller.ControllerSum;
@@ -13,7 +13,7 @@ import javafx.util.Callback;
 import java.io.IOException;
 
 public class ViewConsommationTextDate {
-    private static final String SUM = "Resources/sum.fxml";
+    private static final String SUM = "../Resources/sum.fxml";
     private static int rangeSelectedItem = -1;
     private static ModelListOfSum modelSum;
     private static ControllerConsommationTextDate controller;

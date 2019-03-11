@@ -1,12 +1,8 @@
-package Program;
+package Program.View;
 
-import Program.Controller.Controller;
-import Program.Controller.ControllerMessage;
-import Program.Controller.ControllerMessages;
-import Program.Model.ModelMessage;
-import Program.Model.ModelUser;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import Program.Controller.ControllerChart;
+import Program.Controller.ControllerConsomationG;
+import Program.Model.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
@@ -14,21 +10,31 @@ import javafx.scene.control.ListView;
 import javafx.util.Callback;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
-public class ViewMessages extends View{
-    private static final String MESSAGE = "Resources/message.fxml";
+public class ViewConsomationG {
+    private static final String CHART = "../Resources/chart.fxml";
+    private static int rangeSelectedItem = -1;
+    private static ModelListOfChart modelChar;
+    private static ControllerConsomationG controller;
 
-    @Override
-    public void init(Controller controllerMessages, StageFactory stages){
-
-        ControllerMessages controllerMessages1=(ControllerMessages)controllerMessages;
-        controllerMessages1.getList_newm().setItems(findMes(stages.getModelListOfMes().getListOfMes(),stages.getUser()));
-
-
-        adaptItems(controllerMessages1.getList_newm());
+    public void init(ModelListOfChart modelChar, ModelListOfSum modelSum, ModelListOfFood modelFood, ModelListOfTags modelTag, ControllerConsomationG controller, String type) {
+        this.modelChar = modelChar;
+        this.controller = controller;
+        //init the ObservableList of food to the ListView
+        modelFood.init();
+        modelSum.init(modelFood,modelTag);
+        if(type.equals("somme")){
+            controller.getlist_chart().setItems(modelChar.getListOfChart());
+        }else if(type.equals("type")){
+            controller.getlist_chart().setItems(modelChar.getListOfCharByType());
+        }else {
+            controller.getlist_chart().setItems(modelChar.getListOfCharByAli());
+        }
+        adaptItems(controller.getlist_chart() );
     }
+
     private void adaptItems(ListView listView) {
+        //Set a new cell factory to use in the ListView.
         listView.setCellFactory(
                 //  first parameter specifies the type of the object passed in to the call method
                 //  the second parameter specifying the return type of the method.
@@ -41,20 +47,20 @@ public class ViewMessages extends View{
                             protected void updateItem(Object item, boolean empty) {
                                 super.updateItem(item, empty);
                                 if (item != null) {
-                                    Parent listElement = null;
+                                    Parent listElement=null;
                                     // Load fxml file for this Person
-                                    FXMLLoader loader = new FXMLLoader(getClass().getResource(MESSAGE));
+                                    FXMLLoader loader = new FXMLLoader(getClass().getResource(CHART));
                                     //create the person controller
-                                    ControllerMessage mesController = new ControllerMessage();
+                                    ControllerChart controllerChart = new ControllerChart();
                                     //attach the person controller to this person
-                                    loader.setController(mesController);
+                                    loader.setController(controllerChart);
                                     try {
-                                        listElement = loader.load(getClass().getResourceAsStream(MESSAGE));
+                                        listElement = loader.load(getClass().getResourceAsStream(CHART));
                                     } catch (IOException e) {
                                         e.printStackTrace();
                                     }
                                     //initialize the person controller
-                                    mesController.init((ModelMessage) item);
+                                    controllerChart.init((ModelChart) item);
                                     // Display content of the fxml file
                                     setGraphic(listElement);
                                     adaptItems(listView);
@@ -66,14 +72,4 @@ public class ViewMessages extends View{
                     }
                 });
     }
-    ObservableList findMes(ObservableList<ModelMessage> listmes, ModelUser user){
-        ObservableList<ModelMessage> list = FXCollections.observableList (new ArrayList<>());
-        for(ModelMessage mes:listmes){
-            if(mes.getReceivor().getUsername().equals(user.getUsername())){
-                list.add(mes);
-            }
-        }
-        return list;
-    }
-
 }

@@ -3,11 +3,8 @@ package Program.Controller;
 import Program.Model.ModelListOfTags;
 import Program.Model.ModelTag;
 import Program.StageFactory;
-import Program.ViewType;
+import Program.View.ViewType;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 

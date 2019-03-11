@@ -1,14 +1,9 @@
 package Program.Controller;
 
-import Program.Model.ModelListOfFood;
 import Program.Model.ModelListOfSum;
 import Program.StageFactory;
-import Program.ViewConsommationTextDate;
-import Program.ViewFoodByType;
+import Program.View.ViewConsommationTextDate;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 

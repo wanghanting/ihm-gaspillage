@@ -1,11 +1,10 @@
 package Program.Controller;
 
 import Program.Model.ModelListOfFood;
-import Program.Model.ModelListOfUsers;
 import Program.StageFactory;
-import Program.View;
-import Program.ViewMessages;
-import Program.ViewAccueil;
+import Program.View.View;
+import Program.View.ViewMessages;
+import Program.View.ViewAccueil;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

@@ -50,7 +50,6 @@ public class ControllerMessages extends Controller {
             }
         });
         link_aide.setOnAction(event -> {
-            stage.close();
             try {
                 stageFactory.initAide();
             } catch (IOException e) {

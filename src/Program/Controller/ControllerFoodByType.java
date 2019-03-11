@@ -3,7 +3,7 @@ package Program.Controller;
 
 import Program.Model.ModelListOfFood;
 import Program.StageFactory;
-import Program.ViewFoodByType;
+import Program.View.ViewFoodByType;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;

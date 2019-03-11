@@ -1,9 +1,8 @@
-package Program;
+package Program.View;
 
 import Program.Controller.ControllerFollow;
 import Program.Controller.ControllerUser;
 import Program.Model.ModelListOfFollow;
-import Program.Model.ModelTag;
 import Program.Model.ModelUser;
 import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +14,7 @@ import javafx.util.Callback;
 import java.io.IOException;
 
 public class ViewFollow {
-    public static final String USER = "Resources/user.fxml";
+    public static final String USER = "../Resources/user.fxml";
     private static ModelListOfFollow modelListOfFollow;
     private static ControllerFollow controllerFollow;
     private static int rangeSelectedItem = -1;

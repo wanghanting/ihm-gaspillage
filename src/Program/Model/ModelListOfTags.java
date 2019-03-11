@@ -11,6 +11,7 @@ public class ModelListOfTags {
         listOfTag = FXCollections.observableList(new ArrayList<>());
         listOfTag.add(new ModelTag("fruit"));
         listOfTag.add(new ModelTag("legume"));
+        listOfTag.add(new ModelTag("boisson"));
     }
 
     public void add(ModelTag tag){

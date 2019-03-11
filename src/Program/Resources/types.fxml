@@ -10,41 +10,41 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="365.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="366.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-      <HBox fx:id="hboxa" layoutX="2.0" layoutY="1.0" prefHeight="365.0" prefWidth="649.0">
+      <HBox fx:id="hboxa" layoutX="2.0" layoutY="1.0" prefHeight="365.0" prefWidth="625.0">
          <children>
-            <VBox prefHeight="365.0" prefWidth="671.0">
+            <VBox prefHeight="365.0" prefWidth="625.0">
                <children>
                   <HBox prefHeight="33.0" prefWidth="649.0">
                      <children>
                         <HBox prefHeight="32.0" prefWidth="546.0" />
-                          <Button fx:id="btn_close" mnemonicParsing="false" text="Close" />
+                          <Button fx:id="btn_close" mnemonicParsing="false" prefHeight="30.0" prefWidth="73.0" text="Close" />
                      </children>
                   </HBox>
                   <HBox prefHeight="50.0" prefWidth="649.0">
                      <children>
                         <HBox prefHeight="50.0" prefWidth="48.0" />
-                        <HBox prefHeight="50.0" prefWidth="117.0">
+                        <HBox prefHeight="50.0" prefWidth="168.0">
                            <children>
-                                <Hyperlink fx:id="link_accueil" text="Page d'accueil" />
+                                <Hyperlink fx:id="link_accueil" prefHeight="28.0" prefWidth="131.0" text="Page d'accueil" />
                            </children>
                         </HBox>
-                        <HBox prefHeight="49.0" prefWidth="103.0">
+                        <HBox prefHeight="50.0" prefWidth="72.0">
                            <children>
                                 <Hyperlink fx:id="link_aide" text="Aide" />
                            </children>
                         </HBox>
-                        <HBox prefHeight="49.0" prefWidth="223.0">
+                        <HBox prefHeight="50.0" prefWidth="278.0">
                            <children>
-                                <Label text="Categorie d'aliment" textFill="#3baebb">
+                                <Label prefHeight="32.0" prefWidth="280.0" text="Categorie d'aliment" textFill="#3baebb">
                                     <font>
                                         <Font size="24.0" />
                                     </font>
                                 </Label>
                            </children>
                         </HBox>
-                        <HBox prefHeight="50.0" prefWidth="137.0">
+                        <HBox prefHeight="50.0" prefWidth="162.0">
                            <children>
                                 <Hyperlink fx:id="link_deco" text="Se déconnecter" />
                            </children>
@@ -59,9 +59,9 @@
                                 <TextField fx:id="txt_tag" />
                            </children>
                         </HBox>
-                        <HBox prefHeight="33.0" prefWidth="127.0">
+                        <HBox prefHeight="33.0" prefWidth="204.0">
                            <children>
-                                <Button fx:id="btn_ajoute" mnemonicParsing="false" text="Ajouter une  type" />
+                                <Button fx:id="btn_ajoute" mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" text="Ajouter" />
                            </children>
                         </HBox>
                      </children>
@@ -78,10 +78,10 @@
                   </HBox>
                   <HBox prefHeight="44.0" prefWidth="649.0">
                      <children>
-                        <HBox prefHeight="43.0" prefWidth="297.0" />
-                        <HBox prefHeight="43.0" prefWidth="58.0">
+                        <HBox prefHeight="43.0" prefWidth="257.0" />
+                        <HBox prefHeight="43.0" prefWidth="173.0">
                            <children>
-                              <Button fx:id="btn_open" mnemonicParsing="false" prefHeight="4.0" prefWidth="56.0" text="Ouvrir" />
+                              <Button fx:id="btn_open" mnemonicParsing="false" prefHeight="23.0" prefWidth="132.0" text="Ouvrir" />
                            </children>
                         </HBox>
                      </children>

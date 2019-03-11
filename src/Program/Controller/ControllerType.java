@@ -6,11 +6,12 @@ import Program.StageFactory;
 import Program.View.ViewType;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ControllerType {
+public class ControllerType extends Controller{
 
     private ModelListOfTags modelListOfTags = null;
     private String type;
@@ -31,6 +32,10 @@ public class ControllerType {
     private TextField txt_tag;
     @FXML
     private Button btn_open;
+    @FXML
+    private HBox hboxa;
+
+    public HBox getHboxa(){return hboxa;}
 
 
     @FXML

@@ -12,6 +12,9 @@
     -fx-cursor: hand;
     -fx-background-color: #336699;
 }
+#image_1 {
+    -fx-image: url(legume.jpg);
+}
 
 #btn_close:hover{
     -fx-background-color : #336699;
@@ -41,6 +44,6 @@
     -fx-text-fill: red;
 }
 
-#image_1 {
-    -fx-image: url(legume.jpg);
+.hyperlink{
+    -fx-font-weight: bold;
 }

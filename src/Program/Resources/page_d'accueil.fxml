@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox fx:id="hboxa" maxHeight="800.0" maxWidth="1000.0" minHeight="100.0" minWidth="100.0" prefHeight="400.0" prefWidth="600.0">
          <children>
@@ -45,29 +45,29 @@
                   <HBox prefHeight="45.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
                      <children>
                         <HBox prefHeight="53.0" prefWidth="19.0" />
-                        <HBox prefHeight="45.0" prefWidth="111.0">
+                        <HBox prefHeight="51.0" prefWidth="97.0">
                            <children>
-                            <Button fx:id="btn_pro" mnemonicParsing="false" prefHeight="30.0" prefWidth="116.0" text="Mon profil" />
+                            <Button fx:id="btn_pro" mnemonicParsing="false" prefHeight="30.0" prefWidth="88.0" text="Mon profil" />
                            </children>
                         </HBox>
                         <HBox prefHeight="53.0" prefWidth="85.0">
                            <children>
-                              <Button fx:id="btn_mes" mnemonicParsing="false" text="Messages" />
+                              <Button fx:id="btn_mes" mnemonicParsing="false" prefHeight="31.0" prefWidth="76.0" text="Messages" />
                            </children>
                         </HBox>
-                        <HBox prefHeight="53.0" prefWidth="167.0">
+                        <HBox prefHeight="51.0" prefWidth="151.0">
                            <children>
-                              <Button fx:id="btn_follow" mnemonicParsing="false" prefHeight="30.0" prefWidth="175.0" text="Followers/Following" />
+                              <Button fx:id="btn_follow" mnemonicParsing="false" prefHeight="32.0" prefWidth="140.0" text="Followers/Following" />
                            </children>
                         </HBox>
-                        <HBox prefHeight="53.0" prefWidth="57.0">
+                        <HBox prefHeight="51.0" prefWidth="128.0">
                            <children>
-                              <Button fx:id="btn_type" mnemonicParsing="false" text="Types d'aliments" />
+                              <Button fx:id="btn_type" mnemonicParsing="false" prefHeight="31.0" prefWidth="115.0" text="Types d'aliments" />
                            </children>
                         </HBox>
-                        <HBox prefHeight="45.0" prefWidth="135.0">
+                        <HBox prefHeight="51.0" prefWidth="126.0">
                            <children>
-                              <Button fx:id="btn_conso" mnemonicParsing="false" text="Consommation" />
+                              <Button fx:id="btn_conso" mnemonicParsing="false" prefHeight="31.0" prefWidth="105.0" text="Consommation" />
                            </children>
                         </HBox>
                      </children>

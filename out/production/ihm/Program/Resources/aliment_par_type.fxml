@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button fx:id="back" layoutX="275.0" layoutY="363.0" mnemonicParsing="false" text="Retour" />
       <Hyperlink fx:id="link_aide" layoutX="136.0" layoutY="24.0" text="Aide" underline="true" />
@@ -21,7 +21,7 @@
       <TitledPane animated="false" layoutX="21.0" layoutY="144.0" prefHeight="25.0" prefWidth="180.0" text="Aliments perimes" />
       <TitledPane animated="false" layoutX="201.0" layoutY="144.0" prefHeight="25.0" prefWidth="180.0" text="Presque perimes" />
       <TitledPane animated="false" layoutX="381.0" layoutY="144.0" prefHeight="25.0" prefWidth="180.0" text="C'est OK!" />
-      <Button fx:id="btn_close" layoutX="550.0" mnemonicParsing="false" text="close" />
+      <Button fx:id="btn_close" layoutX="544.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="57.0" text="close" />
       <ListView fx:id="list_perimes" layoutX="21.0" layoutY="169.0" prefHeight="181.0" prefWidth="180.0" />
       <ListView fx:id="list_alipp" layoutX="201.0" layoutY="169.0" prefHeight="181.0" prefWidth="180.0" />
       <ListView fx:id="list_aliok" layoutX="381.0" layoutY="169.0" prefHeight="181.0" prefWidth="180.0" />

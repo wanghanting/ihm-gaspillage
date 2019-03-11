@@ -51,7 +51,7 @@ public class ControllerAuthentification extends Controller {
         this.userInformation = model;
         btn_authentifier.setOnAction( event -> {
             if(isRegistred()==false){
-                authenerr.setText("You have not registered an account yet"+"\n"+"please register first");
+                authenerr.setText("Vous n'avez pas encore de compte ?"+"\n"+"Veuillez vous inscrire");
             }else {
                 if (comfirmedPassword() == true) {
                     try {
@@ -60,7 +60,7 @@ public class ControllerAuthentification extends Controller {
                         e.getStackTrace();
                     }
                 } else {
-                    authenerr.setText("The account name and password you entered do not match"+"\n"+" Please confirm and re-enter");
+                    authenerr.setText("Le nom d'utilisateur et le mot de passe ne correspondent pas"+"\n"+"Réessayer");
                 }
             }
         });

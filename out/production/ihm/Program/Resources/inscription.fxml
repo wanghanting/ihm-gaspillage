@@ -83,7 +83,7 @@
                   </HBox>
                   <HBox prefHeight="40.0" prefWidth="347.0">
                      <children>
-                        <Label prefHeight="18.0" prefWidth="147.0" text="mot de passe(encore)">
+                        <Label prefHeight="18.0" prefWidth="147.0" text="mot de passe (encore)">
                            <font>
                               <Font name="System Bold Italic" size="13.0" />
                            </font>
@@ -107,7 +107,7 @@
                         <HBox prefHeight="24.0" prefWidth="21.0" />
                         <HBox prefHeight="24.0" prefWidth="178.0">
                            <children>
-                              <Label prefHeight="18.0" prefWidth="178.0" text="       vous avez déjà  une compte?">
+                              <Label prefHeight="18.0" prefWidth="178.0" text="    vous avez déjà un compte ?">
                                  <font>
                                     <Font name="Arial Bold Italic" size="12.0" />
                                  </font>

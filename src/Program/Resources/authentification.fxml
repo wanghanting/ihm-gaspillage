@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -35,5 +36,6 @@
       <TextField fx:id="txt_frame1" layoutX="224.0" layoutY="160.0" prefHeight="47.0" prefWidth="301.0" />
       <TextField fx:id="txt_frame2" layoutX="224.0" layoutY="249.0" prefHeight="47.0" prefWidth="301.0" />
       <Label fx:id="authenerr" layoutX="224.0" layoutY="74.0" prefHeight="47.0" prefWidth="375.0" textFill="#f90a0a" />
+      <ImageView id="image_1" fitHeight="203.0" fitWidth="163.0" layoutX="45.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

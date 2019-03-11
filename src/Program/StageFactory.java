@@ -283,7 +283,7 @@ public class StageFactory {
         return stage;
     }
 
-    public Stage initAuthentification1(ModelListOfUsers modelListOfUser) throws IOException {
+    public Stage initAuthentification1() throws IOException {
         FXMLLoader loader= new FXMLLoader();
         Stage stage = new Stage();
 
@@ -291,8 +291,8 @@ public class StageFactory {
         ControllerAuthentification controllerAuthentification = new ControllerAuthentification();
         loader.setController(controllerAuthentification);
         Parent root = loader.load(getClass().getResourceAsStream("Resources/authentification.fxml"));
-        controllerAuthentification.init(modelListOfUser, stage,this);
-        viewUser.init(modelListOfUser, controllerAuthentification);
+        controllerAuthentification.init(modelListOfUsers, stage,this);
+        viewUser.init(modelListOfUsers, controllerAuthentification);
         Scene scene = new Scene(root, width, height);
         scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
         stage.setScene(scene);

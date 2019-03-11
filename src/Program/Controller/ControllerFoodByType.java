@@ -31,6 +31,8 @@ public class ControllerFoodByType {
     @FXML
     private Hyperlink link_accueil;
     @FXML
+    private Hyperlink link_deco;
+    @FXML
     private Button btn_close;
 
     public ListView getPerimeFoodListView(){ return list_perimes;}
@@ -64,6 +66,9 @@ public class ControllerFoodByType {
         btn_close.setOnAction(event -> {
             setBtn_close(stage);
         });
+        link_deco.setOnAction (event -> {
+            setLink_deco(stage,stageFactory);
+        });
     }
 
     private void setBack(Stage stageOld,StageFactory stageFactory)throws IOException {
@@ -82,5 +87,15 @@ public class ControllerFoodByType {
 
     private void setBtn_close(Stage stage){
         stage.close ();
+    }
+
+    private void setLink_deco(Stage stageold, StageFactory factory) {
+        try{
+            stageold.close();
+            factory.initAuthentification1();
+        }
+        catch (Exception e ){
+            e.getStackTrace();
+        }
     }
 }

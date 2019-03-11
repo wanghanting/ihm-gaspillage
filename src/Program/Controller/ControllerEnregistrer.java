@@ -41,6 +41,8 @@ public class ControllerEnregistrer extends Controller{
     @FXML
     private Hyperlink link_accueil;
     @FXML
+    private Hyperlink link_deco;
+    @FXML
     private Button btn_close;
 
     public HBox getHboxa(){return  hboxa;}
@@ -120,6 +122,19 @@ public class ControllerEnregistrer extends Controller{
             }
         });
 
-    }
+        link_deco.setOnAction (event -> {
+            setLink_deco(stage,factory);
+        });
 
+    }
+    private void setLink_deco(Stage stageold, StageFactory factory) {
+        try{
+            stageold.close();
+            factory.initAuthentification1();
+
+        }
+        catch (Exception e ){
+            e.getStackTrace();
+        }
+    }
 }

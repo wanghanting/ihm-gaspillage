@@ -27,8 +27,6 @@ public class ControllerAccueil extends Controller{
     private View viewp = new View();
     private int chosenfood;
     @FXML
-    ModelListOfUsers userInformation = new ModelListOfUsers();
-    @FXML
     private ListView list_alipp;
     @FXML
     private ListView list_aliok;
@@ -93,7 +91,7 @@ public class ControllerAccueil extends Controller{
     private void setLink_deco(Stage stageold, StageFactory factory) {
         try{
             stageold.close();
-            factory.initAuthentification1(userInformation);
+            factory.initAuthentification1();
 
         }
         catch (Exception e ){
@@ -126,7 +124,6 @@ public class ControllerAccueil extends Controller{
     public void init(ModelListOfFood food, ViewAccueil view, Stage stage, StageFactory factory) {
         this.modelListfood = food;
         link_deco.setOnAction (event -> {
-            stage.close();
             setLink_deco(stage,factory);
         });
 

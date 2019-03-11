@@ -77,9 +77,6 @@ public class ControllerFollow extends Controller {
         factory.initAccueil ();
     }
 
-    private void setLink_deco(Stage stageold, StageFactory factory) throws IOException{
-    }
-
     public void init(ModelListOfFollow listOfAmi, ModelListOfFollow listOfUsers, ViewFollow view, Stage stage, StageFactory factory){
         this.modelListOfAmi = listOfAmi;
         this.modelListOfUsers = listOfUsers;
@@ -105,12 +102,9 @@ public class ControllerFollow extends Controller {
         });
 
         link_deco.setOnAction (event -> {
-            try{
-                setLink_deco (stage, factory);
-            }catch (IOException e){
-                e.printStackTrace ();
-            }
+            setLink_deco(stage,factory);
         });
+
         btn_msg.setOnAction(event -> {
             factory.setRece(this.user);
             stage.close();
@@ -124,5 +118,15 @@ public class ControllerFollow extends Controller {
 
     public void setRece(ModelUser user){
         this.user = user;
+    }
+
+    private void setLink_deco(Stage stageold, StageFactory factory) {
+        try{
+            stageold.close();
+            factory.initAuthentification1();
+        }
+        catch (Exception e ){
+            e.getStackTrace();
+        }
     }
 }

@@ -23,7 +23,7 @@ public class ControllerConsommationTextDate {
     @FXML
     private Hyperlink link_aide;
     @FXML
-    private Hyperlink link_deco;
+    private Hyperlink link_deconn;
     @FXML
     private ListView list_cons;
     @FXML
@@ -133,6 +133,9 @@ public class ControllerConsommationTextDate {
                 e.printStackTrace();
             }
         });
+        link_deconn.setOnAction (event -> {
+            setLink_deco(stage,stageFactory);
+        });
     }
 
     @FXML
@@ -157,4 +160,13 @@ public class ControllerConsommationTextDate {
         factory.initAccueil();
     }
 
+    private void setLink_deco(Stage stageold, StageFactory factory) {
+        try{
+            stageold.close();
+            factory.initAuthentification1();
+        }
+        catch (Exception e ){
+            e.getStackTrace();
+        }
+    }
 }

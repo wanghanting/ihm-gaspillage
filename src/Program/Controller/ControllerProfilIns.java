@@ -5,6 +5,7 @@ import Program.Controller.ControllerProfil;
 import Program.StageFactory;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -33,6 +34,9 @@ public class ControllerProfilIns extends Controller{
     @FXML
     public TextArea txt_description;
 
+    @FXML
+    private Hyperlink link_accueil;
+
 //    ControllerInscription controller;
 
     @Override
@@ -45,16 +49,40 @@ public class ControllerProfilIns extends Controller{
                 e.getStackTrace();
             }
         });
+
+        btn_close.setOnAction (event -> {
+            closeButtonAction (stage);
+        });
     }
 
     //
     void setBtn_sub(Stage stageold, StageFactory factory) throws IOException {
-        factory.user.setLastName (txt_frame1.getText ());
-        factory.user.setFirstName (txt_frame2.getText ());
-        factory.user.setSmallDescription (txt_frame3.getText ());
-        factory.user.setLongDescription (txt_description.getText ());
+        if(txt_frame1.getText() == null){
+            factory.user.setLastName (" ");
+        }else {
+            factory.user.setLastName(txt_frame1.getText());
+        }
+        if(txt_frame2.getText() == null){
+            factory.user.setFirstName (" ");
+        }else {
+            factory.user.setFirstName (txt_frame2.getText ());
+        }
+        if(txt_frame3.getText () == null){
+            factory.user.setSmallDescription (" ");
+        }else {
+            factory.user.setSmallDescription (txt_frame3.getText ());
+        }
+        if(txt_description.getText () == null){
+            factory.user.setLongDescription (" ");
+        }else {
+            factory.user.setLongDescription (txt_description.getText ());
+        }
         stageold.close();
         factory.initProfil();
+    }
+
+    private void closeButtonAction(Stage stage) {
+        stage.close ();
     }
 
 }

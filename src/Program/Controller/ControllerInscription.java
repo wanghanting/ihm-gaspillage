@@ -82,6 +82,9 @@ public class ControllerInscription {
             stage.close();
             setLink_authen(stage,factory);
         });
+        btn_close.setOnAction(event -> {
+            stage.close();
+        });
     }
 
     void setBtn_suivant(Stage stageold,StageFactory factory) throws IOException {
@@ -108,7 +111,7 @@ public class ControllerInscription {
     private void setLink_authen(Stage stageold, StageFactory factory) {
         try{
             stageold.close();
-            factory.initAuthentification1(userInformation);}
+            factory.initAuthentification1();}
         catch (Exception e ){
             e.getStackTrace();
         }

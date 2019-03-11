@@ -18,7 +18,7 @@ public class ControllerConsomationG {
     @FXML
     private Hyperlink link_aide;
     @FXML
-    private Hyperlink link_deco;
+    private Hyperlink link_deconn;
     @FXML
     private DatePicker date_from;
     @FXML
@@ -117,6 +117,9 @@ public class ControllerConsomationG {
                 e.printStackTrace();
             }
         });
+        link_deconn.setOnAction (event -> {
+            setLink_deco(stage,stageFactory);
+        });
     }
 
     @FXML
@@ -141,4 +144,14 @@ public class ControllerConsomationG {
         factory.initAccueil();
     }
 
+    private void setLink_deco(Stage stageold, StageFactory factory) {
+        try{
+            stageold.close();
+            factory.initAuthentification1();
+
+        }
+        catch (Exception e ){
+            e.getStackTrace();
+        }
+    }
 }

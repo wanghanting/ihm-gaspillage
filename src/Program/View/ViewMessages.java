@@ -19,15 +19,17 @@ import java.util.ArrayList;
 
 public class ViewMessages extends View{
     private static final String MESSAGE = "../Resources/message.fxml";
+    private ControllerMessages controllerMessages;
 
     @Override
-    public void init(Controller controllerMessages, StageFactory stages){
+    public void init(Controller controller, StageFactory factory){
+        this.controllerMessages = (ControllerMessages)controller;
 
-        ControllerMessages controllerMessages1=(ControllerMessages)controllerMessages;
-        controllerMessages1.getList_newm().setItems(findMes(stages.getModelListOfMes().getListOfMes(),stages.getUser()));
+        System.out.println(factory.getUser().getUsername());
+        this.controllerMessages.getList_newm().setItems(findMes(factory.getModelListOfMes().getListOfMes(),factory.getUser()));
 
 
-        adaptItems(controllerMessages1.getList_newm());
+        adaptItems(this.controllerMessages.getList_newm());
     }
     private void adaptItems(ListView listView) {
         listView.setCellFactory(

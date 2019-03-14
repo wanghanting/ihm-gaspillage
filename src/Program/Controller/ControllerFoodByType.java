@@ -3,7 +3,7 @@ package Program.Controller;
 
 import Program.Model.ModelListOfFood;
 import Program.StageFactory;
-import Program.View.ViewFoodByType;
+import Program.View.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
@@ -13,8 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ControllerFoodByType {
-    private ModelListOfFood modelListOfFood = null;
+public class ControllerFoodByType extends Controller{
 
     @FXML
     private ListView list_alipp;
@@ -34,31 +33,29 @@ public class ControllerFoodByType {
     private Hyperlink link_deco;
     @FXML
     private Button btn_close;
-
+    public Label getType(){return type;}
     public ListView getPerimeFoodListView(){ return list_perimes;}
     public ListView getOkFoodListView(){ return this.list_aliok;}
     public ListView getPPFoodListView(){return  this.list_alipp;}
 
-    public void init(ModelListOfFood food, ViewFoodByType view, Stage stage , StageFactory stageFactory,String type){
-        this.modelListOfFood = food;
-        this.type.setText(type);
+    public void init(Stage stage , StageFactory factory){
         back.setOnAction(event -> {
             try {
-                setBack(stageFactory);
+                setBack(factory);
             }catch (IOException e){
                 e.printStackTrace();
             }
         });
         link_aide.setOnAction(event -> {
             try {
-                setLink_aide(stageFactory);
+                setLink_aide(factory);
             }catch (IOException e){
                 e.printStackTrace();
             }
         });
         link_accueil.setOnAction(event -> {
             try {
-                setLink_accueil(stageFactory);
+                setLink_accueil(factory);
             }catch (IOException e){
                 e.printStackTrace();
             }
@@ -67,20 +64,20 @@ public class ControllerFoodByType {
             setBtn_close(stage);
         });
         link_deco.setOnAction (event -> {
-            setLink_deco(stageFactory);
+            setLink_deco(factory);
         });
     }
 
-    private void setBack(StageFactory stageFactory)throws IOException {
-        stageFactory.initType();
+    private void setBack(StageFactory factory)throws IOException {
+        factory.initAll(ViewType.PATH,factory.getControllerType(),factory.getViewType());
     }
 
     private void setLink_aide(StageFactory factory)throws IOException {
-        factory.initAide ();
+        factory.initAide();
     }
 
     private void setLink_accueil(StageFactory factory)throws IOException{
-        factory.initAccueil();
+        factory.initAll(ViewAccueil.PATH,factory.getControllerAccueil(),factory.getViewAccueil());
     }
 
     private void setBtn_close(Stage stage){
@@ -89,7 +86,7 @@ public class ControllerFoodByType {
 
     private void setLink_deco( StageFactory factory) {
         try{
-            factory.initAuthentification1();
+            factory.initAll(ViewAuthentification.PATH,factory.getControllerAuthentification(),factory.getViewAuthentification());
         }
         catch (Exception e ){
             e.getStackTrace();

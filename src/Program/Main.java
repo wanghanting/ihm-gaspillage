@@ -36,12 +36,10 @@ public class Main extends Application {
         Parent root = loader.load(getClass().getResourceAsStream("Resources/authentification.fxml"));
 
 
-        ModelListOfUsers model = new ModelListOfUsers();
-
         //initialize the controller
-        controller.init(model, primaryStage, stages);
+        controller.init(primaryStage, stages);
 
-        view.init(model, controller);
+        view.init(controller,stages);
         Scene scene = new Scene(root, 710, 400);
         scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
         primaryStage.setScene(scene);

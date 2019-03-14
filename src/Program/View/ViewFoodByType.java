@@ -1,9 +1,11 @@
 package Program.View;
 
+import Program.Controller.Controller;
 import Program.Controller.ControllerFood;
 import Program.Controller.ControllerFoodByType;
 import Program.Model.ModelFood;
 import Program.Model.ModelListOfFood;
+import Program.StageFactory;
 import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,38 +13,38 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class ViewFoodByType extends View {
+    public static final String PATH = "Resources/aliment_par_type.fxml";
     private static final String FOOD = "../Resources/food.fxml";
-    private static int rangeSelectedItem = -1;
-    private static ModelListOfFood model;
-    private static ControllerFoodByType controller;
+    private  ModelListOfFood model;
+    private ControllerFoodByType controller;
+    private String type ;
 
-    public static int getRangeSelectedItem() {
-        return rangeSelectedItem;
-    }
+    @Override
+    public void init(Controller controller, StageFactory factory) {
+        this.controller =(ControllerFoodByType) controller;
+        this.type=factory.getType();
+        this.controller.getType().setText(type);
+        this.model = findFood(factory.getModelListOfFood());
 
-    public void init(ModelListOfFood model, ControllerFoodByType controller) {
-        ViewFoodByType.model = model;
-        ViewFoodByType.controller = controller;
         //init the ObservableList of food to the ListView
         model.init();
         listinit();
-        controller.getPerimeFoodListView().setItems(model.getListOfPerimeFoodOfOneType());
-        controller.getOkFoodListView().setItems(model.getListOfOkFoodOfOneType());
-        controller.getPPFoodListView().setItems(model.getListOfPPFoodOfOneType());
+        this.controller.getPerimeFoodListView().setItems(model.getListOfPerimeFood());
+        this.controller.getOkFoodListView().setItems(model.getListOfOkFood());
+        this.controller.getPPFoodListView().setItems(model.getListOfPPFood());
 
         //call a cell factory and display each observable item in the ListView
-        adaptItems( controller.getPerimeFoodListView() );
-        adaptItems(controller.getOkFoodListView());
-        adaptItems(controller.getPPFoodListView());
+        adaptItems(this.controller.getPerimeFoodListView() );
+        adaptItems(this.controller.getOkFoodListView());
+        adaptItems(this.controller.getPPFoodListView());
 
-        //listner if user click in the ListView update rangeSelectedItem value
-        listenTo( controller.getPerimeFoodListView() );
     }
     private void adaptItems(ListView listView) {
         //Set a new cell factory to use in the ListView.
@@ -83,22 +85,22 @@ public class ViewFoodByType extends View {
                     }
                 });
     }
-
-
-    private void listenTo(ListView listView) {
-        listView.getSelectionModel().selectedItemProperty().addListener(
-                (ChangeListener<ModelFood>) (observable, oldValue, newValue) -> {
-                    rangeSelectedItem = model.getListOfOkFood().indexOf(newValue);
-                    // --> GRRR! in javaFX the field Name is kbown in the Controller class (not in the view)
-                    //controller.getChoosenName().setText(newValue.getName());
-                });
-    }
     private void listinit(){
         ObservableList listvide= FXCollections.observableList(new ArrayList<>());
         controller.getPerimeFoodListView().setItems(listvide);
         controller.getOkFoodListView().setItems(listvide);
         controller.getPPFoodListView().setItems(listvide);
 
+    }
+    private ModelListOfFood findFood( ModelListOfFood modelListOfFood){
+        ModelListOfFood modelListOfFood1 = new ModelListOfFood();
+        modelListOfFood1.setListOfFoodA();
+        for(ModelFood food: modelListOfFood.getListOfFoodA()){
+            if(food.getFoodType().equals(this.type)){
+                modelListOfFood1.addFood(food);
+            }
+        }
+        return modelListOfFood1;
     }
 
 }

@@ -11,7 +11,8 @@ import javafx.util.Callback;
 
 import java.io.IOException;
 
-public class ViewConsomationG {
+public class ViewConsomationG extends View {
+    public static final String PATH = "Resources/consommation_graphique.fxml";
     private static final String CHART = "../Resources/chart.fxml";
     private static int rangeSelectedItem = -1;
     private static ModelListOfChart modelChar;

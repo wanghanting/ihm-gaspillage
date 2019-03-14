@@ -1,6 +1,8 @@
 package Program.Controller;
 
 import Program.StageFactory;
+import Program.View.ViewAccueil;
+import Program.View.ViewProfilIns;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
@@ -37,7 +39,7 @@ public class ControllerProfil extends Controller {
     }
 
     private void setLink_accueil(StageFactory factory) throws IOException{
-        factory.initAccueil ();
+        factory.initAll(ViewAccueil.PATH,factory.getControllerAccueil(),factory.getViewAccueil());
     }
 
     private Label getLbl_nom(){
@@ -71,19 +73,19 @@ public class ControllerProfil extends Controller {
         });
         btn_changer.setOnAction(event -> {
             try {
-                factory.initProfilIns();
+                factory.initAll(ViewProfilIns.PATH,factory.getControllerProfilIns(),factory.getViewProfilIns());
             }catch (IOException e){
                 e.printStackTrace();
             }
         });
 
-        this.getLbl_nom().setText (factory.user.getLastName ());
+        this.getLbl_nom().setText (factory.getUser().getLastName ());
 
-        this.getLbl_prenom ().setText (factory.user.getFirstName ());
+        this.getLbl_prenom ().setText (factory.getUser().getFirstName ());
 
-        this.getLbl_mot ().setText (factory.user.getSmallDescription ());
+        this.getLbl_mot ().setText (factory.getUser().getSmallDescription ());
 
-        this.getLbl_profil ().setText (factory.user.getLongDescription ());
+        this.getLbl_profil ().setText (factory.getUser().getLongDescription ());
 
     }
 

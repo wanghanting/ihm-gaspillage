@@ -3,8 +3,7 @@ package Program.Controller;
 import Program.Model.ModelListOfFollow;
 import Program.Model.ModelUser;
 import Program.StageFactory;
-import Program.View.ViewFollow;
-import Program.View.ViewSend;
+import Program.View.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
@@ -14,8 +13,7 @@ import java.io.IOException;
 
 public class ControllerFollow extends Controller {
 
-    private ModelListOfFollow modelListOfAmi = null;
-    private ModelListOfFollow modelListOfUsers = null;
+    private ModelListOfFollow modelListOfFollow;
     private ControllerSend controllerSend=new ControllerSend();
     private ViewSend viewSend = new ViewSend();
     private ModelUser user;
@@ -70,17 +68,16 @@ public class ControllerFollow extends Controller {
         return text_pro;
     }
 
-    private void setLink_aide(StageFactory stageFactory) throws IOException{
-        stageFactory.initAide ();
+    private void setLink_aide(StageFactory factory) throws IOException{
+        factory.initAide();
     }
 
     private void setLink_accueil( StageFactory factory) throws IOException{
-        factory.initAccueil ();
+        factory.initAll(ViewAccueil.PATH,factory.getControllerAccueil(),factory.getViewAccueil());
     }
-
-    public void init(ModelListOfFollow listOfAmi, ModelListOfFollow listOfUsers, ViewFollow view, Stage stage, StageFactory factory){
-        this.modelListOfAmi = listOfAmi;
-        this.modelListOfUsers = listOfUsers;
+    @Override
+    public void init(Stage stage, StageFactory factory){
+        this.modelListOfFollow =factory.getModelListOfFollow();
 
         btn_close.setOnAction (event -> {
             setBtn_close (stage);
@@ -109,7 +106,7 @@ public class ControllerFollow extends Controller {
         btn_msg.setOnAction(event -> {
             factory.setRece(this.user);
             try {
-                factory.initMes("Resources/send.fxml",controllerSend,viewSend);
+                factory.initAll("Resources/send.fxml",controllerSend,viewSend);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -122,7 +119,7 @@ public class ControllerFollow extends Controller {
 
     private void setLink_deco( StageFactory factory) {
         try{
-            factory.initAuthentification1();
+            factory.initAll(ViewAuthentification.PATH,factory.getControllerAuthentification(),factory.getViewAuthentification());
         }
         catch (Exception e ){
             e.getStackTrace();

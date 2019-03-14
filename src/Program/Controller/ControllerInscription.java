@@ -3,10 +3,9 @@ package Program.Controller;
 import Program.Model.ModelListOfUsers;
 import Program.Model.ModelUser;
 import Program.StageFactory;
+import Program.View.ViewAuthentification;
+import Program.View.ViewProfilIns;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
@@ -15,7 +14,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ControllerInscription {
+public class ControllerInscription extends Controller{
     @FXML
     ModelListOfUsers userInformation = new ModelListOfUsers();
 
@@ -67,8 +66,8 @@ public class ControllerInscription {
 
 
 
-    public void init(ModelListOfUsers model, Stage stage, StageFactory factory){
-        this.userInformation = model;
+    public void init(Stage stage, StageFactory factory){
+        this.userInformation = factory.getModelListOfUsers();
 
         btn_suivant.setOnAction(event -> {
             try {
@@ -89,13 +88,13 @@ public class ControllerInscription {
     void setBtn_suivant(StageFactory factory) throws IOException {
         if(comfirmInformation()== true) {
             try {
-                factory.user = new ModelUser (text_frame1.getText(), text_frame2.getText());
-                userInformation.addUser(factory.user);
+                factory.setUser( new ModelUser (text_frame1.getText(), text_frame2.getText()));
+                userInformation.addUser(factory.getUser());
                 factory.setModelListOfUsers(userInformation);
             } catch (Exception e) {
                 e.getStackTrace();
             }
-            factory.initProfilIns ();
+            factory.initAll(ViewProfilIns.PATH,factory.getControllerProfilIns(),factory.getViewProfilIns());
         }else{
             text_frame1.setText(" ");
             text_frame2.setText(" ");
@@ -107,8 +106,9 @@ public class ControllerInscription {
 
     @FXML
     private void setLink_authen( StageFactory factory) {
-        try{
-            factory.initAuthentification1();}
+        try {
+            factory.initAll(ViewAuthentification.PATH, factory.getControllerAuthentification(), factory.getViewAuthentification());
+        }
         catch (Exception e ){
             e.getStackTrace();
         }

@@ -3,7 +3,7 @@ package Program.Controller;
 import Program.Model.ModelListOfTags;
 import Program.Model.ModelTag;
 import Program.StageFactory;
-import Program.View.ViewType;
+import Program.View.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
@@ -48,9 +48,8 @@ public class ControllerType extends Controller{
         return txt_tag;
     }
 
-    @FXML
-    public void init(ModelListOfTags tagList, ViewType view, Stage stage, StageFactory factory) {
-        this.modelListOfTags = tagList;
+    public void init(Stage stage, StageFactory factory) {
+        this.modelListOfTags = factory.getModelListOfTags();
         link_accueil.setOnAction(event -> {
             try {
                 setLink_accueil(factory);
@@ -96,17 +95,19 @@ public class ControllerType extends Controller{
 
     @FXML
     private void setLink_aide(StageFactory factory)throws IOException {
-        factory.initAide ();
+        factory.initAide();
     }
 
     @FXML
     private void setLink_accueil(StageFactory factory)throws IOException{
-            factory.initAccueil();
+        factory.initAll(ViewAccueil.PATH,factory.getControllerAccueil(),factory.getViewAccueil());
     }
 
     @FXML
     private void setBtn_open(StageFactory factory)throws IOException{
-        factory.initFoodByType(type);
+        factory.setType(this.type);
+        factory.initAll(ViewFoodByType.PATH,factory.getControllerFoodByType(),factory.getViewFoodByType());
+
     }
 
     private void setBtn_close(Stage stage){
@@ -115,7 +116,7 @@ public class ControllerType extends Controller{
 
     private void setLink_deco(StageFactory factory) {
         try{
-            factory.initAuthentification1();
+            factory.initAll(ViewAuthentification.PATH,factory.getControllerAuthentification(),factory.getViewAuthentification());
         }
         catch (Exception e ){
             e.getStackTrace();

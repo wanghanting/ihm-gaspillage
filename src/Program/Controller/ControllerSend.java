@@ -4,11 +4,11 @@ import Program.Model.ModelListOfMes;
 import Program.Model.ModelMessage;
 import Program.Model.ModelUser;
 import Program.StageFactory;
+import Program.View.ViewAccueil;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -36,7 +36,7 @@ public class ControllerSend extends Controller {
         btn_send.setOnAction(event -> {
             modelListOfMes.getListOfMes().add(new ModelMessage(factory.getUser(),findUser(lab_rece.getText()),txt_mes.getText(), LocalDateTime.now()));
             try {
-                factory.initAccueil();
+                factory.initAll(ViewAccueil.PATH,factory.getControllerAccueil(),factory.getViewAccueil());
             } catch (IOException e) {
                 e.printStackTrace();
             }

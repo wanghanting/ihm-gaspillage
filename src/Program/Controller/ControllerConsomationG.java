@@ -1,6 +1,8 @@
 package Program.Controller;
 
 import Program.StageFactory;
+import Program.View.ViewAccueil;
+import Program.View.ViewAuthentification;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
@@ -133,17 +135,16 @@ public class ControllerConsomationG {
 
     @FXML
     private void setLink_aide(StageFactory factory)throws IOException {
-        factory.initAide ();
-    }
+        factory.initAide();}
 
     @FXML
     private void setLink_accueil(StageFactory factory)throws IOException{
-        factory.initAccueil();
+        factory.initAll(ViewAccueil.PATH,factory.getControllerAccueil(),factory.getViewAccueil());
     }
 
     private void setLink_deco( StageFactory factory) {
         try{
-            factory.initAuthentification1();
+            factory.initAll(ViewAuthentification.PATH,factory.getControllerAuthentification(),factory.getViewAuthentification());
 
         }
         catch (Exception e ){

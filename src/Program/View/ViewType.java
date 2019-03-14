@@ -1,10 +1,12 @@
 package Program.View;
 
 
+import Program.Controller.Controller;
 import Program.Controller.ControllerTag;
 import Program.Controller.ControllerType;
 import Program.Model.ModelListOfTags;
 import Program.Model.ModelTag;
+import Program.StageFactory;
 import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,8 +16,8 @@ import javafx.util.Callback;
 
 import java.io.IOException;
 
-public class ViewType{
-    public static final String TYPE = "../Resources/types.fxml";
+public class ViewType extends View{
+    public static final String PATH = "Resources/types.fxml";
     static final String TAG = "../Resources/tag.fxml";
     static final String ACCUEIL = "../Resources/page_d'accueil.fxml";
     public static final String LABEL = "HFV";
@@ -26,10 +28,10 @@ public class ViewType{
     public static int getRangeSelectedItem() {
         return rangeSelectedItem;
     }
-
-    public void init(ModelListOfTags modelListOfTags, ControllerType controllerType) {
-        ViewType.modelListOfTags = modelListOfTags;
-        ViewType.controllerType = controllerType;
+    @Override
+    public void init(Controller controller, StageFactory factory) {
+        ViewType.modelListOfTags = factory.getModelListOfTags();
+        ViewType.controllerType = (ControllerType) controller;
 
         controllerType.getListView().setItems(modelListOfTags.getListOfTag());
 

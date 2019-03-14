@@ -74,6 +74,7 @@ public class ModelListOfFood {
             }else listOfPPFoodG.add(food);
         }
     }
+    public void setListOfFoodA(){this.listOfFoodA.removeAll(this.listOfFoodA);}
 
     public void setType(String type){
         this.type = type;

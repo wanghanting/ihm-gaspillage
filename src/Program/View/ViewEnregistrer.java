@@ -1,7 +1,9 @@
 package Program.View;
 
+import Program.Controller.Controller;
 import Program.Controller.ControllerEnregistrer;
 import Program.Model.ModelListOfTags;
+import Program.StageFactory;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
@@ -9,7 +11,9 @@ import javafx.scene.control.*;
 
 import java.lang.reflect.Type;
 
-public class ViewEnregistrer {
+public class ViewEnregistrer extends View {
+    public static final String PATH = "Resources/enregistrer.fxml";
+    private ControllerEnregistrer controller;
     private void listenTo(TextField textField, Label label) {
         textField.textProperty().addListener(new ChangeListener<String>() {
             @Override
@@ -34,17 +38,18 @@ public class ViewEnregistrer {
                     }});
     }
 
-
-    public void init(ModelListOfTags model, ControllerEnregistrer controller) {
-        controller.getSel_type().setItems(model.getNames());
+    @Override
+    public void init(Controller controller, StageFactory factory) {
+        this.controller= (ControllerEnregistrer)controller;
+        this.controller.getSel_type().setItems(factory.getModelListOfTags().getNames());
         SpinnerValueFactory svf = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 99);
-        controller.getSpi_quan().setValueFactory(svf);
+        this.controller.getSpi_quan().setValueFactory(svf);
         SpinnerValueFactory svf2 = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 99);
-        controller.getSpi_jour().setValueFactory(svf2);
-        controller.getLab_noti().setText("Enter le nom!");
-        listenTo(controller.getTxt_nom(),controller.getLab_noti());
-        controller.getLab_notifi().setText("Choisir la type!");
-        listenTo(controller.getSel_type(),controller.getLab_notifi());
+        this.controller.getSpi_jour().setValueFactory(svf2);
+        this.controller.getLab_noti().setText("Enter le nom!");
+        listenTo( this.controller.getTxt_nom(), this.controller.getLab_noti());
+        this.controller.getLab_notifi().setText("Choisir la type!");
+        listenTo( this.controller.getSel_type(), this.controller.getLab_notifi());
         controller.getHboxa().setPrefWidth(600);
         controller.getHboxa().setPrefHeight(475);
     }

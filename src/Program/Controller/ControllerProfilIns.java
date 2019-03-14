@@ -1,8 +1,7 @@
 package Program.Controller;
 
-import Program.Model.ModelListOfUsers;
-import Program.Controller.ControllerProfil;
 import Program.StageFactory;
+import Program.View.ViewProfil;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
@@ -58,26 +57,26 @@ public class ControllerProfilIns extends Controller{
     //
     void setBtn_sub( StageFactory factory) throws IOException {
         if(txt_frame1.getText() == null){
-            factory.user.setLastName (" ");
+            factory.getUser().setLastName (" ");
         }else {
-            factory.user.setLastName(txt_frame1.getText());
+            factory.getUser().setLastName(txt_frame1.getText());
         }
         if(txt_frame2.getText() == null){
-            factory.user.setFirstName (" ");
+            factory.getUser().setFirstName (" ");
         }else {
-            factory.user.setFirstName (txt_frame2.getText ());
+            factory.getUser().setFirstName (txt_frame2.getText ());
         }
         if(txt_frame3.getText () == null){
-            factory.user.setSmallDescription (" ");
+            factory.getUser().setSmallDescription (" ");
         }else {
-            factory.user.setSmallDescription (txt_frame3.getText ());
+            factory.getUser().setSmallDescription (txt_frame3.getText ());
         }
         if(txt_description.getText () == null){
-            factory.user.setLongDescription (" ");
+            factory.getUser().setLongDescription (" ");
         }else {
-            factory.user.setLongDescription (txt_description.getText ());
+            factory.getUser().setLongDescription (txt_description.getText ());
         }
-        factory.initProfil();
+        factory.initAll(ViewProfil.PATH,factory.getControllerProfil(),factory.getViewProfil());
     }
 
     private void closeButtonAction(Stage stage) {

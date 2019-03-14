@@ -2,9 +2,7 @@ package Program.Controller;
 
 import Program.Model.ModelListOfFood;
 import Program.StageFactory;
-import Program.View.View;
-import Program.View.ViewMessages;
-import Program.View.ViewAccueil;
+import Program.View.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -60,12 +58,12 @@ public class ControllerAccueil extends Controller{
     ControllerInscription controller;
 
     private void setLink_aide(StageFactory factory)throws IOException {
-        factory.initAide ();
+        factory.initAll(ViewAide.PATH,factory.getControllerAide(),factory.getViewAide());
     }
 
     @FXML
     private void setBtn_pro(StageFactory factory) throws IOException{
-        factory.initMes ("Resources/profil.fxml",controllerProfil,viewp);
+        factory.initAll("Resources/profil.fxml",controllerProfil,viewp);
     }
 
     @FXML
@@ -87,13 +85,13 @@ public class ControllerAccueil extends Controller{
      void setBtn_ajouter(StageFactory factory) throws IOException {
 
             factory.setModelListOfFood(modelListfood);
-            factory.initEnregistrer();
+            factory.initAll(ViewEnregistrer.PATH,factory.getControllerEnregistrer(),factory.getViewEnregistrer());
 
     }
 
     private void setLink_deco( StageFactory factory) {
         try{
-            factory.initAuthentification1();
+            factory.initAll(ViewAuthentification.PATH,factory.getControllerAuthentification(),factory.getViewAuthentification());
 
         }
         catch (Exception e ){
@@ -101,14 +99,14 @@ public class ControllerAccueil extends Controller{
         }
     }
     void setBtn_type(StageFactory factory)throws IOException{
-        factory.initType();
+        factory.initAll(ViewType.PATH,factory.getControllerType(),factory.getViewType());
     }
     void setBtn_conso(StageFactory factory)throws IOException {
         factory.initCosommationT();
     }
 
     void setBtn_follow( StageFactory factory)throws IOException{
-        factory.initFollow ();
+        factory.initAll(ViewFollow.PATH,factory.getControllerFollow(),factory.getViewFollow());
     }
 
     public ListView getPerimeFoodListView(){ return list_perimes;}
@@ -119,9 +117,9 @@ public class ControllerAccueil extends Controller{
         stage.close ();
     }
 
-
-    public void init(ModelListOfFood food, ViewAccueil view, Stage stage, StageFactory factory) {
-        this.modelListfood = food;
+    @Override
+    public void init(Stage stage, StageFactory factory) {
+        this.modelListfood = factory.getModelListOfFood();
         link_deco.setOnAction (event -> {
             setLink_deco(factory);
         });
@@ -141,7 +139,7 @@ public class ControllerAccueil extends Controller{
 
         link_aide.setOnAction (event -> {
             try{
-                setLink_aide (factory);
+                factory.initAll(ViewAide.PATH,factory.getControllerAide(),factory.getViewAide());
             }catch (IOException e){
                 e.printStackTrace ();
             }
@@ -175,18 +173,17 @@ public class ControllerAccueil extends Controller{
             }
         });
         btn_delete.setOnAction(event -> {
-            System.out.println(view.getRangeSelectedItem());
-            this.modelListfood.getListOfFoodA().remove(view.getRangeSelectedItem());
+            this.modelListfood.getListOfFoodA().remove(factory.getViewAccueil().getRangeSelectedItem());
             factory.setModelListOfFood(this.modelListfood);
             try {
-                factory.initAccueil();
+                factory.initAll(ViewAccueil.PATH,factory.getControllerAccueil(),factory.getViewAccueil());
             } catch (IOException e) {
                 e.printStackTrace();
             }
         });
         btn_mes.setOnAction(event -> {
             try {
-                factory.initMes("Resources/messages.fxml",controllerMessages,viewMessages);
+                factory.initAll("Resources/messages.fxml",controllerMessages,viewMessages);
             } catch (IOException e) {
                 e.printStackTrace();
             }

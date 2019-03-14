@@ -1,9 +1,12 @@
 package Program.View;
 
+import Program.Controller.Controller;
 import Program.Controller.ControllerFollow;
+import Program.Controller.ControllerFood;
 import Program.Controller.ControllerUser;
 import Program.Model.ModelListOfFollow;
 import Program.Model.ModelUser;
+import Program.StageFactory;
 import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,10 +16,11 @@ import javafx.util.Callback;
 
 import java.io.IOException;
 
-public class ViewFollow {
+public class ViewFollow extends View{
+    public static final String PATH = "Resources/follower.fxml";
     public static final String USER = "../Resources/user.fxml";
     private static ModelListOfFollow modelListOfFollow;
-    private static ControllerFollow controllerFollow;
+    private ControllerFollow controllerFollow;
     private static int rangeSelectedItem = -1;
 
     public static int getRangeSelectedItem() {
@@ -24,9 +28,9 @@ public class ViewFollow {
     }
 
 
-    public void init(ModelListOfFollow listOfFollow, ControllerFollow controllerFollow){
-        ViewFollow.modelListOfFollow = listOfFollow;
-        ViewFollow.controllerFollow = controllerFollow;
+    public void init(Controller controller, StageFactory factory){
+        ViewFollow.modelListOfFollow = factory.getModelListOfFollow();
+        this.controllerFollow = (ControllerFollow)controller;
         controllerFollow.getLst_ami ().setItems (modelListOfFollow.getListOfAmi ());
         controllerFollow.getLst_fans ().setItems (modelListOfFollow.getListOfFans ());
         adaptItems (controllerFollow.getLst_ami ());

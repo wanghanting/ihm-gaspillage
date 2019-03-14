@@ -1,10 +1,9 @@
 package Program.Controller;
 
 import Program.StageFactory;
+import Program.View.ViewAccueil;
+import Program.View.ViewAuthentification;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.ListView;
@@ -39,30 +38,30 @@ public class ControllerMessages extends Controller {
 
     public ListView getList_newm(){return list_newm;}
     public ListView getList_oldm(){return list_oldm;}
-    public void init(Stage stage, StageFactory stageFactory){
+    public void init(Stage stage, StageFactory factory){
         link_accueil.setOnAction(event ->
         {
             try {
-                stageFactory.initAccueil();
+                factory.initAll(ViewAccueil.PATH,factory.getControllerAccueil(),factory.getViewAccueil());
             } catch (IOException e) {
                 e.printStackTrace();
             }
         });
         link_aide.setOnAction(event -> {
             try {
-                stageFactory.initAide();
+                factory.initAide();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         });
         link_deco.setOnAction (event -> {
-            setLink_deco(stageFactory);
+            setLink_deco(factory);
         });
     }
 
     private void setLink_deco( StageFactory factory) {
         try{
-            factory.initAuthentification1();
+            factory.initAll(ViewAuthentification.PATH,factory.getControllerAuthentification(),factory.getViewAuthentification());
         }
         catch (Exception e ){
             e.getStackTrace();

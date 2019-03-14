@@ -2,6 +2,8 @@ package Program.Controller;
 import Program.Model.ModelFood;
 import Program.Model.ModelListOfFood;
 import Program.StageFactory;
+import Program.View.ViewAccueil;
+import Program.View.ViewAuthentification;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
@@ -65,17 +67,17 @@ public class ControllerEnregistrer extends Controller{
         stage.close();
     }
 
-    private void setLink_aide(StageFactory stageFactory) throws IOException{
-        stageFactory.initAide ();
+    private void setLink_aide(StageFactory factory) throws IOException{
+        factory.initAide();
     }
 
     private void setLink_accueil( StageFactory factory) throws IOException{
-        factory.initAccueil ();
+        factory.initAll(ViewAccueil.PATH,factory.getControllerAccueil(),factory.getViewAccueil());
     }
 
     //public Button getBtn_ajouter() {return btn_ajouter;}
-    public void init(ModelListOfFood foodList, Stage stage, StageFactory factory) {
-        this.modelListFood = foodList;
+    public void init(Stage stage, StageFactory factory) {
+        this.modelListFood = factory.getModelListOfFood();
         this.jour_expira.setValue(LocalDate.now());
         //listner on the buttons
         btn_ajouter.setOnAction( event -> {
@@ -93,7 +95,7 @@ public class ControllerEnregistrer extends Controller{
                         System.out.println(e);
                     }
                     factory.setModelListOfFood(modelListFood);
-                    factory.initAccueil();
+                    factory.initAll(ViewAccueil.PATH,factory.getControllerAccueil(),factory.getViewAccueil());
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -127,7 +129,7 @@ public class ControllerEnregistrer extends Controller{
     }
     private void setLink_deco( StageFactory factory) {
         try{
-            factory.initAuthentification1();
+            factory.initAll(ViewAuthentification.PATH,factory.getControllerAuthentification(),factory.getViewAuthentification());
 
         }
         catch (Exception e ){

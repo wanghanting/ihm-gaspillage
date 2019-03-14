@@ -1,55 +1,55 @@
 package Program.View;
-import Program.Controller.ControllerAttention;
+import Program.Controller.Controller;
 import Program.Controller.ControllerFood;
 import Program.Model.ModelFood;
 import Program.Model.ModelListOfFood;
 import Program.Controller.ControllerAccueil;
+import Program.StageFactory;
 import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.stage.Stage;
 import javafx.util.Callback;
-import java.time.LocalDate;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
 
-public class ViewAccueil {
+public class ViewAccueil extends View{
+    public static final String PATH = "Resources/page_d'accueil.fxml";
     private static final String FOOD = "../Resources/food.fxml";
     private static int rangeSelectedItem = -1;
     private static ModelListOfFood model;
-    private static ControllerAccueil controller;
+    private  ControllerAccueil controller;
 
     public static int getRangeSelectedItem() {
         return rangeSelectedItem;
     }
-
-    public void init(ModelListOfFood model, ControllerAccueil controller) throws IOException {
-        ViewAccueil.model = model;
-        ViewAccueil.controller = controller;
+    @Override
+    public void init(Controller controller, StageFactory factory){
+        ViewAccueil.model = factory.getModelListOfFood();
+        this.controller =(ControllerAccueil) controller;
         //init the ObservableList of food to the ListView
         model.init();
         listinit();
-        controller.getPerimeFoodListView().setItems(model.getListOfPerimeFood());
-        controller.getOkFoodListView().setItems(model.getListOfOkFood());
-        controller.getPPFoodListView().setItems(model.getListOfPPFood());
+        this.controller.getPerimeFoodListView().setItems(model.getListOfPerimeFood());
+        this.controller.getOkFoodListView().setItems(model.getListOfOkFood());
+        this.controller.getPPFoodListView().setItems(model.getListOfPPFood());
 
         //call a cell factory and display each observable item in the ListView
-        adaptItems(controller.getPerimeFoodListView() );
-        adaptItems(controller.getOkFoodListView());
-        adaptItems(controller.getPPFoodListView());
+        adaptItems(this.controller.getPerimeFoodListView() );
+        adaptItems(this.controller.getOkFoodListView());
+        adaptItems(this.controller.getPPFoodListView());
 
 
 
         //listner if user click in the ListView update rangeSelectedItem value
-        listenTo( controller.getPerimeFoodListView() );
-        listenTo(controller.getOkFoodListView());
-        listenTo(controller.getPPFoodListView());
+        listenTo(this.controller.getPerimeFoodListView() );
+        listenTo(this.controller.getOkFoodListView());
+        listenTo(this.controller.getPPFoodListView());
     }
     private void adaptItems(ListView listView) {
         //Set a new cell factory to use in the ListView.
@@ -105,30 +105,5 @@ public class ViewAccueil {
         controller.getOkFoodListView().setItems(listvide);
         controller.getPPFoodListView().setItems(listvide);
 
-    }
-
-    public void initAttention(ObservableList<ModelFood> listpp) throws IOException {
-        String attention="";
-        for(int i =0;i<listpp.size();i++){
-            ModelFood food = listpp.get(i);
-            LocalDate expiraDate = food.getDateExpiration();
-            if(expiraDate.compareTo(LocalDate.now())==0){
-                attention+=food.getName()+" expire apr��s aujourd'hui /n";
-            }
-        }
-        System.out.println(attention);
-        if(!attention.isEmpty()) {
-            FXMLLoader loader = new FXMLLoader();
-            // FXMLLoader loader = new FXMLLoader (getClass ().getClassLoader().getResource ("../Resources/attention.fxml"));
-            Stage stage = new Stage();
-            ControllerAttention controllerAttention = new ControllerAttention();
-
-            loader.setController(controllerAttention);
-            Parent root = loader.load(getClass().getResourceAsStream("../Resources/attention.fxml"));
-            //Parent root = loader.load (getClass().getClassLoader().);
-            controllerAttention.getTxt_attention().setText(attention);
-            stage.setScene(new Scene(root, 200, 100));
-            stage.show();
-        }
     }
 }

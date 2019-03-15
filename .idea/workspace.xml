@@ -2,65 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="change css">
-      <change afterPath="$PROJECT_DIR$/src/Program/View/ViewAide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Program/View/ViewProfil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Program/View/ViewProfilIns.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ihm/META-INF/ihm.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Controller/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerAccueil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerAccueil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerAuthentification.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerAuthentification.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerConsomationG.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerConsomationG.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerConsommationTextDate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerConsommationTextDate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerEnregistrer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerEnregistrer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerFollow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerFollow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerFoodByType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerFoodByType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerInscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerInscription.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerMessages.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerMessages.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerProfil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerProfil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerSend.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerSend.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Model/ModelListOfTags.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Model/ModelListOfTags.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Resources/authentification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Resources/authentification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Resources/page_d'accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Resources/page_d'accueil.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/StageFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/StageFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/StageFactory$10.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/StageFactory$11.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/StageFactory$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/StageFactory$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/StageFactory$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/StageFactory$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/StageFactory$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/StageFactory$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/StageFactory$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/StageFactory$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/StageFactory$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerAide.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerAide.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerAttention.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerBienvenue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerConsomationG.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Model/ModelListOfFood.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/Model/ModelListOfFood.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Model/ModelThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Resources/Unknown.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Resources/confirmation_close.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Resources/lock.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/Resources/profil_Pauldu66.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ihm/Program/StageFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ihm/Program/StageFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Program/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerAccueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Controller/ControllerAccueil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerAttention.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerAuthentification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Controller/ControllerAuthentification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerConsomationG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Controller/ControllerConsomationG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerConsommationTextDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Controller/ControllerConsommationTextDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerEnregistrer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Controller/ControllerEnregistrer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerFollow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Controller/ControllerFollow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerFoodByType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Controller/ControllerFoodByType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerInscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Controller/ControllerInscription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Controller/ControllerMessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerProfil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Controller/ControllerProfil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerProfilIns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Controller/ControllerProfilIns.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerSend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Controller/ControllerSend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Controller/ControllerType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerAide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Controller/ControllerAide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerBienvenue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Program/Controller/ControllerConsomationG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Controller/ControllerConsomationGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Program/Model/ModelListOfFood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Model/ModelListOfFood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/Resources/authentification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/Resources/authentification.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Program/Model/ModelThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Program/Resources/Unknown.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Program/Resources/confirmation_close.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Program/Resources/lock.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Program/Resources/profil_Pauldu66.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Program/StageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/StageFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Program/View/ViewAccueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/View/ViewAccueil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/View/ViewAuthentification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/View/ViewAuthentification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Program/View/ViewConsomationG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/View/ViewConsomationG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/View/ViewEnregistrer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/View/ViewEnregistrer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/View/ViewFollow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/View/ViewFollow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Program/View/ViewFoodByType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/View/ViewFoodByType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/View/ViewInscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/View/ViewInscription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/View/ViewMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/View/ViewMessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program/View/ViewType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program/View/ViewType.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -155,285 +126,113 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1498882705">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="fxml" value="25" />
+          <entry key="java" value="38" />
+          <entry key="jpg" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Image" value="2" />
+          <entry key="JAVA" value="38" />
+          <entry key="XML" value="25" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="5" />
+          <entry key="java" value="48" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="48" />
+          <entry key="PLAIN_TEXT" value="5" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.8195067">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/StageFactory.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="201">
-                  <caret line="319" column="8" selection-start-line="319" selection-start-column="8" selection-end-line="319" selection-end-column="8" />
-                  <folding>
-                    <element signature="e#1949#1950#0" expanded="true" />
-                    <element signature="e#1993#1994#0" expanded="true" />
-                    <element signature="e#2732#2733#0" expanded="true" />
-                    <element signature="e#2764#2765#0" expanded="true" />
-                    <element signature="e#2485#2486#0" expanded="true" />
-                    <element signature="e#2523#2524#0" expanded="true" />
-                    <element signature="e#2578#2579#0" expanded="true" />
-                    <element signature="e#2618#2619#0" expanded="true" />
-                    <element signature="e#2762#2763#0" expanded="true" />
-                    <element signature="e#2795#2796#0" expanded="true" />
-                    <element signature="e#2954#2955#0" expanded="true" />
-                    <element signature="e#2991#2992#0" expanded="true" />
-                    <element signature="e#3028#3029#0" expanded="true" />
-                    <element signature="e#3059#3060#0" expanded="true" />
-                    <element signature="e#3104#3105#0" expanded="true" />
-                    <element signature="e#3137#3138#0" expanded="true" />
-                    <element signature="e#3176#3177#0" expanded="true" />
-                    <element signature="e#3211#3212#0" expanded="true" />
-                    <element signature="e#3197#3198#0" expanded="true" />
-                    <element signature="e#3235#3236#0" expanded="true" />
-                    <element signature="e#4056#4057#0" expanded="true" />
-                    <element signature="e#4110#4111#0" expanded="true" />
-                    <element signature="e#4171#4172#0" expanded="true" />
-                    <element signature="e#4219#4220#0" expanded="true" />
-                    <element signature="e#3950#3951#0" expanded="true" />
-                    <element signature="e#3983#3984#0" expanded="true" />
-                    <element signature="e#3904#3905#0" expanded="true" />
-                    <element signature="e#3947#3948#0" expanded="true" />
-                    <element signature="e#4773#4774#0" expanded="true" />
-                    <element signature="e#4807#4808#0" expanded="true" />
-                    <element signature="e#5420#5421#0" expanded="true" />
-                    <element signature="e#5466#5467#0" expanded="true" />
-                    <element signature="e#6521#6522#0" expanded="true" />
-                    <element signature="e#6560#6561#0" expanded="true" />
-                    <element signature="e#6619#6620#0" expanded="true" />
-                    <element signature="e#6661#6662#0" expanded="true" />
-                    <element signature="e#6702#6703#0" expanded="true" />
-                    <element signature="e#6735#6736#0" expanded="true" />
-                    <element signature="e#6782#6783#0" expanded="true" />
-                    <element signature="e#6818#6819#0" expanded="true" />
-                    <element signature="e#8257#8258#0" expanded="true" />
-                    <element signature="e#8303#8304#0" expanded="true" />
-                    <element signature="e#9072#9073#0" expanded="true" />
-                    <element signature="e#9126#9127#0" expanded="true" />
-                    <element signature="e#9197#9198#0" expanded="true" />
-                    <element signature="e#9251#9252#0" expanded="true" />
-                    <element signature="e#9302#9303#0" expanded="true" />
-                    <element signature="e#9340#9341#0" expanded="true" />
-                    <element signature="e#9388#9389#0" expanded="true" />
-                    <element signature="e#9423#9424#0" expanded="true" />
-                    <element signature="e#9472#9473#0" expanded="true" />
-                    <element signature="e#9509#9510#0" expanded="true" />
-                    <element signature="e#9543#9544#0" expanded="true" />
-                    <element signature="e#9575#9576#0" expanded="true" />
-                    <element signature="e#9628#9629#0" expanded="true" />
-                    <element signature="e#9672#9673#0" expanded="true" />
-                    <element signature="e#9734#9735#0" expanded="true" />
-                    <element signature="e#9778#9779#0" expanded="true" />
-                    <element signature="e#9818#9819#0" expanded="true" />
-                    <element signature="e#9847#9848#0" expanded="true" />
-                    <element signature="e#9881#9882#0" expanded="true" />
-                    <element signature="e#9913#9914#0" expanded="true" />
-                    <element signature="e#10441#10442#0" expanded="true" />
-                    <element signature="e#10481#10482#0" expanded="true" />
-                    <element signature="e#10512#10513#0" expanded="true" />
-                    <element signature="e#10552#10553#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerProfilIns.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="44">
-                  <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerMessages.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="87">
-                  <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="35" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerSend.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="334">
-                  <caret line="38" column="106" selection-start-line="38" selection-start-column="106" selection-end-line="38" selection-end-column="106" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerType.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="44">
-                  <caret line="107" column="35" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#3079#3080#0" expanded="true" />
-                    <element signature="e#3111#3112#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/View/ViewType.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="197">
-                  <caret line="86" column="34" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerFoodByType.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="665">
-                  <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Program/View/ViewFoodByType.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="96" column="41" selection-start-line="96" selection-start-column="41" selection-end-line="96" selection-end-column="41" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/Resources/aliment_par_type.fxml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-162" />
-              </provider>
-              <provider editor-type-id="JavaFX-Scene-Builder" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelListOfFood.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="92">
-                  <caret line="76" column="62" selection-start-line="76" selection-start-column="62" selection-end-line="76" selection-end-column="62" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerProfil.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="239">
-                  <caret line="87" column="56" selection-start-line="87" selection-start-column="56" selection-end-line="87" selection-end-column="56" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerAccueil.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="138">
-                  <caret line="119" column="13" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerAuthentification.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-16">
-                  <caret line="48" column="60" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerBienvenue.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-333">
-                  <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerChart.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-8">
-                  <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/View/ViewFollow.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="122">
-                  <caret line="31" column="69" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Program/View/ViewMessages.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1080">
-                  <caret line="78" column="20" lean-forward="true" selection-start-line="72" selection-start-column="8" selection-end-line="78" selection-end-column="20" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="98">
-                  <caret line="36" selection-start-line="36" selection-end-line="36" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerFollow.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="174">
-                  <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerFood.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="76">
-                  <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Program/Resources/profil_torempli.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Program/Resources/rate.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Program/Resources/send.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Program/Resources/sum.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Program/Resources/tag.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Program/Resources/types.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Program/Resources/user.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelListOfFood.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerConsomationGraph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Program/StageFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -461,10 +260,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Program/Resources/view.css" />
-        <option value="$PROJECT_DIR$/src/Program/Resources/attention.fxml" />
-        <option value="$PROJECT_DIR$/src/Program/Controller/ControllerFood.java" />
-        <option value="$PROJECT_DIR$/src/Program/ViewConsomationG.java" />
         <option value="$PROJECT_DIR$/src/Program/Resources/authentification.fxml" />
         <option value="$PROJECT_DIR$/src/Program/ViewAccueil.java" />
         <option value="$PROJECT_DIR$/src/Program/View/View.java" />
@@ -475,10 +270,9 @@
         <option value="$PROJECT_DIR$/src/Program/ViewFollow.java" />
         <option value="$PROJECT_DIR$/src/Program/ViewMessages.java" />
         <option value="$PROJECT_DIR$/src/Program/Model/ModelListOfMes.java" />
-        <option value="$USER_HOME$/Desktop/33/Program/StageFactory.java" />
+        <option value="$PROJECT_DIR$/../../33/Program/StageFactory.java" />
         <option value="$PROJECT_DIR$/src/Program/Model/ModelListOfUsers.java" />
         <option value="$PROJECT_DIR$/src/Program/Controller/ControllerMessage.java" />
-        <option value="$PROJECT_DIR$/src/Program/Controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/Program/Resources/enregistrer.fxml" />
         <option value="$PROJECT_DIR$/src/Program/Controller/ControllerAttention.java" />
         <option value="$PROJECT_DIR$/src/Program/Controller/ControllerBienvenue.java" />
@@ -498,7 +292,6 @@
         <option value="$PROJECT_DIR$/src/Program/Controller/ControllerProfil.java" />
         <option value="$PROJECT_DIR$/src/Program/Controller/ControllerProfilIns.java" />
         <option value="$PROJECT_DIR$/src/Program/Controller/ControllerInscription.java" />
-        <option value="$PROJECT_DIR$/src/Program/Controller/ControllerAccueil.java" />
         <option value="$PROJECT_DIR$/src/Program/Controller/ControllerAuthentification.java" />
         <option value="$PROJECT_DIR$/src/Program/Main.java" />
         <option value="$PROJECT_DIR$/src/Program/View/ViewAccueil.java" />
@@ -511,6 +304,12 @@
         <option value="$PROJECT_DIR$/src/Program/Controller/ControllerType.java" />
         <option value="$PROJECT_DIR$/src/Program/StageFactory.java" />
         <option value="$PROJECT_DIR$/src/Program/View/ViewFoodByType.java" />
+        <option value="$PROJECT_DIR$/src/Program/Controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Program/Controller/ControllerAccueil.java" />
+        <option value="$PROJECT_DIR$/src/Program/Controller/ControllerAide.java" />
+        <option value="$PROJECT_DIR$/src/Program/Resources/conversation.fxml" />
+        <option value="$PROJECT_DIR$/src/Program/Controller/ControllerConsomationGrap.java" />
+        <option value="$PROJECT_DIR$/src/Program/Controller/ControllerConsomationGraph.java" />
         <option value="$PROJECT_DIR$/src/Program/Model/ModelListOfFood.java" />
       </list>
     </option>
@@ -541,64 +340,51 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="ihm-gaspillage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ihm-gaspillage" type="462c0819:PsiDirectoryNode" />
+              <item name="7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="7" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ihm-gaspillage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ihm-gaspillage" type="462c0819:PsiDirectoryNode" />
+              <item name="7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="7" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ihm-gaspillage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ihm-gaspillage" type="462c0819:PsiDirectoryNode" />
+              <item name="7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="7" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Program" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ihm-gaspillage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ihm-gaspillage" type="462c0819:PsiDirectoryNode" />
+              <item name="7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="7" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Program" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ihm-gaspillage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ihm-gaspillage" type="462c0819:PsiDirectoryNode" />
+              <item name="7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="7" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Program" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ihm-gaspillage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ihm-gaspillage" type="462c0819:PsiDirectoryNode" />
+              <item name="7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="7" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Program" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ihm-gaspillage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ihm-gaspillage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ihm-gaspillage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ihm-gaspillage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ihm-gaspillage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -612,9 +398,9 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552232525129" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552693767316" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../IHM/ihm-gaspillage-master" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IHM/ihm-gaspillage-master" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="recentsLimit" value="5" />
   </component>
@@ -632,6 +418,174 @@
       <recent name="F:\2018-2019\JAVA\workplace\ihm-gaspillage\src\Program" />
       <recent name="C:\Users\Shinelon\Desktop\IHM\ihm-gaspillage\src\Program\Resources" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerAccueil.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerAuthentification.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerConsomationG.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerConsommationTextDate.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerEnregistrer.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerFollow.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerFoodByType.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerInscription.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerMessages.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerProfil.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerSend.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/Controller/ControllerType.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/Main.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/Model/ModelListOfTags.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/Resources/authentification.fxml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/Resources/page_d'accueil.fxml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/StageFactory$1.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/StageFactory$2.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/StageFactory.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Controller/ControllerAccueil.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Controller/ControllerAuthentification.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Controller/ControllerConsomationG.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Controller/ControllerConsommationTextDate.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Controller/ControllerEnregistrer.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Controller/ControllerFollow.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Controller/ControllerFoodByType.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Controller/ControllerInscription.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Controller/ControllerMessages.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Controller/ControllerProfil.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Controller/ControllerProfilIns.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Controller/ControllerSend.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Controller/ControllerType.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Main.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Model/ModelListOfFood.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Resources/authentification.fxml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/StageFactory.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/View/ViewAccueil.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/View/ViewAuthentification.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/View/ViewConsomationG.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/View/ViewEnregistrer.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/View/ViewFollow.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/View/ViewFoodByType.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/View/ViewInscription.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/View/ViewMessages.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/View/ViewType.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/View/ViewAide.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/View/ViewProfil.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/View/ViewProfilIns.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/StageFactory$10.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/StageFactory$11.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/StageFactory$3.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/StageFactory$4.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/StageFactory$5.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/StageFactory$6.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/StageFactory$7.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/StageFactory$8.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/ihm/Program/StageFactory$9.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Program/Controller/ControllerAttention.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -993,13 +947,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177356000" />
+    <option name="totallyTimeSpent" value="178055000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="26" y="0" width="1260" height="688" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2579035" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.25603217" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1009,7 +963,7 @@
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32768363" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.3314501" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.33286715" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39928058" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1113,56 +1067,40 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Program/Resources/chart.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Resources/authentification.fxml">
+    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerMessages.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelListOfMes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="101" selection-start-line="14" selection-start-column="101" selection-end-line="14" selection-end-column="101" />
+        <state relative-caret-position="969">
+          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelListOfUsers.java">
+    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerProfil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="16" column="56" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="56" />
+        <state relative-caret-position="1216">
+          <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Resources/attention.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Resources/inscription.fxml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Resources/message.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Resources/page_d'accueil.fxml">
+    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerProfilIns.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+        <state relative-caret-position="1292">
+          <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerMessage.java">
+    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerSend.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        <state relative-caret-position="627">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1173,38 +1111,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Resources/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="6" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerAide.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/View/ViewAide.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Resources/follower.fxml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerTag.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="117" column="12" selection-start-line="117" selection-start-column="12" selection-end-line="117" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1215,338 +1135,227 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/View/View.java">
+    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelChart.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/View/ViewProfilIns.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="69" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/View/ViewProfil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="58" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelListOfChart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/View/ViewConsomationG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/View/ViewInscription.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/View/ViewAuthentification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="24" column="67" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelListOfFollow.java">
+    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelFood.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/View/ViewEnregistrer.java">
+    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelListOfChart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="51" column="54" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
+        <state relative-caret-position="228">
+          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/View/ViewFollow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="31" column="69" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/View/ViewAccueil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerAttention.java">
+    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelListOfMes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerAccueil.java">
+    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelListOfSum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="119" column="13" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="76">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerAuthentification.java">
+    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelListOfTags.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="48" column="60" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
+        <state relative-caret-position="361">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerBienvenue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-333">
-          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerConsomationG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="137" column="27" selection-start-line="137" selection-start-column="27" selection-end-line="137" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerEnregistrer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerChart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerFood.java">
+    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelListOfUsers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerConsommationTextDate.java">
+    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="149" column="4" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="4" />
+        <state relative-caret-position="76">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerInscription.java">
+    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelOtherUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="93" column="94" selection-start-line="93" selection-start-column="94" selection-end-line="93" selection-end-column="94" />
+        <state relative-caret-position="76">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerFollow.java">
+    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelTag.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+        <state relative-caret-position="76">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerMessages.java">
+    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerProfilIns.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerSend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="38" column="106" selection-start-line="38" selection-start-column="106" selection-end-line="38" selection-end-column="106" />
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerProfil.java">
+    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelSum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="87" column="56" selection-start-line="87" selection-start-column="56" selection-end-line="87" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="76">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/View/ViewMessages.java">
+    <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="78" column="20" lean-forward="true" selection-start-line="72" selection-start-column="8" selection-end-line="78" selection-end-column="20" />
+        <state relative-caret-position="76">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/aide.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Program/Resources/aliment_par_type.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162" />
-      </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerFoodByType.java">
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/attention.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/authentification.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/confirmation_close.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/chart.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/consommation_graphique.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/consommation_texte.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/conversation.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/enregistrer.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/follower.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/food.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/lock.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/inscription.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/message.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/messages.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/page_d'accueil.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/profil_Pauldu66.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/profil.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/profil_torempli.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/rate.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/send.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/sum.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/tag.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/Unknown.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/types.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Resources/user.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerConsomationGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+        <state relative-caret-position="150">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/View/ViewType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="86" column="34" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/Controller/ControllerType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="107" column="35" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3079#3080#0" expanded="true" />
-            <element signature="e#3111#3112#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Program/StageFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="319" column="8" selection-start-line="319" selection-start-column="8" selection-end-line="319" selection-end-column="8" />
-          <folding>
-            <element signature="e#1949#1950#0" expanded="true" />
-            <element signature="e#1993#1994#0" expanded="true" />
-            <element signature="e#2732#2733#0" expanded="true" />
-            <element signature="e#2764#2765#0" expanded="true" />
-            <element signature="e#2485#2486#0" expanded="true" />
-            <element signature="e#2523#2524#0" expanded="true" />
-            <element signature="e#2578#2579#0" expanded="true" />
-            <element signature="e#2618#2619#0" expanded="true" />
-            <element signature="e#2762#2763#0" expanded="true" />
-            <element signature="e#2795#2796#0" expanded="true" />
-            <element signature="e#2954#2955#0" expanded="true" />
-            <element signature="e#2991#2992#0" expanded="true" />
-            <element signature="e#3028#3029#0" expanded="true" />
-            <element signature="e#3059#3060#0" expanded="true" />
-            <element signature="e#3104#3105#0" expanded="true" />
-            <element signature="e#3137#3138#0" expanded="true" />
-            <element signature="e#3176#3177#0" expanded="true" />
-            <element signature="e#3211#3212#0" expanded="true" />
-            <element signature="e#3197#3198#0" expanded="true" />
-            <element signature="e#3235#3236#0" expanded="true" />
-            <element signature="e#4056#4057#0" expanded="true" />
-            <element signature="e#4110#4111#0" expanded="true" />
-            <element signature="e#4171#4172#0" expanded="true" />
-            <element signature="e#4219#4220#0" expanded="true" />
-            <element signature="e#3950#3951#0" expanded="true" />
-            <element signature="e#3983#3984#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="e#3947#3948#0" expanded="true" />
-            <element signature="e#4773#4774#0" expanded="true" />
-            <element signature="e#4807#4808#0" expanded="true" />
-            <element signature="e#5420#5421#0" expanded="true" />
-            <element signature="e#5466#5467#0" expanded="true" />
-            <element signature="e#6521#6522#0" expanded="true" />
-            <element signature="e#6560#6561#0" expanded="true" />
-            <element signature="e#6619#6620#0" expanded="true" />
-            <element signature="e#6661#6662#0" expanded="true" />
-            <element signature="e#6702#6703#0" expanded="true" />
-            <element signature="e#6735#6736#0" expanded="true" />
-            <element signature="e#6782#6783#0" expanded="true" />
-            <element signature="e#6818#6819#0" expanded="true" />
-            <element signature="e#8257#8258#0" expanded="true" />
-            <element signature="e#8303#8304#0" expanded="true" />
-            <element signature="e#9072#9073#0" expanded="true" />
-            <element signature="e#9126#9127#0" expanded="true" />
-            <element signature="e#9197#9198#0" expanded="true" />
-            <element signature="e#9251#9252#0" expanded="true" />
-            <element signature="e#9302#9303#0" expanded="true" />
-            <element signature="e#9340#9341#0" expanded="true" />
-            <element signature="e#9388#9389#0" expanded="true" />
-            <element signature="e#9423#9424#0" expanded="true" />
-            <element signature="e#9472#9473#0" expanded="true" />
-            <element signature="e#9509#9510#0" expanded="true" />
-            <element signature="e#9543#9544#0" expanded="true" />
-            <element signature="e#9575#9576#0" expanded="true" />
-            <element signature="e#9628#9629#0" expanded="true" />
-            <element signature="e#9672#9673#0" expanded="true" />
-            <element signature="e#9734#9735#0" expanded="true" />
-            <element signature="e#9778#9779#0" expanded="true" />
-            <element signature="e#9818#9819#0" expanded="true" />
-            <element signature="e#9847#9848#0" expanded="true" />
-            <element signature="e#9881#9882#0" expanded="true" />
-            <element signature="e#9913#9914#0" expanded="true" />
-            <element signature="e#10441#10442#0" expanded="true" />
-            <element signature="e#10481#10482#0" expanded="true" />
-            <element signature="e#10512#10513#0" expanded="true" />
-            <element signature="e#10552#10553#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="95">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Program/Model/ModelListOfFood.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="76" column="62" selection-start-line="76" selection-start-column="62" selection-end-line="76" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program/View/ViewFoodByType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="96" column="41" selection-start-line="96" selection-start-column="41" selection-end-line="96" selection-end-column="41" />
+        <state relative-caret-position="190">
+          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
         </state>
       </provider>
     </entry>

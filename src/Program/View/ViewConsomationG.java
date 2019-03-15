@@ -1,7 +1,7 @@
 package Program.View;
 
 import Program.Controller.ControllerChart;
-import Program.Controller.ControllerConsomationG;
+import Program.Controller.ControllerConsomationGraph;
 import Program.Model.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,9 +16,9 @@ public class ViewConsomationG extends View {
     private static final String CHART = "../Resources/chart.fxml";
     private static int rangeSelectedItem = -1;
     private static ModelListOfChart modelChar;
-    private static ControllerConsomationG controller;
+    private static ControllerConsomationGraph controller;
 
-    public void init(ModelListOfChart modelChar, ModelListOfSum modelSum, ModelListOfFood modelFood, ModelListOfTags modelTag, ControllerConsomationG controller, String type) {
+    public void init(ModelListOfChart modelChar, ModelListOfSum modelSum, ModelListOfFood modelFood, ModelListOfTags modelTag, ControllerConsomationGraph controller, String type) {
         this.modelChar = modelChar;
         this.controller = controller;
         //init the ObservableList of food to the ListView

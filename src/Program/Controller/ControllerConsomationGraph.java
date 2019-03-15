@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ControllerConsomationG {
+public class ControllerConsomationGraph {
 
     @FXML
     private javafx.scene.control.ListView list_chart;

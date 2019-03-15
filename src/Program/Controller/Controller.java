@@ -1,6 +1,5 @@
 package Program.Controller;
 
-import Program.Model.ModelMessage;
 import Program.StageFactory;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;

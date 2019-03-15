@@ -4,9 +4,6 @@ import Program.Model.ModelListOfFood;
 import Program.StageFactory;
 import Program.View.*;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.ListView;
@@ -23,7 +20,6 @@ public class ControllerAccueil extends Controller{
     private ControllerProfil controllerProfil = new ControllerProfil ();
     private ControllerAide controllerAide = new ControllerAide();
     private View viewp = new View();
-    private int chosenfood;
     @FXML
     private ListView list_alipp;
     @FXML
@@ -65,22 +61,6 @@ public class ControllerAccueil extends Controller{
     private void setBtn_pro(StageFactory factory) throws IOException{
         factory.initAll("Resources/profil.fxml",controllerProfil,viewp);
     }
-
-    @FXML
-    private void setBtn_mes(){
-        FXMLLoader fxmlLoader = new FXMLLoader (getClass ().getResource ("../Resources/messages.fxml"));
-        try {
-            Parent root1 = (Parent) fxmlLoader.load ();
-            Stage stage = (Stage) btn_pro.getScene ().getWindow ();
-            stage.setTitle ("Messages");
-            stage.setScene (new Scene (root1));
-            stage.show ();
-        } catch (IOException e) {
-            e.printStackTrace ();
-        }
-    }
-
-
 
      void setBtn_ajouter(StageFactory factory) throws IOException {
 
@@ -173,7 +153,7 @@ public class ControllerAccueil extends Controller{
             }
         });
         btn_delete.setOnAction(event -> {
-            this.modelListfood.getListOfFoodA().remove(factory.getViewAccueil().getRangeSelectedItem());
+            this.modelListfood.getListOfFoodCanDelete().remove(factory.getViewAccueil().getRangeSelectedItem());
             factory.setModelListOfFood(this.modelListfood);
             try {
                 factory.initAll(ViewAccueil.PATH,factory.getControllerAccueil(),factory.getViewAccueil());

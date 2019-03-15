@@ -95,7 +95,7 @@ public class ViewAccueil extends View{
     private void listenTo(ListView listView) {
         listView.getSelectionModel().selectedItemProperty().addListener(
                 (ChangeListener<ModelFood>) (observable, oldValue, newValue) -> {
-                    rangeSelectedItem = model.getListOfFoodA().indexOf(newValue);
+                    rangeSelectedItem = model.getListOfFoodCanDelete().indexOf(newValue);
                     //controller.getChoosenFood(newValue.getName(),newValue.getDateExpiration());
                 });
     }

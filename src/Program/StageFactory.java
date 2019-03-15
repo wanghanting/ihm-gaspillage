@@ -33,7 +33,7 @@ public class StageFactory {
     private ControllerAide controllerAide = new ControllerAide();
     private ControllerAccueil controllerAccueil = new ControllerAccueil();
     private ControllerMessages controllerMessages = new ControllerMessages();
-    private ControllerConsomationG controllerConsomationG = new ControllerConsomationG();
+    private ControllerConsomationGraph controllerConsomationGraph = new ControllerConsomationGraph();
     private ControllerFollow controllerFollow = new ControllerFollow();
     private ControllerInscription controllerInscription = new ControllerInscription();
     private ControllerType controllerType = new ControllerType();
@@ -66,8 +66,8 @@ public class StageFactory {
         return controllerMessages;
     }
 
-    public ControllerConsomationG getControllerConsomationG() {
-        return controllerConsomationG;
+    public ControllerConsomationGraph getControllerConsomationG() {
+        return controllerConsomationGraph;
     }
 
     public ControllerFollow getControllerFollow() {
@@ -193,22 +193,22 @@ public class StageFactory {
 
     public Stage initConsomation() throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        ControllerConsomationG controllerConsomationG = new ControllerConsomationG();
+        ControllerConsomationGraph controllerConsomationGraph = new ControllerConsomationGraph();
         ViewConsomationG viewConsomationG = new ViewConsomationG();
 
-        loader.setController(controllerConsomationG);
+        loader.setController(controllerConsomationGraph);
         Parent root = loader.load(getClass().getResourceAsStream("Resources/consommation_graphique.fxml"));
         ModelListOfSum modelSum = new ModelListOfSum();
         ModelListOfChart modelChart = new ModelListOfChart();
         modelSum.init(modelListOfFood, modelListOfTags);
         modelChart.init(modelSum);
-        controllerConsomationG.init(stage, this);
+        controllerConsomationGraph.init(stage, this);
         if (typeOfConsom.equals("somme")) {
-            controllerConsomationG.setSel_cosm_type(typeOfConsom);
+            controllerConsomationGraph.setSel_cosm_type(typeOfConsom);
         } else {
-            controllerConsomationG.setSel_cosm_type("par " + typeOfConsom);
+            controllerConsomationGraph.setSel_cosm_type("par " + typeOfConsom);
         }
-        viewConsomationG.init(modelChart, modelSum, modelListOfFood, modelListOfTags, controllerConsomationG, typeOfConsom);
+        viewConsomationG.init(modelChart, modelSum, modelListOfFood, modelListOfTags, controllerConsomationGraph, typeOfConsom);
         Scene scene = new Scene(root, width, height);
         scene.getStylesheets().add(getClass().getResource("Resources/styles/style.css").toString());
         stage.setScene(scene);

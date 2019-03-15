@@ -6,14 +6,12 @@ import Program.Controller.ControllerFoodByType;
 import Program.Model.ModelFood;
 import Program.Model.ModelListOfFood;
 import Program.StageFactory;
-import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.stage.Stage;
 import javafx.util.Callback;
 
 import java.io.IOException;
@@ -95,7 +93,7 @@ public class ViewFoodByType extends View {
     private ModelListOfFood findFood( ModelListOfFood modelListOfFood){
         ModelListOfFood modelListOfFood1 = new ModelListOfFood();
         modelListOfFood1.setListOfFoodA();
-        for(ModelFood food: modelListOfFood.getListOfFoodA()){
+        for(ModelFood food: modelListOfFood.getListOfFoodCanDelete()){
             if(food.getFoodType().equals(this.type)){
                 modelListOfFood1.addFood(food);
             }

@@ -18,7 +18,6 @@ public class ControllerAccueil extends Controller{
     private ControllerMessages controllerMessages=new ControllerMessages();
     private ViewMessages viewMessages = new ViewMessages();
     private ControllerProfil controllerProfil = new ControllerProfil ();
-    private ControllerAide controllerAide = new ControllerAide();
     private View viewp = new View();
     @FXML
     private ListView list_alipp;
@@ -53,8 +52,9 @@ public class ControllerAccueil extends Controller{
 
     ControllerInscription controller;
 
+    @FXML
     private void setLink_aide(StageFactory factory)throws IOException {
-        factory.initAll(ViewAide.PATH,factory.getControllerAide(),factory.getViewAide());
+        factory.initAide();
     }
 
     @FXML
@@ -119,7 +119,7 @@ public class ControllerAccueil extends Controller{
 
         link_aide.setOnAction (event -> {
             try{
-                factory.initAll(ViewAide.PATH,factory.getControllerAide(),factory.getViewAide());
+                setLink_aide(factory);
             }catch (IOException e){
                 e.printStackTrace ();
             }
